@@ -1,0 +1,400 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "text_table_with_tabs": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_backgroundchange",
+                        "tx_mask_headline",
+                        "tx_mask_subheadline",
+                        "tx_mask_text",
+                        "tx_mask_textmobile",
+                        "tx_mask_texttablelist"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-database",
+                    "iconOverlay": "",
+                    "key": "text_table_with_tabs",
+                    "label": "Text Table with tabs",
+                    "labels": [
+                        "Change background",
+                        "Headline",
+                        "Subheadline",
+                        "Text",
+                        "Text mobile",
+                        "Elements"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_backgroundchange": {
+                    "tt_content": {
+                        "tx_mask_backgroundchange": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_subheadline": {
+                    "tt_content": {
+                        "tx_mask_subheadline": "mediumtext"
+                    }
+                },
+                "tx_mask_text": {
+                    "tt_content": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_textmobile": {
+                    "tt_content": {
+                        "tx_mask_textmobile": "mediumtext"
+                    }
+                },
+                "tx_mask_texttablelist": {
+                    "tt_content": {
+                        "tx_mask_texttablelist": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_backgroundchange": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "description": {
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_backgroundchange",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "backgroundchange",
+                    "label": {
+                        "juri_list": "Change background"
+                    },
+                    "order": {
+                        "juri_list": 4
+                    },
+                    "type": "check"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_subheadline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_subheadline",
+                    "key": "subheadline",
+                    "type": "richtext"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "text",
+                    "label": {
+                        "3_box_text_static_module": "Text",
+                        "criteria_items": "Text",
+                        "image_link_zoom_in_effect": "Text",
+                        "image_slider_text": "Text",
+                        "juri_list": "Text",
+                        "landing_page_banner": "Text"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_textmobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_textmobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "textmobile",
+                    "label": {
+                        "3_box_text_static_module": "Text mobile",
+                        "criteria_items": "Text mobile",
+                        "image_link_zoom_in_effect": "Text mobile",
+                        "image_slider_text": "Text mobile",
+                        "juri_list": "Text mobile",
+                        "landing_page_banner": "Text mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_texttablelist": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_texttablelist",
+                    "key": "texttablelist",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_eventlist": {
+            "sql": {
+                "tx_mask_bywhom": {
+                    "tx_mask_eventlist": {
+                        "tx_mask_bywhom": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_time": {
+                    "tx_mask_eventlist": {
+                        "tx_mask_time": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_title": {
+                    "tx_mask_eventlist": {
+                        "tx_mask_title": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_bywhom": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_bywhom",
+                    "inlineParent": "tx_mask_eventlist",
+                    "key": "bywhom",
+                    "label": "By whom",
+                    "order": 3,
+                    "type": "string"
+                },
+                "tx_mask_time": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_time",
+                    "inlineParent": "tx_mask_eventlist",
+                    "key": "time",
+                    "label": "Time",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_title": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_title",
+                    "inlineParent": "tx_mask_eventlist",
+                    "key": "title",
+                    "label": "Title",
+                    "order": 2,
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_texttablelist": {
+            "sql": {
+                "tx_mask_eventlist": {
+                    "tx_mask_texttablelist": {
+                        "tx_mask_eventlist": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_subtitle": {
+                    "tx_mask_texttablelist": {
+                        "tx_mask_subtitle": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_tabtitle": {
+                    "tx_mask_texttablelist": {
+                        "tx_mask_tabtitle": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_eventlist": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "ctrl": {
+                        "label": "tx_mask_"
+                    },
+                    "fullKey": "tx_mask_eventlist",
+                    "inlineParent": "tx_mask_texttablelist",
+                    "key": "eventlist",
+                    "label": "Elements",
+                    "order": 3,
+                    "type": "inline"
+                },
+                "tx_mask_subtitle": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_subtitle",
+                    "inlineParent": "tx_mask_texttablelist",
+                    "key": "subtitle",
+                    "label": "Subtitle",
+                    "order": 2,
+                    "type": "string"
+                },
+                "tx_mask_tabtitle": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_tabtitle",
+                    "inlineParent": "tx_mask_texttablelist",
+                    "key": "tabtitle",
+                    "label": "Tab title",
+                    "order": 1,
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

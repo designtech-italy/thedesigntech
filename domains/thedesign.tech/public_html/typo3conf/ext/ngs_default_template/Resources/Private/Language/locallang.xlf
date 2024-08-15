@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:ngs_default_template/Resources/Private/Language/locallang.xlf" date="2024-02-02T14:31:09Z" product-name="ngs_default_template">
+		<header/>
+		<body>
+			<trans-unit id="footer.subTitle" resname="footer.subTitle">
+				<source>WHERE DESIGN INDUSTRY MEETS TECH STARTUPS</source>
+			</trans-unit>
+			<trans-unit id="footer.copyright" resname="footer.copyright">
+				<source>COPYRIGHT</source>
+			</trans-unit>
+			<trans-unit id="footer.copyrightDescription" resname="footer.copyrightDescription">
+				<source>Designtech srl Società Benefit - via Privata Polidoro da Caravaggio 30 - 20156 Milano - Part. Iva: IT12415810964</source>
+			</trans-unit>
+			<trans-unit id="footer.socialMaskID" resname="footer.socialMaskID">
+				<source>8</source>
+			</trans-unit>
+			<trans-unit id="header.linkTitleJoin" resname="header.linkTitleJoin">
+				<source>Join Us</source>
+			</trans-unit>
+			<trans-unit id="element.name.properties.label" resname="element.name.properties.label">
+				<source>test</source>
+			</trans-unit>
+			<trans-unit id="element.name.properties.placeholder" resname="element.name.properties.placeholder">
+				<source>tawe</source>
+			</trans-unit>
+			<trans-unit id="uploadBoxText" resname="uploadBoxText">
+				<source>Choose a file</source>
+			</trans-unit>
+			<trans-unit id="privacyPolicyPageUid" resname="privacyPolicyPageUid">
+				<source>55</source>
+			</trans-unit>
+			<trans-unit id="privacyPolicyLinkLabel" resname="privacyPolicyLinkLabel">
+				<source>Privacy Policy</source>
+			</trans-unit>
+			<trans-unit id="uploadSuccessText" resname="uploadSuccessText">
+				<source>File uploaded</source>
+			</trans-unit>
+			<trans-unit id="additiveDesignId" resname="additiveDesignId">
+				<source>55</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

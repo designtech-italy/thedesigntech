@@ -1,0 +1,1047 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "3_box_text_static_module": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_30b344f8edb67",
+                        "tx_mask_5502a1390dd8f",
+                        "tx_mask_a019ac1e55959",
+                        "tx_mask_image",
+                        "tx_mask_cards",
+                        "tx_mask_b3ec4e18dcac",
+                        "tx_mask_static_module_items"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "3_box_text_static_module",
+                    "label": "3 Box text static module",
+                    "labels": [
+                        "Box Style",
+                        "Headline",
+                        "Text",
+                        "Image",
+                        "Cards",
+                        "Static module Circle Icon",
+                        "Static module items"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "palettes": {
+                "tx_mask_30b344f8edb67": {
+                    "description": "",
+                    "label": "Box Style",
+                    "showitem": [
+                        "tx_mask_backgroundcolor",
+                        "tx_mask_is_main_text_highlighted"
+                    ]
+                },
+                "tx_mask_5502a1390dd8f": {
+                    "description": "",
+                    "label": "Headline",
+                    "showitem": [
+                        "tx_mask_headline",
+                        "tx_mask_headlinemobile"
+                    ]
+                },
+                "tx_mask_a019ac1e55959": {
+                    "description": "",
+                    "label": "Text",
+                    "showitem": [
+                        "tx_mask_text",
+                        "tx_mask_textmobile"
+                    ]
+                },
+                "tx_mask_b3ec4e18dcac": {
+                    "description": "",
+                    "label": "Static module Circle Icon",
+                    "showitem": [
+                        "tx_mask_circleiconheadline",
+                        "tx_mask_circleiconsupheadline",
+                        "tx_mask_af30a7b84ca08",
+                        "tx_mask_circleiconpreheadline",
+                        "tx_mask_circleiconsubheadline",
+                        "tx_mask_643eee839d4bf",
+                        "tx_mask_circleiconintro",
+                        "tx_mask_8843877f9f53f",
+                        "tx_mask_circleicon"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_backgroundcolor": {
+                    "tt_content": {
+                        "tx_mask_backgroundcolor": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_cards": {
+                    "tt_content": {
+                        "tx_mask_cards": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_circleicon": {
+                    "tt_content": {
+                        "tx_mask_circleicon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconintro": {
+                    "tt_content": {
+                        "tx_mask_circleiconintro": "mediumtext"
+                    }
+                },
+                "tx_mask_circleiconpreheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconpreheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconsubheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconsubheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconsupheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconsupheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_headlinemobile": {
+                    "tt_content": {
+                        "tx_mask_headlinemobile": "mediumtext"
+                    }
+                },
+                "tx_mask_image": {
+                    "tt_content": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_is_main_text_highlighted": {
+                    "tt_content": {
+                        "tx_mask_is_main_text_highlighted": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_static_module_items": {
+                    "tt_content": {
+                        "tx_mask_static_module_items": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tt_content": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_textmobile": {
+                    "tt_content": {
+                        "tx_mask_textmobile": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_30b344f8edb67": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_30b344f8edb67",
+                    "key": "30b344f8edb67",
+                    "type": "palette"
+                },
+                "tx_mask_5502a1390dd8f": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_5502a1390dd8f",
+                    "key": "5502a1390dd8f",
+                    "type": "palette"
+                },
+                "tx_mask_643eee839d4bf": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "3_box_text_static_module": ""
+                    },
+                    "fullKey": "tx_mask_643eee839d4bf",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac"
+                    },
+                    "key": "643eee839d4bf",
+                    "label": {
+                        "3_box_text_static_module": ""
+                    },
+                    "order": {
+                        "3_box_text_static_module": 6
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_8843877f9f53f": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "3_box_text_static_module": ""
+                    },
+                    "fullKey": "tx_mask_8843877f9f53f",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac"
+                    },
+                    "key": "8843877f9f53f",
+                    "label": {
+                        "3_box_text_static_module": ""
+                    },
+                    "order": {
+                        "3_box_text_static_module": 8
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_a019ac1e55959": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_a019ac1e55959",
+                    "key": "a019ac1e55959",
+                    "type": "palette"
+                },
+                "tx_mask_af30a7b84ca08": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "3_box_text_static_module": ""
+                    },
+                    "fullKey": "tx_mask_af30a7b84ca08",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac"
+                    },
+                    "key": "af30a7b84ca08",
+                    "label": {
+                        "3_box_text_static_module": ""
+                    },
+                    "order": {
+                        "3_box_text_static_module": 3
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_b3ec4e18dcac": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_b3ec4e18dcac",
+                    "key": "b3ec4e18dcac",
+                    "type": "palette"
+                },
+                "tx_mask_backgroundcolor": {
+                    "config": {
+                        "renderType": "colorpicker",
+                        "size": 10,
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_backgroundcolor",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_30b344f8edb67",
+                        "image_link_zoom_in_effect": "tx_mask_5929b105e8afa",
+                        "image_slider_text": "tx_mask_6bf61bca8b5ca",
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "backgroundcolor",
+                    "label": {
+                        "3_box_text_static_module": "Background Color",
+                        "image_link_zoom_in_effect": "Background Color",
+                        "image_slider_text": "Background Color",
+                        "juri_list": "Background Color"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1
+                    },
+                    "type": "colorpicker"
+                },
+                "tx_mask_cards": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_cards",
+                    "key": "cards",
+                    "type": "inline"
+                },
+                "tx_mask_circleicon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "description": {
+                        "3_box_text_static_module": ""
+                    },
+                    "fullKey": "tx_mask_circleicon",
+                    "imageoverlayPalette": 1,
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac"
+                    },
+                    "key": "circleicon",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 9
+                    },
+                    "type": "file"
+                },
+                "tx_mask_circleiconheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Headline",
+                        "landing_page_banner": "Circle Icon Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconintro": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": ""
+                    },
+                    "fullKey": "tx_mask_circleiconintro",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac"
+                    },
+                    "key": "circleiconintro",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Intro"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 7
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_circleiconpreheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconpreheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconpreheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Preheadline",
+                        "landing_page_banner": "Circle Icon Preheadline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 4,
+                        "landing_page_banner": 4
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconsubheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconsubheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconsubheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Subheadline",
+                        "landing_page_banner": "Circle Icon Subheadline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 5,
+                        "landing_page_banner": 5
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconsupheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconsupheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconsupheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Sup Headline",
+                        "landing_page_banner": "Circle Icon Sup Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "string"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_headlinemobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headlinemobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headlinemobile",
+                    "label": {
+                        "3_box_text_static_module": "Headline Mobile",
+                        "criteria_items": "Headline Mobile",
+                        "image_link_slider_with_tabs": "Headline Mobile",
+                        "image_link_zoom_in_effect": "Headline Mobile",
+                        "image_slider_text": "Headline Mobile",
+                        "juri_list": "Headline Mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_slider_with_tabs": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "description": {
+                        "card_double_text": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "card_double_text": "tx_mask_7cbad157087c5",
+                        "landing_page_banner": "tx_mask_b75420521c24e"
+                    },
+                    "key": "image",
+                    "label": {
+                        "card_double_text": "Image",
+                        "landing_page_banner": "Image"
+                    },
+                    "order": {
+                        "card_double_text": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "file"
+                },
+                "tx_mask_is_main_text_highlighted": {
+                    "config": {
+                        "items": [
+                            {
+                                "0": "Is Highlighted",
+                                "iconIdentifierChecked": "true",
+                                "iconIdentifierUnchecked": "false",
+                                "invertStateDisplay": "0"
+                            }
+                        ],
+                        "type": "check"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_is_main_text_highlighted",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_30b344f8edb67",
+                        "image_link_zoom_in_effect": "tx_mask_5929b105e8afa",
+                        "image_slider_text": "tx_mask_6bf61bca8b5ca",
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "is_main_text_highlighted",
+                    "label": {
+                        "3_box_text_static_module": "Is Main Text Highlighted",
+                        "image_link_zoom_in_effect": "Is Main Text Highlighted",
+                        "image_slider_text": "Is Main Text Highlighted",
+                        "juri_list": "Is Main Text Highlighted"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2
+                    },
+                    "type": "check"
+                },
+                "tx_mask_static_module_items": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_static_module_items",
+                    "key": "static_module_items",
+                    "type": "inline"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "text",
+                    "label": {
+                        "3_box_text_static_module": "Text",
+                        "criteria_items": "Text",
+                        "image_link_zoom_in_effect": "Text",
+                        "image_slider_text": "Text",
+                        "juri_list": "Text",
+                        "landing_page_banner": "Text"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_textmobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_textmobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "textmobile",
+                    "label": {
+                        "3_box_text_static_module": "Text mobile",
+                        "criteria_items": "Text mobile",
+                        "image_link_zoom_in_effect": "Text mobile",
+                        "image_slider_text": "Text mobile",
+                        "juri_list": "Text mobile",
+                        "landing_page_banner": "Text mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_cards": {
+            "palettes": {
+                "tx_mask_0b3fade15bfac": {
+                    "description": "",
+                    "label": "Link",
+                    "showitem": [
+                        "tx_mask_linktext",
+                        "tx_mask_link",
+                        "tx_mask_58a42c0569989",
+                        "tx_mask_linkclass",
+                        "tx_mask_linkaditionaltext"
+                    ]
+                },
+                "tx_mask_78d7b47203244": {
+                    "description": "",
+                    "label": "Text",
+                    "showitem": [
+                        "tx_mask_text",
+                        "tx_mask_textmobile"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_headline": {
+                    "tx_mask_cards": {
+                        "tx_mask_headline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_headlineicon": {
+                    "tx_mask_cards": {
+                        "tx_mask_headlineicon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link": {
+                    "tx_mask_cards": {
+                        "tx_mask_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linkaditionaltext": {
+                    "tx_mask_cards": {
+                        "tx_mask_linkaditionaltext": "mediumtext"
+                    }
+                },
+                "tx_mask_linkclass": {
+                    "tx_mask_cards": {
+                        "tx_mask_linkclass": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linktext": {
+                    "tx_mask_cards": {
+                        "tx_mask_linktext": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tx_mask_cards": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_textmobile": {
+                    "tx_mask_cards": {
+                        "tx_mask_textmobile": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_0b3fade15bfac": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_0b3fade15bfac",
+                    "inlineParent": "tx_mask_cards",
+                    "key": "0b3fade15bfac",
+                    "label": "Link",
+                    "order": 4,
+                    "type": "palette"
+                },
+                "tx_mask_58a42c0569989": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "fullKey": "tx_mask_58a42c0569989",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_0b3fade15bfac",
+                    "key": "58a42c0569989",
+                    "order": 3,
+                    "type": "linebreak"
+                },
+                "tx_mask_78d7b47203244": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_78d7b47203244",
+                    "inlineParent": "tx_mask_cards",
+                    "key": "78d7b47203244",
+                    "label": "Text",
+                    "order": 3,
+                    "type": "palette"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inlineParent": "tx_mask_cards",
+                    "key": "headline",
+                    "label": "Headline",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_headlineicon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_headlineicon",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_cards",
+                    "key": "headlineicon",
+                    "label": "Headline Icon",
+                    "order": 2,
+                    "type": "file"
+                },
+                "tx_mask_link": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_link",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_0b3fade15bfac",
+                    "key": "link",
+                    "label": "Link",
+                    "order": 2,
+                    "type": "link"
+                },
+                "tx_mask_linkaditionaltext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_linkaditionaltext",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_0b3fade15bfac",
+                    "key": "linkaditionaltext",
+                    "label": "Link aditional text",
+                    "order": 5,
+                    "type": "richtext"
+                },
+                "tx_mask_linkclass": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linkclass",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_0b3fade15bfac",
+                    "key": "linkclass",
+                    "label": "Link form",
+                    "order": 4,
+                    "type": "string"
+                },
+                "tx_mask_linktext": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linktext",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_0b3fade15bfac",
+                    "key": "linktext",
+                    "label": "Link Text",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_78d7b47203244",
+                    "key": "text",
+                    "label": "Text",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_textmobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_textmobile",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_78d7b47203244",
+                    "key": "textmobile",
+                    "label": "Text Mobile",
+                    "order": 2,
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_static_module_items": {
+            "sql": {
+                "tx_mask_headline": {
+                    "tx_mask_static_module_items": {
+                        "tx_mask_headline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_icon": {
+                    "tx_mask_static_module_items": {
+                        "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_intro": {
+                    "tx_mask_static_module_items": {
+                        "tx_mask_intro": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_headline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inlineParent": "tx_mask_static_module_items",
+                    "key": "headline",
+                    "label": "Headline",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_icon",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_static_module_items",
+                    "key": "icon",
+                    "label": "Icon",
+                    "order": 2,
+                    "type": "file"
+                },
+                "tx_mask_intro": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_intro",
+                    "inlineParent": "tx_mask_static_module_items",
+                    "key": "intro",
+                    "label": "Intro",
+                    "order": 3,
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

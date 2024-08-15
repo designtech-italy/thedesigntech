@@ -1,0 +1,155 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "social": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_sociallinks"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "fa-soccer-ball-o",
+                    "iconOverlay": "",
+                    "key": "social",
+                    "label": "Social",
+                    "labels": [
+                        "Social"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 7
+                }
+            },
+            "sql": {
+                "tx_mask_sociallinks": {
+                    "tt_content": {
+                        "tx_mask_sociallinks": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_sociallinks": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_sociallinks",
+                    "key": "sociallinks",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_sociallinks": {
+            "sql": {
+                "tx_mask_linkitem": {
+                    "tx_mask_sociallinks": {
+                        "tx_mask_linkitem": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_social": {
+                    "tx_mask_sociallinks": {
+                        "tx_mask_social": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_linkitem": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linkitem",
+                    "inlineParent": "tx_mask_sociallinks",
+                    "key": "linkitem",
+                    "label": "Link",
+                    "order": 2,
+                    "type": "link"
+                },
+                "tx_mask_social": {
+                    "config": {
+                        "fieldWizard": {
+                            "selectIcons": {
+                                "disabled": 1
+                            }
+                        },
+                        "items": [
+                            [
+                                "Facebook",
+                                "facebook",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Instagram",
+                                "insta",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Linkedin",
+                                "linkedin",
+                                "",
+                                ""
+                            ],
+                            [
+                                "YouTube",
+                                "youtube",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Twitter",
+                                "twitter",
+                                "",
+                                ""
+                            ],
+                            [
+                                "E-Mail",
+                                "mail",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Pinterest",
+                                "pinterest",
+                                "",
+                                ""
+                            ]
+                        ],
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_social",
+                    "inlineParent": "tx_mask_sociallinks",
+                    "key": "social",
+                    "label": "Social",
+                    "order": 1,
+                    "type": "select"
+                }
+            }
+        }
+    }
+}

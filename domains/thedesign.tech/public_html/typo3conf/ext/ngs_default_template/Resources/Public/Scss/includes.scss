@@ -1,0 +1,107 @@
+/*---------path variables-------------*/
+
+$image-path: "/typo3conf/ext/ngs_default_template/Resources/Public/Images/FrontendLayouts/" !default;
+
+/*---------size variables-------------*/
+
+$bodyMaxWidth: 2500px;
+
+$mediaDesktopLargest: 1850px;
+$mediaDesktopLarge-: 1601px;
+$mediaDesktopLarge: 1600px;
+$mediaDesktop-: 1441px;
+$mediaDesktop: 1440px;
+$mediaTablet-: 1025px;
+$mediaTablet: 1024px;
+$mediaMobile-: 768px;
+
+$mediaMobile: 767px;
+$mediaMobileSmall-: 391px;
+$mediaMobileSmall: 390px;
+
+
+$maxVP: 1900;
+$minVP: 390;
+
+
+
+$mediaDesktopLargeSize: 1600;
+$mediaDesktopSize: 1440;
+$mediaMobileSize: 768;
+$mediaMobileSmallSizeX: 390;
+
+/*---------zindex variables-------------*/
+
+$zindex-overelement:       500 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-sticky:            2000 !default;
+$zindex-fixed:             3000 !default;
+$zindex-modal-backdrop:    4000 !default;
+$zindex-modal:             5000 !default;
+$zindex-popover:           6000 !default;
+$zindex-tooltip:           7000 !default;
+
+//Functions
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/mixin/functions';
+
+//// Variables
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/mixin/variables';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/mixin/color';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/mixin/default';
+
+//@import 'font';
+
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/global';
+
+@import 'libs/tiny-slider';
+@import 'libs/lightgallery';
+
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/form';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/header';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/footer';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/mobile-menu';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/themestage';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/image-video';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/intro';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/usps';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/flowing-text-banner';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/image-slider-text';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/running-text-banner';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/eccosystem';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/socials';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/labs';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/team-slider';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/carousel-with-text-logo';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/text-table';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/speakers';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/designers';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/text-table-with-tabs';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/sliders';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/qr-code';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/video';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/text-box-3';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/image-text-hover';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/image-link-zoom';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/image-link-slider-tabs';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/guest-flow';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/landing-page-banner';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/box-text-static-module';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/simple-text';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/criteria-items';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/discover-box';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/juri-list';
+@import 'typo3conf/ext/ngs_default_template/Resources/Public/Scss/modules/card-double-text';
+
+:root {
+  --app-height: 100%;
+}
+
+//html,
+//body {
+//  padding: 0;
+//  margin: 0;
+//  overflow: hidden;
+//  width: 100vw;
+//  height: 100vh;
+//  height: var(--app-height);
+//}

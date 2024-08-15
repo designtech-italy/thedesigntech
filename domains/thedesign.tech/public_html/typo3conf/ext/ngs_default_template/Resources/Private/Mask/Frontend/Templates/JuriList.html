@@ -1,0 +1,138 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<f:variable name="spacingAfterClass">
+    <f:if condition="{data.space_after_class} == 'standard' or {data.space_after_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_after_class}</f:else>
+    </f:if>
+</f:variable>
+<f:variable name="spacingBeforeClass">
+    <f:if condition="{data.space_before_class} == 'standard' or {data.space_before_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_before_class}</f:else>
+    </f:if>
+</f:variable>
+
+
+<div class="juri-list-element f_slider-wrapper after-{spacingAfterClass -> f:spaceless()} before-{spacingBeforeClass -> f:spaceless()}{f:if(condition: data.tx_mask_is_main_text_highlighted, then: ' bggallerybox')}{f:if(condition: data.tx_mask_backgroundchange, then: ' changedBg')}"
+     style="background-color: {f:if(condition: data.tx_mask_backgroundcolor, then: data.tx_mask_backgroundcolor)}" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline}">
+        <div class="boxed-headline">
+            <div class="boxed-headline-inner">
+                <f:if condition="{data.tx_mask_link1}">
+                    <f:link.typolink parameter="{data.tx_mask_link1}" class="back-btn btn button1">
+                        <svg class="svg-box">
+                            <use xlink:href="#icon-arrow-left"></use>
+                        </svg>
+                    </f:link.typolink>
+                </f:if>
+
+                <f:if condition="{data.tx_mask_headlinemobile}">
+                    <div class="headline t4 mobile-view">
+                        <div class="svg-line"></div>
+                        {data.tx_mask_headlinemobile -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_headline}">
+                    <div class="headline t4 desktop-view">
+                        {data.tx_mask_headline -> f:format.html()}
+                        <div class="svg-line"></div>
+                    </div>
+                </f:if>
+
+                <f:if condition="{data.tx_mask_textmobile}">
+                    <div class="description mobile-view">
+                        {data.tx_mask_textmobile -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_text}">
+                    <div class="description desktop-view">
+                        {data.tx_mask_text -> f:format.html()}
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </f:if>
+
+    <f:if condition="{data.tx_mask_jurilist}">
+        <div class="juri-list-container">
+            <div class="juri-list-container-inner">
+                <div class="juri-list-wrapper">
+                    <div class="juri-list-inner">
+                        <div class="juri-list f_juri-list">
+                            <f:for each="{data.tx_mask_jurilist}" as="data_item">
+                                <div class="juri-item">
+                                    <f:for each="{data_item.tx_mask_juriimage}" as="file">
+                                        <f:if condition="{data_item.tx_mask_juriheadline}">
+                                            <f:if condition="{data_item.tx_mask_jurilink}">
+                                                <f:then>
+                                                    <f:link.typolink parameter="{data_item.tx_mask_jurilink}" class="image-box">
+                                                        <f:render partial="Picture" arguments="{
+                                                            lazyload: 1,
+                                                            data: {
+                                                                1400: { file: file, width: '280c', height: '280c' },
+                                                                0: { file: file, width: '250c', height: '250c' }
+                                                            }
+                                                        }"/>
+                                                    </f:link.typolink>
+                                                </f:then>
+                                                <f:else>
+                                                    <div class="image-box">
+                                                        <f:render partial="Picture" arguments="{
+                                                            lazyload: 1,
+                                                            data: {
+                                                                1400: { file: file, width: '280c', height: '280c' },
+                                                                0: { file: file, width: '250c', height: '250c' }
+                                                            }
+                                                        }"/>
+                                                    </div>
+                                                </f:else>
+                                            </f:if>
+                                        </f:if>
+                                    </f:for>
+
+                                    <div class="info-box">
+                                        <f:if condition="{data_item.tx_mask_juriheadline}">
+                                            <f:if condition="{data_item.tx_mask_jurilink}">
+                                                <f:then>
+                                                    <f:link.typolink parameter="{data_item.tx_mask_jurilink}" class="headline">
+                                                        {data_item.tx_mask_juriheadline -> f:format.html()}
+                                                    </f:link.typolink>
+                                                </f:then>
+                                                <f:else>
+                                                    <div class="headline">
+                                                        {data_item.tx_mask_juriheadline -> f:format.html()}
+                                                    </div>
+                                                </f:else>
+                                            </f:if>
+                                        </f:if>
+
+                                        <f:if condition="{data_item.tx_mask_juri_subheadline}">
+                                            <div class="subheadline">
+                                                {data_item.tx_mask_juri_subheadline -> f:format.html()}
+                                            </div>
+                                        </f:if>
+
+                                        <f:if condition="{data_item.tx_mask_juriintro}">
+                                            <div class="intro">
+                                                {data_item.tx_mask_juriintro -> f:format.html()}
+                                            </div>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</div>
+

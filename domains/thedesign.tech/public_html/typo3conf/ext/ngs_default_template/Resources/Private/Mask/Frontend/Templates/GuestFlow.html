@@ -1,0 +1,41 @@
+<div class="guest-flow-element bgweb2">
+    <div class="inner">
+        <f:if condition="{data.tx_mask_headline} || {data.tx_mask_subheadline}">
+            <div class="boxed-headline">
+                <f:if condition="{data.tx_mask_headline}">
+                    <div class="headline t1large">
+                        {data.tx_mask_headline -> f:format.html()}
+                        <f:if condition="{data.tx_mask_subheadline}">
+                            <div class="svg-line"></div>
+                        </f:if>
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_subheadline}">
+                    <div class="description t6-inverse">{data.tx_mask_subheadline -> f:format.html()}</div>
+                </f:if>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_downloads}">
+            <div class="download-list">
+                <f:for each="{data.tx_mask_downloads}" as="data_item">
+                    <div class="download-item">
+                        <f:if condition="{data_item.tx_mask_downloadlink}">
+                            <f:link.typolink parameter="{data_item.tx_mask_downloadlink}">
+                                <f:for each="{data_item.tx_mask_image}" as="file">
+                                    <f:render partial="Picture" arguments="{
+                                        lazyload: 1,
+                                        data: {
+                                            0: { file: file, width: '175c', height: '50c' }
+                                        },
+                                        imageratiox: 175,
+                                        imageratioy: 50
+                                    }"/>
+                                </f:for>
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</div>

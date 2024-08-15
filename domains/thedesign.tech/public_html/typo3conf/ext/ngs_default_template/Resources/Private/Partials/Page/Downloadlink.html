@@ -1,0 +1,25 @@
+<f:if condition="{linkUrl} && {linkText}">
+    <f:if condition="{download}">
+        <f:then>
+
+            <v:condition.string.contains haystack="{linkUrl}" needle="file">
+                <f:then>
+                    <a class="{class}"
+                       download="{f:uri.typolink(parameter:linkUrl)}"
+                       href="{f:uri.typolink(parameter:linkUrl)}">
+                        {linkText}</a>
+                </f:then>
+                <f:else>
+                    <f:link.typolink class="{class}" parameter="{linkUrl}">
+                        {linkText}
+                    </f:link.typolink>
+                </f:else>
+            </v:condition.string.contains>
+        </f:then>
+        <f:else>
+            <f:link.typolink class="{class}" parameter="{linkUrl}">
+                {linkText}
+            </f:link.typolink>
+        </f:else>
+    </f:if>
+</f:if>

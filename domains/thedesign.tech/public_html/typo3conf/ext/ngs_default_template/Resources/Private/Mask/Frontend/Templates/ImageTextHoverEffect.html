@@ -1,0 +1,68 @@
+<div class="image-text-hover-element">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_subheadline}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="t4 headline">
+                    {data.tx_mask_headline -> f:format.html()}
+                    <div class="svg-line"></div>
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_subheadline}">
+                <div class="description">
+                    {data.tx_mask_subheadline -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_imageelemenet}">
+        <div class="image-list">
+            <f:for each="{data.tx_mask_imageelemenet}" as="data_item">
+                <div class="image-item">
+                    <div class="inner">
+                        <f:for each="{data_item.tx_mask_logo2}" as="file">
+                            <div class="logo-box">
+                                <f:render partial="Picture" arguments="{
+                                   lazyload: 1,
+                                   data: {
+                                       0: { file: file, width: 'auto', height: 'auto' }
+                                   }
+                                }"/>
+                            </div>
+                        </f:for>
+                        <div class="image-box">
+                            <f:for each="{data_item.tx_mask_image}" as="file">
+                                <f:render partial="Picture" arguments="{
+                                    lazyload: 1,
+                                    data: {
+                                        1701: { file: file, width: '1138c', height: '757c' },
+                                        1026: { file: file, width: '610c', height: '406c' },
+                                        768: { file: file, width: '420c', height: '280c' },
+                                        0: { file: file, width: '390c', height: '260c' }
+                                    }
+                                }"/>
+                            </f:for>
+                            <div class="text-box">
+                                <f:for each="{data_item.tx_mask_logo}" as="file">
+                                    <div class="image-block">
+                                        <f:render partial="Picture" arguments="{
+                                        lazyload: 1,
+                                        data: {
+                                            0: { file: file, width: 'auto', height: 'auto' }
+                                        }
+                                    }"/>
+                                    </div>
+                                </f:for>
+                                <f:if condition="{data_item.tx_mask_title}">
+                                    <div class="title large1">{data_item.tx_mask_title -> f:format.html()}</div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_text}">
+                                    <div class="description">{data_item.tx_mask_text -> f:format.html()}</div>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

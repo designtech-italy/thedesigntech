@@ -1,0 +1,20 @@
+routeEnhancers:
+  Request:
+    type: Extbase
+    extension: NgsApproveRequest
+    plugin: Request
+    routes:
+      - { routePath: '/booking/{id}/{userHash}', _controller: 'Booking::booking',  _arguments: { 'id': id, 'userHash':userHash } ,
+          additionalParams: {
+           exclude: cHash
+          },
+          _query: 'status'
+      }
+      - { routePath: '/event/{id}/{userHash}', _controller: 'Booking::event',  _arguments: { 'id': id, 'userHash': userHash } ,
+          additionalParams: {
+            exclude: cHash
+          },
+          _query: 'status'
+      }
+
+

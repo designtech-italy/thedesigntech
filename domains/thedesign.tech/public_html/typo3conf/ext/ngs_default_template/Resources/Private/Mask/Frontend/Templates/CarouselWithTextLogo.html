@@ -1,0 +1,105 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="carousel-with-text-logo-element f_slider-wrapper{f:if(condition: data.tx_mask_onlylogos, then: ' only-logos')}{f:if(condition: data.tx_mask_background, then: ' bgweb', else: ' bow-background bgweb2')}{f:if(condition: data.tx_mask_backgroundrotate, then: ' rotate-background bgweb')}" id="c{contentLocalizedUid}">
+    <div class="boxed-headline">
+        <f:for each="{data.tx_mask_logo}" as="file">
+            <div class="logo-box">
+                <f:render partial="Picture" arguments="{
+                    lazyload: 1,
+                    data: {
+                        0: { file: file, width: 'auto', height: 'auto' }
+                    }
+                }"/>
+            </div>
+        </f:for>
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="t3 headline">{data.tx_mask_headline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_subheadline}">
+            <div class="subheadline">{data.tx_mask_subheadline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_textmobile}">
+            <div class="description mobile-view">
+                {data.tx_mask_textmobile -> f:format.html()}
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_text}">
+            <div class="description desktop-view">
+                {data.tx_mask_text -> f:format.html()}
+            </div>
+        </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_images}">
+        <div class="image-slider-block">
+            <f:if condition="{data.tx_mask_location}">
+                <div class="location">{data.tx_mask_location}</div>
+            </f:if>
+            <div class="image-list f_image-list-carousel">
+                <f:for each="{data.tx_mask_images}" as="data_item">
+                    <div class="image-item">
+                        <f:for each="{data_item.tx_mask_image}" as="file">
+                            <div class="image-box">
+                                <f:render partial="Picture" arguments="{
+                                lazyload: 1,
+                                data: {
+                                    1024: { file: file, width: '1189c', height: '501c' },
+                                    767c: { file: file, width: '1027c', height: '459c' },
+                                    0: { file: file, width: '1027c', height: '459c' }
+                                }
+                            }"/>
+                            </div>
+                        </f:for>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_logolist}">
+        <div class="bottom-box">
+            <div class="logo-block">
+                <f:for each="{data.tx_mask_logolist}" as="data_item">
+                    <div class="logo-inner{f:if(condition: data_item.tx_mask_headlinealignment, then: ' align-center')}">
+                        <f:if condition="{data_item.tx_mask_headline}">
+                            <div class="subheadline{f:if(condition: data_item.tx_mask_headlinealignment, then: ' t6', else: ' large1')}">{data_item.tx_mask_headline -> f:format.html()}</div>
+                        </f:if>
+                        <f:if condition="{data_item.tx_mask_partnerslogo}">
+                            <div class="logo-list">
+                                <f:for each="{data_item.tx_mask_partnerslogo}" as="data_item_item">
+                                    <div class="logo-item">
+                                        <f:if condition="{data_item_item.tx_mask_partnerlink}">
+                                            <f:link.typolink parameter="{data_item_item.tx_mask_partnerlink}">
+                                                <f:for each="{data_item_item.tx_mask_partnerlogo}" as="file">
+                                                    <f:render partial="Picture" arguments="{
+                                                        lazyload: 1,
+                                                        data: {
+                                                            0: { file: file, width: 'auto', height: 'auto' }
+                                                        }
+                                                    }"/>
+                                                </f:for>
+                                                <f:for each="{data_item_item.tx_mask_partnerlogomobile}" as="file">
+                                                    <f:render partial="Picture" arguments="{
+                                                        lazyload: 1,
+                                                        data: {
+                                                            0: { file: file, width: 'auto', height: 'auto' }
+                                                        }
+                                                    }"/>
+                                                </f:for>
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </div>
+                                </f:for>
+                            </div>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+</div>

@@ -1,0 +1,153 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="image-link-zoom-element bgweb2 f_slider-wrapper {data.tx_mask_type}{f:if(condition: data.tx_mask_is_main_text_highlighted, then: ' bggallerybox')}{f:if(condition: data.tx_mask_remove_zoomin, then: ' no-zoomin')}"
+     style="background-color: {f:if(condition: data.tx_mask_backgroundcolor, then: data.tx_mask_backgroundcolor)}" id="c{contentLocalizedUid}">
+    <div class="image-link-zoom-inner">
+        <f:if condition="{data.tx_mask_headline} || {data.tx_mask_text} || {data.tx_mask_textmobile} || {data.tx_mask_link1text}">
+            <div class="boxed-headline">
+                <f:if condition="{data.tx_mask_headlinemobile}">
+                    <div class="headline t4 mobile-view">
+                        <svg class="svg-line"></svg>
+                        {data.tx_mask_headlinemobile -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_headline}">
+                    <div class="headline t4 desktop-view">
+                        <svg class="svg-line"></svg>
+                        {data.tx_mask_headline -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_textmobile}">
+                    <div class="description mobile-view">
+                        {data.tx_mask_textmobile -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_text}">
+                    <div class="description desktop-view">
+                        {data.tx_mask_text -> f:format.html()}
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_link1text}">
+                    <div class="linkbox">
+                        <a href="#" class="btn button2 btn-primary f_join-us f_modal-form-open-btn" data-modal-form-btn="join-us">{data.tx_mask_link1text}</a>
+                    </div>
+                </f:if>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_zoomelements}">
+            <div class="zoom-list f_zoom-list {data.tx_mask_type}">
+                <f:for each="{data.tx_mask_zoomelements}" as="data_item">
+                    <div class="zoom-item">
+                        <div class="inner bgweb insideClass">
+                            <f:if condition="{data_item.tx_mask_link}">
+                                <f:then>
+                                    <f:link.typolink parameter="{data_item.tx_mask_link}">
+                                        <f:for each="{data_item.tx_mask_image}" as="file">
+                                            <div class="image-box">
+                                                <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        1701: { file: file, width: '685c', height: '465c' },
+                                                        1026: { file: file, width: '610c', height: '406c' },
+                                                        768: { file: file, width: '420c', height: '280c' },
+                                                        0: { file: file, width: '390c', height: '260c' }
+                                                    }
+                                                }"/>
+                                            </div>
+                                        </f:for>
+
+                                        <div class="info-box">
+                                            <f:if condition="{data_item.tx_mask_title}">
+                                                <div class="title">
+                                                    {data_item.tx_mask_title -> f:format.html()}
+                                                </div>
+                                            </f:if>
+
+                                            <f:if condition="{data_item.tx_mask_textmobile}">
+                                                <div class="text{f:if(condition: data_item.tx_mask_text, then: ' mobile-view')}">
+                                                    {data_item.tx_mask_textmobile -> f:format.html()}
+                                                </div>
+                                            </f:if>
+                                            <f:if condition="{data_item.tx_mask_text}">
+                                                <div class="text{f:if(condition: data_item.tx_mask_textmobile, then: ' desktop-view')}">
+                                                    {data_item.tx_mask_text -> f:format.html()}
+                                                </div>
+                                            </f:if>
+
+                                            <f:if condition="{data_item.tx_mask_tagmobile}">
+                                                <div class="tags{f:if(condition: data_item.tx_mask_tags, then: ' mobile-view')}">
+                                                    {data_item.tx_mask_tagmobile -> f:format.html()}
+                                                </div>
+                                            </f:if>
+                                            <f:if condition="{data_item.tx_mask_tags}">
+                                                <div class="tags{f:if(condition: data_item.tx_mask_tagmobile, then: ' desktop-view')}">
+                                                    {data_item.tx_mask_tags -> f:format.html()}
+                                                </div>
+                                            </f:if>
+                                        </div>
+                                    </f:link.typolink>
+                                </f:then>
+                                <f:else>
+                                    <f:for each="{data_item.tx_mask_image}" as="file">
+                                        <div class="image-box">
+                                            <f:render partial="Picture" arguments="{
+                                                lazyload: 1,
+                                                data: {
+                                                    1701: { file: file, width: '685c', height: '465c' },
+                                                    1026: { file: file, width: '610c', height: '406c' },
+                                                    768: { file: file, width: '420c', height: '280c' },
+                                                    0: { file: file, width: '390c', height: '260c' }
+                                                }
+                                            }"/>
+                                        </div>
+                                    </f:for>
+                                    <div class="info-box">
+                                        <f:if condition="{data_item.tx_mask_title}">
+                                            <div class="title">
+                                                {data_item.tx_mask_title -> f:format.html()}
+                                            </div>
+                                        </f:if>
+
+                                        <f:if condition="{data_item.tx_mask_textmobile}">
+                                            <div class="text{f:if(condition: data_item.tx_mask_text, then: ' mobile-view')}">
+                                                {data_item.tx_mask_textmobile -> f:format.html()}
+                                            </div>
+                                        </f:if>
+                                        <f:if condition="{data_item.tx_mask_text}">
+                                            <div class="text{f:if(condition: data_item.tx_mask_textmobile, then: ' desktop-view')}">
+                                                {data_item.tx_mask_text -> f:format.html()}
+                                            </div>
+                                        </f:if>
+
+                                        <f:if condition="{data_item.tx_mask_tagmobile}">
+                                            <div class="tags{f:if(condition: data_item.tx_mask_tags, then: ' mobile-view')}">
+                                                {data_item.tx_mask_tagmobile -> f:format.html()}
+                                            </div>
+                                        </f:if>
+                                        <f:if condition="{data_item.tx_mask_tags}">
+                                            <div class="tags{f:if(condition: data_item.tx_mask_tagmobile, then: ' desktop-view')}">
+                                                {data_item.tx_mask_tags -> f:format.html()}
+                                            </div>
+                                        </f:if>
+                                    </div>
+                                </f:else>
+                            </f:if>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_link1text}">
+            <div class="linkbox">
+                <a href="#" class="btn button2 btn-primary f_join-us f_modal-form-open-btn" data-modal-form-btn="join-us">{data.tx_mask_link1text}</a>
+            </div>
+        </f:if>
+    </div>
+</div>

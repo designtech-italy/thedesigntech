@@ -1,0 +1,380 @@
+.labs-element {
+  @include glob-map-get-fluid(padding-top, 117, 117, 80, 57);
+  @include glob-map-get-fluid(padding-right, 178, 178, 45, 22);
+  @include glob-map-get-fluid(padding-bottom, 64, 64, 45, 40);
+  @include glob-map-get-fluid(padding-left, 125, 125, 45, 24);
+
+  p {
+    margin: 0;
+  }
+
+  .small {
+    line-height: 22px;
+  }
+
+  .boxed-headline {
+    text-align: center;
+    max-width: 901px;
+    margin: 0 auto;
+
+    & + .section-block {
+      margin: 70px auto 0;
+
+      @include glob-map-get-fluid(margin-top, 70, 70, 60, 52);
+    }
+
+    .headline {
+      color: $g-color1;
+      position: relative;
+
+      @include mobile {
+        font-size: 40px;
+        line-height: 56px;
+      }
+
+      &:last-child {
+        @include glob-map-get-fluid(margin-bottom, 146, 130, 120, 120);
+
+        @include mobile {
+          margin-bottom: 35px;
+        }
+
+        .svg-line {
+          @include mobile {
+            bottom: auto;
+            top: -20px;
+          }
+        }
+      }
+
+      strong {
+        color: $g-color3;
+        font-weight: 600;
+      }
+
+      .svg-line {
+        transform: translate(-50%,0);
+        background-color: $g-color1;
+        bottom: -38px;
+        left: 50%;
+
+        @include glob-map-get-fluid(width, 270, 270, 210, 170);
+        @include glob-map-get-fluid(height, 16, 16, 12, 9.6);
+
+        @include mobile {
+          bottom: -16px;
+        }
+      }
+    }
+
+    .description {
+      opacity: 0.9;
+
+      @include glob-map-get-fluid(margin-top, 81, 81, 55, 40);
+
+      &.mobile-view {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      @include mobile {
+        &.desktop-view {
+          display: none;
+        }
+      }
+    }
+  }
+  .link-action {
+    display: flex;
+    justify-content: flex-end;
+
+    @include glob-map-get-fluid(margin-top, 103, 70, 50, 44);
+
+    @include mobile {
+      justify-content: center;
+    }
+
+    .btn {
+      font-family: Poppins;
+      font-weight: 300;
+      padding: 13px 18px 14px 18px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      @include glob-map-get-fluid(font-size, 23, 20, 16, 14);
+      @include glob-map-get-fluid(line-height, 26, 22, 17, 14);
+
+      @include mobile {
+        padding: 12px 16px;
+        justify-content: flex-start;
+      }
+
+      &:hover, &:focus {
+        background-color: $g-color1;
+        color: $g-color3;
+      }
+    }
+  }
+  .section-block {
+    max-width: 776px;
+    margin: 0 auto;
+
+    &.is-wide {
+      max-width: 1007px;
+    }
+
+    .subheadline {
+      font-size: 24px;
+      line-height: 22.8px;
+      font-family: Rische;
+      letter-spacing: 0.2px;
+    }
+
+    .section-list {
+      display: flex;
+
+      @include glob-map-get-fluid(margin-top, 70, 70, 50, 44);
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      .section-item {
+        width: 210px;
+        padding: 0 18px;
+        text-align: center;
+        position: relative;
+
+        @include mobile {
+          display: flex;
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: left;
+          padding: 0 0 19px 65px;
+          align-items: flex-start;
+        }
+
+        &:last-child {
+          &:after {
+            display: none;
+          }
+        }
+
+        &:before {
+          content: '';
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: -31px;
+          left: 50%;
+          z-index: 10;
+          border-radius: 50%;
+          transform: translate(-50%,0);
+          box-shadow: 3px 1px 9px rgba($g-color1, 0.4);
+          background-color: $g-color1;
+
+          @include mobile {
+            left: 29px;
+            top: 4px;
+          }
+        }
+
+        &:after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          top: -24px;
+          left: 50%;
+          background-color: $g-color1;
+
+          @include mobile {
+            top: 7px;
+            left: 28px;
+            width: 2px;
+            height: 100%;
+            transform: none;
+          }
+        }
+
+        .headline {
+          font-family: Poppins;
+          //max-width: 120px;
+          margin: 0 auto;
+          min-height: 66px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+
+          @include mobile {
+            margin: 0;
+            max-width: 162px;
+            justify-content: flex-start;
+          }
+
+          &.mobile-view {
+            display: none;
+
+            @include mobile {
+              display: flex;
+
+              & + .desktop-view {
+                display: none;
+              }
+            }
+          }
+
+          strong {
+            font-weight: 600;
+          }
+        }
+
+        .image-block {
+          height: 66px;
+          margin-top: 32px;
+
+          @include mobile {
+            margin-top: 0;
+            margin-left: 23px;
+          }
+        }
+
+        .description {
+          font-family: Poppins;
+          max-width: 183px;
+          margin-top: 16px;
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .tns-nav {
+    @include glob-map-get-fluid(margin-top, 53, 53, 45, 40);
+  }
+  .image-text-slider-list {
+    @include glob-map-get-fluid(margin-top, 130, 130, 50, 23);
+
+    @include tablet {
+      pointer-events: none;
+    }
+
+    .image-text-slider-item {
+      .image-text-slider-item-inner {
+        display: flex;
+        position: relative;
+
+        @include tablet {
+          flex-direction: column-reverse;
+        }
+
+        .left-box {
+          flex: 1;
+          padding-top: 40px;
+          position: relative;
+          padding-right: 120px;
+
+          @include glob-map-get-fluid(padding-top, 40, 40, 36, 34);
+
+          @include tablet {
+            padding-right: 0;
+            position: static;
+          }
+
+          .headline {
+            letter-spacing: 0;
+            font-weight: 200;
+          }
+
+          .status-box {
+            font-family: Poppins;
+            position: absolute;
+            text-align: right;
+            right: 22px;
+            top: 9px;
+
+            @include glob-map-get-fluid(font-size, 14, 14, 13, 12);
+            @include glob-map-get-fluid(line-height, 21, 21, 19, 18);
+
+            @include tablet {
+              text-align: left;
+              z-index: 10;
+              right: auto;
+              left: 8px;
+              top: 23px;
+            }
+
+            &.black-text {
+              @include mobile {
+                color: $g-color4;
+              }
+            }
+
+            .svg-line {
+              right: 0;
+              top: -11px;
+
+              @include glob-map-get-fluid(width, 79, 79, 60, 40);
+              @include glob-map-get-fluid(height, 6, 6, 5, 4);
+
+              @include tablet {
+                right: auto;
+                top: -10px;
+                left: 0;
+              }
+            }
+          }
+
+          .description {
+            font-family: Poppins;
+            margin-top: 27px;
+
+            @include glob-map-get-fluid(margin-top, 27, 27, 20, 14);
+          }
+
+          .linkbox {
+            pointer-events: all;
+
+            @include glob-map-get-fluid(margin-top, 39, 39, 20, 14);
+
+            .btn {
+              background-color: $g-color3;
+              border: 1px solid $g-color3;
+              transition: all 0.3s ease;
+              font-weight: 400;
+              color: $g-color1;
+
+              @media (hover: hover) {
+                &:hover {
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+        }
+        .right-box {
+          flex: 0 0 48.6%;
+          max-width: 48.6%;
+
+          @include tablet {
+            flex: 0 0 100%;
+            max-width: 100%;
+            pointer-events: auto;
+          }
+
+          .image-box {
+            height: 100%;
+
+            img {
+              min-height: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

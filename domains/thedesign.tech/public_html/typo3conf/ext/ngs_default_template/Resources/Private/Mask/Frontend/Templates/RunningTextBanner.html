@@ -1,0 +1,16 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<f:if condition="{data.tx_mask_text1}">
+    <div class="running-text-banner-element bgweb" id="c{contentLocalizedUid}">
+        <div marqueeSmall class="large1 running-text">{data.tx_mask_text1}</div>
+        <div marqueeSmall class="large1 running-text">{data.tx_mask_text1}</div>
+        <div marqueeSmall class="large1 running-text">{data.tx_mask_text1}</div>
+    </div>
+</f:if>

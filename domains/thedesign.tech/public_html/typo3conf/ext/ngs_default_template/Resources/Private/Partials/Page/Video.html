@@ -1,0 +1,25 @@
+<div class="video-container" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+
+    <v:condition.string.contains haystack="{videolink}" needle="//youtu">
+        <f:then>
+
+            <f:variable name="VideoId"
+                        value="{v:format.replace(substring: 'https://youtu.be/', content: videolink, replacement: '', count: 0)}"/>
+            {v:random.number(minimum: 100000, maximum: 999999, minimumDecimals: 0, maximumDecimals: 0) -> v:variable.set(name: 'newvariablename')}
+            <iframe class="iframe" width="100%" height="100%" data-autoplay="{autoplay}" id="youtube-embed-iframe-{newvariablename}"
+                    src="https://www.youtube-nocookie.com/embed/{VideoId}?enablejsapi=1&mute=1&rel=1&autoplay={f:if(condition: '{autoplay}', then: '1', else: '0')}&loop={f:if(condition: '{loop}', then: '1', else: '0')}&playlist={VideoId}"
+                    frameborder="0" allow='autoplay' allowfullscreen="allowfullscreen"></iframe>
+
+        </f:then>
+        <f:else if="{videolink}">
+            <video style="object-fit: cover" class="video" autoplay="autoplay" src="{videolink}"
+                   {f:if(condition: '{loop}', then: 'loop=\'true\'')} width="100%" data-resize="true" playsinline="" data-autoplay="{autoplay}"
+            {f:if(condition: '{controls}', then: ' controls="1"')}
+            {f:if(condition: '{autoplay}', then: ' muted="true"')}>
+
+            <meta property="og:video" content="{videolink}">
+            <source type="video/mp4" data-url="{videolink}">
+            </video>
+        </f:else>
+    </v:condition.string.contains>
+</div>

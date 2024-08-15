@@ -1,0 +1,122 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "sliders": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_sliders"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "fa-slideshare",
+                    "iconOverlay": "",
+                    "key": "sliders",
+                    "label": "Sliders",
+                    "labels": [
+                        "Elements"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 14
+                }
+            },
+            "sql": {
+                "tx_mask_sliders": {
+                    "tt_content": {
+                        "tx_mask_sliders": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_sliders": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_sliders",
+                    "key": "sliders",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_sliders": {
+            "sql": {
+                "tx_mask_slideritem": {
+                    "tx_mask_sliders": {
+                        "tx_mask_slideritem": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_slideritem": {
+                    "cTypes": [
+                        "mask_text_table_with_tabs",
+                        "mask_text_table",
+                        "mask_carousel_with_text_logo",
+                        "mask_designer",
+                        "mask_speackers"
+                    ],
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "tt_content",
+                        "overrideChildTca": {
+                            "columns": {
+                                "colPos": {
+                                    "config": {
+                                        "default": 999
+                                    }
+                                }
+                            }
+                        },
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_slideritem",
+                    "inlineParent": "tx_mask_sliders",
+                    "key": "slideritem",
+                    "label": "Item",
+                    "order": 1,
+                    "type": "content"
+                }
+            }
+        }
+    }
+}

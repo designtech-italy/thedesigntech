@@ -1,0 +1,52 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="autoplay-video-element f_autoplay-video-element bgweb2{f:if(condition: data.tx_mask_3dfram, then: ' frame-element')}" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_link1text}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="headline t4">
+                    {data.tx_mask_headline -> f:format.html()}
+                    <f:if condition="{data.tx_mask_link1text}">
+                        <f:then></f:then>
+                        <f:else>
+                            <div class="svg-line"></div>
+                        </f:else>
+                    </f:if>
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_link1text}">
+                <f:if condition="{data.tx_mask_link1}">
+                    <div class="linkbox">
+                        <f:link.typolink parameter="{data.tx_mask_link1}" class="btn button2 btn-primary">{data.tx_mask_link1text}</f:link.typolink>
+                    </div>
+                </f:if>
+            </f:if>
+        </div>
+    </f:if>
+    <div class="image-video" data-object-fit="cover">
+        <f:if condition="{data.tx_mask_video}">
+            <f:then>
+                <f:for each="{data.tx_mask_video}" as="file">
+                    <f:media file="{file}" additionalConfig="{loop: '1', muted: '1', controls: '0', playsinline: '1'}"/>
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:if condition="{data.tx_mask_videourlhighdef} and {data.tx_mask_videourlstandard} and {data.tx_mask_videourlmobile}">
+                    <f:render partial="Video" arguments="{videolinks: {videourlmobile: data.tx_mask_videourlmobile, videourlstandard: data.tx_mask_videourlstandard, videourlhighdef: data.tx_mask_videourlhighdef}, autoplay: 'true', loop: 'true', controls: 'false', muted: 'false'}" />
+                </f:if>
+            </f:else>
+        </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_widgetcode}">
+        <f:for each="{data.tx_mask_widgetcode}" as="data_item">
+            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+        </f:for>
+    </f:if>
+</div>

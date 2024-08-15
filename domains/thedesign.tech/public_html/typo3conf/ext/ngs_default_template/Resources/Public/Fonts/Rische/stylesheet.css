@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Rische';
+    src: url('Rische-Medium.eot');
+    src: local('Rische Medium'), local('Rische-Medium'),
+        url('Rische-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Rische-Medium.woff2') format('woff2'),
+        url('Rische-Medium.woff') format('woff'),
+        url('Rische-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rische';
+    src: url('Rische-Light.eot');
+    src: local('Rische Light'), local('Rische-Light'),
+        url('Rische-Light.eot?#iefix') format('embedded-opentype'),
+        url('Rische-Light.woff2') format('woff2'),
+        url('Rische-Light.woff') format('woff'),
+        url('Rische-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rische';
+    src: url('Rische-Regular.eot');
+    src: local('Rische Regular'), local('Rische-Regular'),
+        url('Rische-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Rische-Regular.woff2') format('woff2'),
+        url('Rische-Regular.woff') format('woff'),
+        url('Rische-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rische';
+    src: url('Rische-Bold.eot');
+    src: local('Rische Bold'), local('Rische-Bold'),
+        url('Rische-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Rische-Bold.woff2') format('woff2'),
+        url('Rische-Bold.woff') format('woff'),
+        url('Rische-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rische';
+    src: url('Rische-Semibold.eot');
+    src: local('Rische Semibold'), local('Rische-Semibold'),
+        url('Rische-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Rische-Semibold.woff2') format('woff2'),
+        url('Rische-Semibold.woff') format('woff'),
+        url('Rische-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

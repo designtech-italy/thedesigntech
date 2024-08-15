@@ -1,0 +1,204 @@
+.image-text-hover-element {
+  overflow: hidden;
+
+  @include glob-map-get-fluid(padding-bottom, 153, 153, 100, 59);
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    max-width: 1309px;
+
+    @include glob-map-get-fluid(padding-top, 120, 120, 75, 44);
+    @include glob-map-get-fluid(padding-right, 134, 134, 60, 24);
+    @include glob-map-get-fluid(padding-bottom, 59, 59, 50, 42);
+    @include glob-map-get-fluid(padding-left, 107, 107, 60, 24);
+
+    & + .image-text-list {
+      @include glob-map-get-fluid(margin-top, 86, 86, 40, 20);
+    }
+
+    .headline {
+      position: relative;
+
+      @include glob-map-get-fluid(padding-right, 280, 280, 100, 0);
+
+      @include mobile {
+        padding-left: 17px;
+        line-height: 39px;
+      }
+
+      strong {
+        font-weight: 400;
+        color: $g-color3;
+      }
+
+      .svg-line {
+        right: 2px;
+        top: 33px;
+
+        @include glob-map-get-fluid(width, 270, 270, 150, 111);
+        @include glob-map-get-fluid(height, 16, 16, 12, 8);
+
+        @include mobile {
+          bottom: -14px;
+          right: auto;
+          left: 18px;
+          top: auto;
+        }
+      }
+    }
+
+    .description {
+      @include glob-map-get-fluid(margin-top, 15, 15, 35, 50);
+    }
+  }
+
+  .image-list {
+    display: flex;
+
+    @include glob-map-get-fluid(padding-left, 99, 99, 60, 26);
+    @include glob-map-get-fluid(padding-right, 99, 99, 60, 26);
+    @include glob-map-get-fluid(margin-left, -13.5, -13.5, -6, 0);
+    @include glob-map-get-fluid(margin-right, -13.5, -13.5, -6, 0);
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    .image-item {
+      flex: 0 0 50%;
+      max-width: 50%;
+      cursor: pointer;
+      position: relative;
+
+      @include glob-map-get-fluid(padding-left, 13.5, 13.5, 6, 0);
+      @include glob-map-get-fluid(padding-right, 13.5, 13.5, 6, 0);
+
+      @include mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 41px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          .logo-box {
+            display: none;
+          }
+
+          .text-box {
+            display: block;
+          }
+
+          .image-box {
+            &:before {
+              background-color: rgba($g-color4, 0.7);
+            }
+          }
+        }
+      }
+
+      .logo-box {
+        position: absolute;
+        max-height: 10%;
+        max-width: 70%;
+        z-index: 1;
+        right: 16px;
+        top: 19px;
+
+        @include mobile {
+          margin-bottom: 9px;
+          position: static;
+          max-width: 100%;
+          right: auto;
+          top: auto;
+        }
+
+        img {
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .image-box {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 10;
+          transition: background-color 0.2s linear;
+
+          @include mobile {
+            background-color: rgba($g-color4, 0.4);
+          }
+        }
+      }
+
+      .inner {
+        position: relative;
+      }
+
+      .text-box {
+        z-index: 10;
+        display: none;
+        position: absolute;
+        top: calc(50% + 19px);
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 66.7%;
+        color: $g-color1;
+        transform: translate(0,-50%);
+
+        @include mobile {
+          top: calc(50% + 4px);
+          display: block;
+        }
+
+        .image-block {
+          text-align: center;
+
+          img {
+            object-fit: contain;
+
+            @include glob-map-get-fluid(max-width, 301, 301, 197, 197);
+            @include glob-map-get-fluid(max-height, 62, 62, 46, 46);
+          }
+        }
+
+        .title {
+          color: $g-color1;
+          text-align: center;
+
+          @include mobile {
+            font-size: 18px;
+            line-height: 27px;
+            margin-top: -10px;
+          }
+        }
+
+        .description {
+          font-size: 15px;
+          line-height: 23px;
+          margin-top: 14px;
+          text-align: center;
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

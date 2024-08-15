@@ -1,0 +1,511 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "image_link_slider_with_tabs": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_0e33ab916b889",
+                        "tx_mask_slidertabs",
+                        "tx_mask_link1text",
+                        "tx_mask_downloadlinks"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-slack",
+                    "iconOverlay": "",
+                    "key": "image_link_slider_with_tabs",
+                    "label": "Image link slider with tabs",
+                    "labels": [
+                        "Headline",
+                        "Slider tabs",
+                        "Link text",
+                        "Download Links"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 18
+                }
+            },
+            "palettes": {
+                "tx_mask_0e33ab916b889": {
+                    "description": "",
+                    "label": "Headline",
+                    "showitem": [
+                        "tx_mask_headline",
+                        "tx_mask_headlinemobile"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_downloadlinks": {
+                    "tt_content": {
+                        "tx_mask_downloadlinks": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_headlinemobile": {
+                    "tt_content": {
+                        "tx_mask_headlinemobile": "mediumtext"
+                    }
+                },
+                "tx_mask_link1text": {
+                    "tt_content": {
+                        "tx_mask_link1text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_slidertabs": {
+                    "tt_content": {
+                        "tx_mask_slidertabs": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_0e33ab916b889": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_0e33ab916b889",
+                    "key": "0e33ab916b889",
+                    "type": "palette"
+                },
+                "tx_mask_downloadlinks": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_downloadlinks",
+                    "key": "downloadlinks",
+                    "type": "inline"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_headlinemobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headlinemobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headlinemobile",
+                    "label": {
+                        "3_box_text_static_module": "Headline Mobile",
+                        "criteria_items": "Headline Mobile",
+                        "image_link_slider_with_tabs": "Headline Mobile",
+                        "image_link_zoom_in_effect": "Headline Mobile",
+                        "image_slider_text": "Headline Mobile",
+                        "juri_list": "Headline Mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_slider_with_tabs": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_link1text": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1text",
+                    "label": {
+                        "criteria_items": "Link text",
+                        "image_slider_text": "Link text",
+                        "intro": "Link text",
+                        "labs": "Link text",
+                        "landing_page_banner": "Link text",
+                        "simple_text": "Link text"
+                    },
+                    "order": {
+                        "criteria_items": 2,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "labs": 1,
+                        "landing_page_banner": 1,
+                        "simple_text": 1
+                    },
+                    "type": "string"
+                },
+                "tx_mask_slidertabs": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_slidertabs",
+                    "key": "slidertabs",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_downloadlinks": {
+            "sql": {
+                "tx_mask_downloadlink": {
+                    "tx_mask_downloadlinks": {
+                        "tx_mask_downloadlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_downloadlink": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_downloadlink",
+                    "inlineParent": "tx_mask_downloadlinks",
+                    "key": "downloadlink",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "link"
+                }
+            }
+        },
+        "tx_mask_slidertabs": {
+            "sql": {
+                "tx_mask_tabtitle": {
+                    "tx_mask_slidertabs": {
+                        "tx_mask_tabtitle": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_videolist": {
+                    "tx_mask_slidertabs": {
+                        "tx_mask_videolist": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_tabtitle": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_tabtitle",
+                    "inlineParent": "tx_mask_slidertabs",
+                    "key": "tabtitle",
+                    "label": "Tab title",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_videolist": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_videolist",
+                    "inlineParent": "tx_mask_slidertabs",
+                    "key": "videolist",
+                    "label": "Elements",
+                    "order": 2,
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_videolist": {
+            "palettes": {
+                "tx_mask_215c345beb998": {
+                    "description": "",
+                    "label": "Text",
+                    "showitem": [
+                        "tx_mask_text",
+                        "tx_mask_mobiletext"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_image": {
+                    "tx_mask_videolist": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_imagemobile": {
+                    "tx_mask_videolist": {
+                        "tx_mask_imagemobile": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link": {
+                    "tx_mask_videolist": {
+                        "tx_mask_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_mobiletext": {
+                    "tx_mask_videolist": {
+                        "tx_mask_mobiletext": "mediumtext"
+                    }
+                },
+                "tx_mask_text": {
+                    "tx_mask_videolist": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_title": {
+                    "tx_mask_videolist": {
+                        "tx_mask_title": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_215c345beb998": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_215c345beb998",
+                    "inlineParent": "tx_mask_videolist",
+                    "key": "215c345beb998",
+                    "label": "Text",
+                    "order": 2,
+                    "type": "palette"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_videolist",
+                    "key": "image",
+                    "label": "Image",
+                    "order": 4,
+                    "type": "file"
+                },
+                "tx_mask_imagemobile": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_imagemobile",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_videolist",
+                    "key": "imagemobile",
+                    "label": "Mobile Image",
+                    "order": 5,
+                    "type": "file"
+                },
+                "tx_mask_link": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_link",
+                    "inlineParent": "tx_mask_videolist",
+                    "key": "link",
+                    "label": "Link",
+                    "order": 3,
+                    "type": "link"
+                },
+                "tx_mask_mobiletext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_mobiletext",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_215c345beb998",
+                    "key": "mobiletext",
+                    "label": "Mobile text",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_215c345beb998",
+                    "key": "text",
+                    "label": "Text",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_title": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_title",
+                    "inlineParent": "tx_mask_videolist",
+                    "key": "title",
+                    "label": "Title",
+                    "order": 1,
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,816 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "landing_page_banner": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_headline",
+                        "tx_mask_49f1c44e65f1b",
+                        "tx_mask_0621319df136",
+                        "tx_mask_b75420521c24e",
+                        "tx_mask_41a61b2d3f981"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "landing_page_banner",
+                    "label": "Landing page Banner",
+                    "labels": [
+                        "Headline",
+                        "Text",
+                        "Button line",
+                        "Image",
+                        "Circle Icon"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "palettes": {
+                "tx_mask_0621319df136": {
+                    "description": "",
+                    "label": "Button line",
+                    "showitem": [
+                        "tx_mask_link1text",
+                        "tx_mask_link1",
+                        "tx_mask_9e5057c26e758",
+                        "tx_mask_linkform",
+                        "tx_mask_483b8681e8fa1",
+                        "tx_mask_buttonrighttext",
+                        "tx_mask_rightlinktext",
+                        "tx_mask_1ff37902bdb82",
+                        "tx_mask_rightlink",
+                        "tx_mask_rightlinkform"
+                    ]
+                },
+                "tx_mask_41a61b2d3f981": {
+                    "description": "",
+                    "label": "Circle Icon",
+                    "showitem": [
+                        "tx_mask_circleiconheadline",
+                        "tx_mask_circleiconsupheadline",
+                        "tx_mask_86c6ccd6cf6d6",
+                        "tx_mask_circleiconpreheadline",
+                        "tx_mask_circleiconsubheadline"
+                    ]
+                },
+                "tx_mask_49f1c44e65f1b": {
+                    "description": "",
+                    "label": "Text",
+                    "showitem": [
+                        "tx_mask_text",
+                        "tx_mask_textmobile"
+                    ]
+                },
+                "tx_mask_b75420521c24e": {
+                    "description": "",
+                    "label": "Image",
+                    "showitem": [
+                        "tx_mask_image",
+                        "tx_mask_imagemobile"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_buttonrighttext": {
+                    "tt_content": {
+                        "tx_mask_buttonrighttext": "mediumtext"
+                    }
+                },
+                "tx_mask_circleiconheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconpreheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconpreheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconsubheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconsubheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_circleiconsupheadline": {
+                    "tt_content": {
+                        "tx_mask_circleiconsupheadline": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_image": {
+                    "tt_content": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_imagemobile": {
+                    "tt_content": {
+                        "tx_mask_imagemobile": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link1": {
+                    "tt_content": {
+                        "tx_mask_link1": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_link1text": {
+                    "tt_content": {
+                        "tx_mask_link1text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linkform": {
+                    "tt_content": {
+                        "tx_mask_linkform": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_rightlink": {
+                    "tt_content": {
+                        "tx_mask_rightlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_rightlinkform": {
+                    "tt_content": {
+                        "tx_mask_rightlinkform": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_rightlinktext": {
+                    "tt_content": {
+                        "tx_mask_rightlinktext": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tt_content": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_textmobile": {
+                    "tt_content": {
+                        "tx_mask_textmobile": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_0621319df136": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_0621319df136",
+                    "key": "0621319df136",
+                    "type": "palette"
+                },
+                "tx_mask_1ff37902bdb82": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_1ff37902bdb82",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136"
+                    },
+                    "key": "1ff37902bdb82",
+                    "label": {
+                        "landing_page_banner": ""
+                    },
+                    "order": {
+                        "landing_page_banner": 8
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_41a61b2d3f981": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_41a61b2d3f981",
+                    "key": "41a61b2d3f981",
+                    "type": "palette"
+                },
+                "tx_mask_483b8681e8fa1": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_483b8681e8fa1",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136"
+                    },
+                    "key": "483b8681e8fa1",
+                    "label": {
+                        "landing_page_banner": ""
+                    },
+                    "order": {
+                        "landing_page_banner": 5
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_49f1c44e65f1b": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_49f1c44e65f1b",
+                    "key": "49f1c44e65f1b",
+                    "type": "palette"
+                },
+                "tx_mask_86c6ccd6cf6d6": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_86c6ccd6cf6d6",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "86c6ccd6cf6d6",
+                    "label": {
+                        "landing_page_banner": ""
+                    },
+                    "order": {
+                        "landing_page_banner": 3
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_9e5057c26e758": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_9e5057c26e758",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136"
+                    },
+                    "key": "9e5057c26e758",
+                    "label": {
+                        "landing_page_banner": ""
+                    },
+                    "order": {
+                        "landing_page_banner": 3
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_b75420521c24e": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_b75420521c24e",
+                    "key": "b75420521c24e",
+                    "type": "palette"
+                },
+                "tx_mask_buttonrighttext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_buttonrighttext",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "buttonrighttext",
+                    "label": {
+                        "landing_page_banner": "Right Text",
+                        "simple_text": "Right Text"
+                    },
+                    "order": {
+                        "landing_page_banner": 6,
+                        "simple_text": 6
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_circleiconheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Headline",
+                        "landing_page_banner": "Circle Icon Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconpreheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconpreheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconpreheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Preheadline",
+                        "landing_page_banner": "Circle Icon Preheadline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 4,
+                        "landing_page_banner": 4
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconsubheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconsubheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconsubheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Subheadline",
+                        "landing_page_banner": "Circle Icon Subheadline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 5,
+                        "landing_page_banner": 5
+                    },
+                    "type": "string"
+                },
+                "tx_mask_circleiconsupheadline": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_circleiconsupheadline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_b3ec4e18dcac",
+                        "landing_page_banner": "tx_mask_41a61b2d3f981"
+                    },
+                    "key": "circleiconsupheadline",
+                    "label": {
+                        "3_box_text_static_module": "Circle Icon Sup Headline",
+                        "landing_page_banner": "Circle Icon Sup Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "string"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "description": {
+                        "card_double_text": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "card_double_text": "tx_mask_7cbad157087c5",
+                        "landing_page_banner": "tx_mask_b75420521c24e"
+                    },
+                    "key": "image",
+                    "label": {
+                        "card_double_text": "Image",
+                        "landing_page_banner": "Image"
+                    },
+                    "order": {
+                        "card_double_text": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "file"
+                },
+                "tx_mask_imagemobile": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "description": {
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_imagemobile",
+                    "imageoverlayPalette": 1,
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_b75420521c24e"
+                    },
+                    "key": "imagemobile",
+                    "label": {
+                        "landing_page_banner": "Image mobile"
+                    },
+                    "order": {
+                        "landing_page_banner": 2
+                    },
+                    "type": "file"
+                },
+                "tx_mask_link1": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1",
+                    "label": {
+                        "criteria_items": "Link",
+                        "image_slider_text": "Link",
+                        "intro": "Link",
+                        "labs": "Link",
+                        "landing_page_banner": "Link",
+                        "simple_text": "Link"
+                    },
+                    "order": {
+                        "criteria_items": 1,
+                        "image_slider_text": 2,
+                        "intro": 2,
+                        "labs": 2,
+                        "landing_page_banner": 2,
+                        "simple_text": 2
+                    },
+                    "type": "link"
+                },
+                "tx_mask_link1text": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1text",
+                    "label": {
+                        "criteria_items": "Link text",
+                        "image_slider_text": "Link text",
+                        "intro": "Link text",
+                        "labs": "Link text",
+                        "landing_page_banner": "Link text",
+                        "simple_text": "Link text"
+                    },
+                    "order": {
+                        "criteria_items": 2,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "labs": 1,
+                        "landing_page_banner": 1,
+                        "simple_text": 1
+                    },
+                    "type": "string"
+                },
+                "tx_mask_linkform": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_linkform",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "linkform",
+                    "label": {
+                        "criteria_items": "Link Form",
+                        "intro": "Link Form",
+                        "labs": "Link Form",
+                        "landing_page_banner": "Link Form",
+                        "simple_text": "Link Form"
+                    },
+                    "order": {
+                        "criteria_items": 4,
+                        "intro": 4,
+                        "labs": 4,
+                        "landing_page_banner": 4,
+                        "simple_text": 4
+                    },
+                    "type": "string"
+                },
+                "tx_mask_rightlink": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "description": {
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_rightlink",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "rightlink",
+                    "label": {
+                        "landing_page_banner": "Right Link",
+                        "simple_text": "Right Link"
+                    },
+                    "order": {
+                        "landing_page_banner": 9,
+                        "simple_text": 9
+                    },
+                    "type": "link"
+                },
+                "tx_mask_rightlinkform": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_rightlinkform",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "rightlinkform",
+                    "label": {
+                        "landing_page_banner": "Right Link Form",
+                        "simple_text": "Right Link Form"
+                    },
+                    "order": {
+                        "landing_page_banner": 10,
+                        "simple_text": 10
+                    },
+                    "type": "string"
+                },
+                "tx_mask_rightlinktext": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_rightlinktext",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "rightlinktext",
+                    "label": {
+                        "landing_page_banner": "Right Link text",
+                        "simple_text": "Right Link text"
+                    },
+                    "order": {
+                        "landing_page_banner": 7,
+                        "simple_text": 7
+                    },
+                    "type": "string"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "text",
+                    "label": {
+                        "3_box_text_static_module": "Text",
+                        "criteria_items": "Text",
+                        "image_link_zoom_in_effect": "Text",
+                        "image_slider_text": "Text",
+                        "juri_list": "Text",
+                        "landing_page_banner": "Text"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_textmobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_textmobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "textmobile",
+                    "label": {
+                        "3_box_text_static_module": "Text mobile",
+                        "criteria_items": "Text mobile",
+                        "image_link_zoom_in_effect": "Text mobile",
+                        "image_slider_text": "Text mobile",
+                        "juri_list": "Text mobile",
+                        "landing_page_banner": "Text mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

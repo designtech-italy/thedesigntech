@@ -1,0 +1,264 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "eccosystem": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_headline",
+                        "tx_mask_partnerslist"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-assistive-listening-systems",
+                    "iconOverlay": "",
+                    "key": "eccosystem",
+                    "label": "Eccosystem",
+                    "labels": [
+                        "Headline",
+                        "Elements"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 6
+                }
+            },
+            "sql": {
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_partnerslist": {
+                    "tt_content": {
+                        "tx_mask_partnerslist": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_partnerslist": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_partnerslist",
+                    "key": "partnerslist",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_partnerslist": {
+            "sql": {
+                "tx_mask_partnersheadline": {
+                    "tx_mask_partnerslist": {
+                        "tx_mask_partnersheadline": "mediumtext"
+                    }
+                },
+                "tx_mask_partnerslogo": {
+                    "tx_mask_partnerslist": {
+                        "tx_mask_partnerslogo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_partnersheadline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_partnersheadline",
+                    "inlineParent": "tx_mask_partnerslist",
+                    "key": "partnersheadline",
+                    "label": "Headline",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_partnerslogo": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_partnerslogo",
+                    "inlineParent": "tx_mask_partnerslist",
+                    "key": "partnerslogo",
+                    "label": "Partners item",
+                    "order": 2,
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_partnerslogo": {
+            "sql": {
+                "tx_mask_partnerlink": {
+                    "tx_mask_partnerslogo": {
+                        "tx_mask_partnerlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_partnerlogo": {
+                    "tx_mask_partnerslogo": {
+                        "tx_mask_partnerlogo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_partnerlogomobile": {
+                    "tx_mask_partnerslogo": {
+                        "tx_mask_partnerlogomobile": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_partnerlink": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_partnerlink",
+                    "inlineParent": "tx_mask_partnerslogo",
+                    "key": "partnerlink",
+                    "label": "Link",
+                    "order": 3,
+                    "type": "link"
+                },
+                "tx_mask_partnerlogo": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_partnerlogo",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_partnerslogo",
+                    "key": "partnerlogo",
+                    "label": "Logo",
+                    "order": 1,
+                    "type": "file"
+                },
+                "tx_mask_partnerlogomobile": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_partnerlogomobile",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_partnerslogo",
+                    "key": "partnerlogomobile",
+                    "label": "Logo mobile",
+                    "order": 2,
+                    "type": "file"
+                }
+            }
+        }
+    }
+}

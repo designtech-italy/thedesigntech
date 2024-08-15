@@ -1,0 +1,398 @@
+.image-slider-text-element {
+  overflow: hidden;
+
+  &.bggallerybox {
+    .image-text-list {
+      .image-text-item {
+        @include glob-map-get-fluid(margin-bottom, 214, 120, 80, 67);
+      }
+    }
+    .image-text-list {
+      .image-text-item {
+        .sideheadline {
+          @include tablet {
+            color: $g-color1;
+
+            &.mobile-view {
+              color: $g-color1;
+            }
+          }
+        }
+      }
+    }
+    .boxed-headline {
+      max-width: unset;
+
+      .headline {
+        padding-right: 0;
+
+        &.mobile-view {
+          strong {
+            color: $g-color3;
+            font-weight: 200;
+          }
+
+          .svg-line {
+            display: block;
+            margin-bottom: 21px;
+            position: static;
+            width: 111px;
+            height: 8px;
+          }
+        }
+
+        .svg-line {
+          display: none;
+        }
+      }
+    }
+    .image-text-list {
+      @include glob-map-get-fluid(padding-left, 106, 106, 60, 23);
+      @include glob-map-get-fluid(padding-right, 105, 105, 60, 23);
+    }
+  }
+
+  .mobile-view {
+    display: none;
+
+    @include tablet {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    padding-bottom: 50px;
+    max-width: 1225px;
+
+    @include glob-map-get-fluid(padding-top, 56, 56, 40, 17);
+    @include glob-map-get-fluid(padding-left, 106, 106, 60, 23);
+    @include glob-map-get-fluid(padding-right, 105, 105, 60, 23);
+
+    & + .image-text-list {
+      margin-top: 86px;
+
+      @include glob-map-get-fluid(margin-top, 86, 86, 40, 20);
+    }
+
+    .headline {
+      position: relative;
+
+      @include glob-map-get-fluid(padding-right, 280, 280, 100, 0);
+
+      @include mobile {
+        padding-left: 17px;
+      }
+
+      strong {
+        font-weight: 400;
+        color: $g-color3;
+      }
+
+      .svg-line {
+        right: 2px;
+        top: 8px;
+
+        @include glob-map-get-fluid(width, 270, 270, 150, 111);
+        @include glob-map-get-fluid(height, 16, 16, 12, 8);
+
+        @include mobile {
+          bottom: -11px;
+          right: auto;
+          left: 18px;
+          top: auto;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 15px;
+
+      @include mobile {
+        margin-top: 47px;
+      }
+    }
+  }
+
+  .description {
+    margin-right: -2px;
+
+    @include mobile {
+      margin-right: 2px;
+    }
+
+  }
+
+  .linkbox {
+    display: flex;
+    margin-top: 11px;
+    justify-content: flex-end;
+
+    @include mobile {
+      margin-top: 25px;
+      justify-content: flex-start;
+    }
+  }
+
+  .tns-nav {
+    display: none;
+  }
+
+  .arrows-headline {
+    @include tablet {
+      margin-top: 5px;
+    }
+  }
+
+  .image-text-list {
+    padding: 0 150px;
+
+    @include glob-map-get-fluid(padding-left, 150, 150, 60, 23);
+    @include glob-map-get-fluid(padding-right, 150, 150, 60, 23);
+
+    .image-text-item {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+
+      @include glob-map-get-fluid(margin-bottom, 100, 100, 80, 67);
+
+      @include tablet {
+        display: block;
+      }
+
+      &:last-child {
+        @include glob-map-get-fluid(margin-bottom, 87, 87, 79, 79);
+      }
+
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+
+        @include tablet {
+          flex-direction: column;
+        }
+
+        .location {
+          justify-content: flex-start;
+        }
+
+        .headline {
+          right: -150px;
+          left: 25.7%;
+
+          @include glob-map-get-fluid(right, -150, -150, 60, 23);
+        }
+
+        .text-box {
+          padding-left: 0;
+          padding-right: 24px;
+
+          @include tablet {
+            padding-right: 0;
+          }
+        }
+      }
+
+      .headline {
+        position: relative;
+        user-select: none;
+        z-index: 10;
+        left: 33.6%;
+        top: -38px;
+        color: $g-color3;
+
+        @include glob-map-get-fluid(max-width, 630, 630, 340, 340);
+
+        @include tablet {
+          position: static;
+          max-width: inherit !important;
+
+          @include glob-map-get-fluid(padding-right, 140, 140, 120, 102);
+        }
+      }
+
+      .svg-line {
+        position: static;
+        width: 111px;
+        height: 8px;
+        margin-bottom: 36px;
+        margin-top: 10px;
+      }
+      .sideheadline {
+        color: $g-color3;
+
+        @include glob-map-get-fluid(margin-bottom, 32, 25, 20, 14);
+
+        &.mobile-view {
+          display: none;
+          color: $g-color2;
+
+          @include tablet {
+            display: block;
+          }
+
+          strong {
+            font-weight: 500;
+            color: $g-color3;
+          }
+        }
+
+        @include tablet {
+          &.hide-on-mob {
+            display: none;
+          }
+        }
+      }
+
+      .morelink {
+        display: inline-flex;
+        margin-top: 32px;
+        color: currentColor;
+
+        span {
+          text-decoration: underline;
+          display: inline-block;
+          margin-left: 5px;
+        }
+
+        svg {
+          position: relative;
+          top: -1px;
+        }
+      }
+
+      .text-box {
+        padding-top: 1px;
+        max-width: 466px;
+        padding-left: 24px;
+
+        @include tablet {
+          padding-top: 19px;
+          padding-left: 0;
+        }
+      }
+
+      .location {
+        font-family: Poppins;
+        align-items: center;
+        margin-top: 52px;
+        font-size: 15px;
+        line-height: 22px;
+        display: flex;
+        padding-right: 4px;
+        max-width: 276px;
+        width: 100%;
+        margin-left: auto;
+
+        @include glob-map-get-fluid(font-size, 15, 15, 14, 13);
+        @include glob-map-get-fluid(line-height, 22, 22, 19, 16);
+        @include glob-map-get-fluid(margin-top, 52, 52, 25, 25);
+
+        @include tablet {
+          margin-left: inherit;
+          justify-content: flex-start;
+        }
+
+        .svg-box {
+          top: -1px;
+          position: relative;
+
+          @include glob-map-get-fluid(top, -1, -1, -5, -5);
+          @include glob-map-get-fluid(width, 41, 41, 23, 23);
+          @include glob-map-get-fluid(height, 56, 56, 31, 31);
+          @include glob-map-get-fluid(margin-right, 19, 19, 15, 15);
+        }
+      }
+
+      .image-block {
+        flex: 0 0 59.3%;
+        max-width: 59.3%;
+        position: relative;
+
+        @include tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .image-list {
+          display: flex;
+          justify-content: stretch;
+
+          .image-item {
+            position: relative;
+            font-size: 0;
+            line-height: 0;
+
+            .image-box {
+              letter-spacing: 0;
+            }
+
+            picture {
+              height: 100%;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              display: block;
+              object-fit: cover;
+            }
+
+            .image-description {
+              position: absolute;
+              color: $g-color1;
+              font-weight: 500;
+
+              @include glob-map-get-fluid(padding-left, 22, 22, 18, 16);
+              @include glob-map-get-fluid(left, 14, 14, 10, 9);
+              @include glob-map-get-fluid(top, 32, 32, 16, 8);
+
+              &:before {
+                background-color: $g-color1;
+                position: absolute;
+                border-radius: 50%;
+                display: block;
+                content: '';
+                z-index: 10;
+                left: 0;
+                top: 50%;
+                transform: translate(0,-50%);
+
+                @include glob-map-get-fluid(height, 16, 16, 10, 8);
+                @include glob-map-get-fluid(width, 16, 16, 10, 8);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background-color: $g-color3;
+  border: 1px solid $g-color3;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  color: $g-color1;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: transparent;
+      color: $g-color3;
+    }
+  }
+}
+
+.svg-line {
+  box-shadow: inset 0 5px 14px $g-color3;
+  background-color: $g-color1;
+  position: absolute;
+}

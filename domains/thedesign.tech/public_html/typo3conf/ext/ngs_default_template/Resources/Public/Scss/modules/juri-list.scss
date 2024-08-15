@@ -1,0 +1,263 @@
+.juri-list-element {
+  @include glob-map-get-fluid(padding-top, 102, 85, 65, 65);
+  @include glob-map-get-fluid(padding-bottom, 90, 70, 44, 44);
+
+  .mobile-view {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  .tns-ovh {
+    overflow: visible;
+  }
+
+  .tns-outer {
+    @include mobile {
+      margin: 0 auto;
+
+      @include glob-map-get-fluid(max-width, 447, 447, 320, 273);
+    }
+  }
+
+  &.changedBg {
+    .juri-list-container {
+      &:before {
+        left: 0;
+        right: 0;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        display: block;
+        pointer-events: none;
+        background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/subtract.svg") no-repeat center top;
+        background-size: cover;
+        height: 1643px;
+
+        @include glob-map-get-fluid(top, 70, 60, 40, 23);
+
+        @media screen and (max-width: 630px) {
+          background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/subtract-mobile-rotated.svg") no-repeat center top;
+          height: auto;
+          aspect-ratio: 1/2.4;
+          width: 100%;
+          background-size: cover;
+          top: auto !important;
+          bottom: 0;
+        }
+      }
+
+      .juri-list {
+        .juri-item {
+          color: $g-color1;
+
+          @media screen and (max-width: 630px) {
+            color: $g-color2;
+
+          }
+
+          &.tns-slide-active {
+            .image-box {
+              opacity: 1;
+            }
+          }
+
+          .image-box {
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+    .tns-nav {
+      display: none;
+    }
+  }
+
+  .tns-nav {
+    @include glob-map-get-fluid(margin-top, 53, 53, 28, 17);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    text-align: center;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    @include glob-map-get-fluid(padding-left, 178, 106, 60, 23);
+    @include glob-map-get-fluid(padding-right, 178, 106, 60, 23);
+    @include glob-map-get-fluid(margin-bottom, 78, 65, 50, 36);
+
+    .boxed-headline-inner {
+      position: relative;
+    }
+    .back-btn {
+      position: absolute;
+      left: 0;
+      height: 36px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      color: $g-color3;
+      transform: translate(-100%,0);
+      margin-left: -20px;
+
+
+      @media screen and (max-width: 1200px) {
+        top: -40px;
+        margin: 0;
+        transform: none;
+      }
+      @include mobile {
+        width: 40px;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        @include mobile {
+          width: 23px;
+          height: 23px;
+        }
+      }
+    }
+    .headline {
+      position: relative;
+      padding-top: 73px;
+
+      @include mobile {
+        font-size: 40px;
+        line-height: 56px;
+        padding-top: 23px;
+      }
+
+      strong {
+        color: $g-color3;
+        font-weight: 200;
+      }
+
+      .svg-line {
+        transform: translate(-50%, 0);
+        top: 0;
+        left: 50%;
+
+        @include glob-map-get-fluid(width, 275, 275, 210, 162);
+        @include glob-map-get-fluid(height, 16, 16, 12, 8);
+      }
+    }
+    .description {
+      padding-bottom: 5px;
+
+      @include glob-map-get-fluid(margin-top, 19, 19, 14, 14);
+    }
+  }
+  .juri-list-container-inner {
+    overflow: hidden;
+
+    @include glob-map-get-fluid(padding-left, 178, 106, 60, 23);
+    @include glob-map-get-fluid(padding-right, 178, 106, 60, 23);
+  }
+  .juri-list-wrapper {
+    padding-bottom: 10px;
+  }
+  .juri-list-container {
+    position: relative;
+  }
+  .juri-list-inner {
+    @include glob-map-get-fluid(margin-left, -23, -18, -14, -12);
+    @include glob-map-get-fluid(margin-right, -22, -18, -14, -12);
+  }
+  .juri-list {
+    opacity: 0;
+
+    &.tns-slider {
+      opacity: 1;
+    }
+
+    .juri-item {
+      @include glob-map-get-fluid(padding-left, 23, 18, 14, 3);
+      @include glob-map-get-fluid(padding-right, 22, 18, 14, 3);
+
+      &.tns-slide-active {
+        .image-box {
+          opacity: 1;
+          transform: scale(1);
+        }
+
+        .info-box {
+          opacity: 1;
+        }
+      }
+
+      .image-box {
+        display: block;
+        margin-bottom: 24px;
+        opacity: 0.2;
+        transform: scale(0.9);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        @include mobile {
+          margin-bottom: 38px;
+        }
+
+        img {
+          aspect-ratio: 1/1;
+        }
+      }
+      .info-box {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+
+        @include mobile {
+          margin: 0 -10%;
+          text-align: center;
+        }
+      }
+      a.headline {
+        &:hover {
+          @media (hover: hover) {
+            opacity: 0.8;
+          }
+        }
+      }
+      .headline {
+        display: block;
+        font-size: 22px;
+        line-height: 28px;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        margin-bottom: 4px;
+      }
+      .subheadline {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+
+        @include mobile {
+          margin-bottom: 17px;
+        }
+      }
+      .intro {
+        font-size: 17px;
+        line-height: 24px;
+
+        @include mobile {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

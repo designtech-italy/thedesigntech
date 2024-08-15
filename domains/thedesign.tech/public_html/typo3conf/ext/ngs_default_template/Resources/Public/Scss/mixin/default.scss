@@ -1,0 +1,298 @@
+/* Default _______________________________________________________________ */
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+
+	/*---------------------------------*/
+	/*-------Default Styles Start------*/
+
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: glob-map-deep-get($bgweb, "scrollbar", "scrollbar-inner-color");
+
+		&::-webkit-scrollbar {
+			width: glob-map-deep-get($bgweb, "scrollbar", "scrollbar-width");
+			height: glob-map-deep-get($bgweb, "scrollbar", "scrollbar-width");
+		}
+
+		&::-webkit-scrollbar-track {
+			background: glob-map-deep-get($bgweb, "scrollbar", "scrollbar-color");
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: glob-map-deep-get($bgweb, "scrollbar", "scrollbar-inner-color");
+		}
+	}
+
+	.hide-scrollbar {
+		@include glob-hide-scrollbar();
+	}
+
+	body                                                        { max-width: 2500px; min-width: 320px; }
+
+	a                                                           { color: currentColor; }
+
+	address														{ font-style: normal; }
+	hr															{ display: none; }
+
+	h1, h2, h3, h4, h5, h6,
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a							{ margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; text-decoration: none; font-size: 18px; line-height: 20px; font-weight: normal; }
+
+	br.clear													{ clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+	div.clear													{ clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+	.clearbefore::before										{ content: ''; clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+	.clearbeforeafter::before									{ content: ''; clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+	.clearbeforeafter::after									{ content: ''; clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+	.clearafter::after											{ content: ''; clear: both; line-height: 0px; font-size: 0px; height: 0px; overflow: hidden; text-indent: -100px; }
+
+	picture, picture a 											{ display: block; position: relative; }
+
+	svg.icon 													{ width: glob-em(20,16); height: glob-em(20,16);}
+
+
+	.ac															{ display: flex; justify-content: center; }
+	.ac > *														{ margin: 0 20px; }
+
+	.is--hidden        											{ display: none !important; }
+
+	/*--------Default Styles End-------*/
+	/*---------------------------------*/
+
+	/*------------------------------*/
+	/*-----------Sizes Start--------*/
+
+	body	         										    { @each $prop, $value in $default { #{$prop}: $value; } }
+
+	.morelink													{ @include glob-map-get-moreLink(); }
+
+	.btn:first-letter {
+		text-transform: uppercase;
+	}
+
+	.default	         										{ @each $prop, $value in $default { #{$prop}: $value; } }
+	small, .small												{ @each $prop, $value in $small { #{$prop}: $value; } }
+	.medium1													{ @each $prop, $value in $medium { #{$prop}: $value; } }
+	.large1														{ @each $prop, $value in $large { #{$prop}: $value; } }
+	.extrasmall													{ @each $prop, $value in $extrasmall { #{$prop}: $value; } }
+
+	h1, h1 a {
+		@include glob-map-get-headlines(t1);
+	}
+	h2, h2 a {
+		@include glob-map-get-headlines(t2);
+	}
+	h3, h3 a {
+		@include glob-map-get-headlines(t3);
+	}
+	h4, h4 a {
+		@include glob-map-get-headlines(t4);
+	}
+	h5, h5 a {
+		@include glob-map-get-headlines(t5);
+	}
+	h6, h6 a {
+		@include glob-map-get-headlines(t6);
+	}
+
+	@each $class, $properties in $headings {
+		.#{$class}, .#{$class} a								{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	@each $class, $properties in $buttons {
+		.#{$class}												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	/*-----------Sizes end--------*/
+	/*----------------------------*/
+
+	/*---------------------------------*/
+	/*-----------Colors start----------*/
+
+	body {
+		@include glob-map-get-sectionColors(bgweb);
+	}
+	.bgweb,
+	.insideClass.bgweb {
+		@include glob-map-get-sectionColors(bgweb);
+	}
+
+	@each $bgClass, $properties in $bgColors {
+		.#{$bgClass},
+		.insideClass.#{$bgClass} {
+			@include glob-map-get-sectionColors(#{$bgClass});
+		}
+	}
+
+	/*------------Colors end------------*/
+	/*----------------------------------*/
+
+
+	/*------------------------------------*/
+	/*------------Space start-------------*/
+
+	.spaceextra-small											{ padding: 55px 0px; }
+	.spacesmall													{ padding: 90px 0px; }
+	.spacenormal												{ padding: 100px 0px; }
+	.spacemedium												{ padding: 120px 0px; }
+	.spacelarge													{ padding: 145px 0px; }
+
+	.bgweb														{ @each $prop, $value in map-get($bgweb, "colors") { #{$prop}: $value; } }
+	.bgweb + .bgweb.spacesmall									{ padding: 0px 0px 90px 0px; }
+	.bgweb + .bgweb.spacenormal									{ padding: 0px 0px 100px 0px; }
+	.bgweb + .bgweb.spacemedium									{ padding: 0px 0px 120px 0px; }
+	.bgweb + .bgweb.spacelarge									{ padding: 0px 0px 145px 0px; }
+
+	@each $bgClass, $properties in $bgColors {
+		.#{$bgClass} + .#{$bgClass}.spacesmall					{ padding: 0px 0px 90px 0px; }
+		.#{$bgClass} + .#{$bgClass}.spacenormal					{ padding: 0px 0px 100px 0px; }
+		.#{$bgClass} + .#{$bgClass}.spacemedium					{ padding: 0px 0px 120px 0px; }
+		.#{$bgClass} + .#{$bgClass}.spacelarge					{ padding: 0px 0px 145px 0px; }
+	}
+
+	/*--------------Space end--------------*/
+	/*-------------------------------------*/
+
+
+/*   1900px   */
+@include desktopLarge {
+
+	@each $class, $properties in $headingsDesktopLarge {
+		.#{$class}, .#{$class} a {
+			@each $prop, $value in $properties {
+				#{$prop}: $value;
+			}
+		}
+	}
+
+	@each $class, $properties in $fontSizesDesctop {
+		.#{$class} 												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	/*        min-width: 768px        */
+	@media screen and (min-width: $mediaMobile-) {
+		.bgwebInverse {
+			@each $class, $properties in map-get($bgwebInverseDesctop, "fontSizes") {
+				.#{$class}, .#{$class} a				            { @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+
+			@each $class, $properties in map-get($bgwebInverseDesctop, "title") {
+				.#{$class}, .#{$class} a							{ @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+		}
+	}
+
+	.spacesmall													{ padding: glob-pr(90, 1400) 0px; }
+	.spacenormal												{ padding: glob-pr(100, 1400) 0px; }
+	.spacemedium												{ padding: glob-pr(120, 1400) 0px; }
+	.spacelarge													{ padding: glob-pr(145, 1400) 0px; }
+}
+
+
+/*   1280px   */
+@include desktop{
+
+	@each $class, $properties in $headingsDesktopMin {
+		.#{$class}, .#{$class} a {
+			@each $prop, $value in $properties {
+				#{$prop}: $value;
+			}
+		}
+	}
+
+	@each $class, $properties in $fontSizesDesctopMin {
+		.#{$class} 												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	@each $class, $properties in $buttonsTablet {
+		.#{$class}												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	/*        min-width: 768px        */
+	@media screen and (min-width: $mediaMobile-) {
+		.bgwebInverse {
+			@each $class, $properties in map-get($bgwebInverseDesctopMin, "fontSizes") {
+				.#{$class}, .#{$class} a				            { @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+
+			@each $class, $properties in map-get($bgwebInverseDesctopMin, "title") {
+				.#{$class}, .#{$class} a							{ @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+		}
+	}
+
+	.spacesmall													{ padding: glob-pr(90, 1400) 0px; }
+	.spacenormal												{ padding: glob-pr(100, 1400) 0px; }
+	.spacemedium												{ padding: glob-pr(120, 1400) 0px; }
+	.spacelarge													{ padding: glob-pr(145, 1400) 0px; }
+}
+
+/*        max-width: 767px        */
+@include mobile{
+
+	body 														{ @each $prop, $value in map-get($fontSizesTablet, "default") { #{$prop}: $value; } }
+
+	@each $class, $properties in $headingsTablet {
+		.#{$class}, .#{$class} a 								{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	@each $class, $properties in $fontSizesTablet {
+		.#{$class} 												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	/*        min-width: 361        */
+	@media screen and (min-width: $mediaMobileSmall-) {
+		.bgwebInverse {
+			@each $class, $properties in map-get($bgwebInverseTablet, "fontSizes") {
+				.#{$class}, .#{$class} a				            { @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+
+			@each $class, $properties in map-get($bgwebInverseTablet, "title") {
+				.#{$class}, .#{$class} a							{ @each $prop, $value in $properties { #{$prop}: $value; } }
+			}
+		}
+	}
+
+	.btn:hover, .morelink:hover {
+		opacity: 1;
+	}
+
+}
+
+/*   360px   */
+@include mobileSmall {
+	form .form-group div										{ width: 100%; }
+	form .form-group label										{ width: 100%; padding-right: 0px; }
+
+	form .row.zipcity											{ align-items: flex-end; }
+	form .row.zipcity .form-group								{ width: 50%; }
+	form .row.zipcity .form-group:first-child					{ width: 49%; justify-content: space-between; }
+	form .row.zipcity .form-group:first-child .input			{ width: 99%; margin-right: 1%; }
+
+	/*----------------------------*/
+	/*----------------------------*/
+
+	body 														{ @each $prop, $value in map-get($fontSizesMobile, "default") { #{$prop}: $value; } }
+
+	@each $class, $properties in $headingsMobile {
+		.#{$class}, .#{$class} a 								{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	@each $class, $properties in $fontSizesMobile {
+		.#{$class} 												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	@each $class, $properties in $buttonsMobile {
+		.#{$class}												{ @each $prop, $value in $properties { #{$prop}: $value; } }
+	}
+
+	.bgwebInverse {
+		@each $class, $properties in map-get($bgwebInverseMobile, "fontSizes") {
+			.#{$class}, .#{$class} a				            { @each $prop, $value in $properties { #{$prop}: $value; } }
+		}
+	}
+}
+
+
+

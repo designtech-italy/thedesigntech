@@ -1,0 +1,45 @@
+base: /
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-us
+    direction: ltr
+    flag: us
+    websiteTitle: ''
+  -
+    title: Italian
+    enabled: true
+    base: /it/
+    typo3Language: it
+    locale: it_IT
+    iso-639-1: it
+    websiteTitle: ''
+    navigationTitle: Italian
+    hreflang: it-IT
+    direction: ''
+    fallbackType: free
+    fallbacks: ''
+    flag: it
+    languageId: 1
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      sitemap.xml: 1533906435
+  Sitemap:
+    type: Simple
+    routePath: '/{sitemap}'
+    aspects:
+      sitemap:
+        type: StaticValueMapper
+        map:
+          pages: pages
+websiteTitle: ''

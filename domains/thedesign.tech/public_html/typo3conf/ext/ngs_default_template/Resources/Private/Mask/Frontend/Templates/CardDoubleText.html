@@ -1,0 +1,99 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}"/>
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}"/>
+    </f:else>
+</f:if>
+
+<f:variable name="spacingAfterClass">
+    <f:if condition="{data.space_after_class} == 'standard' or {data.space_after_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_after_class}</f:else>
+    </f:if>
+</f:variable>
+<f:variable name="spacingBeforeClass">
+    <f:if condition="{data.space_before_class} == 'standard' or {data.space_before_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_before_class}</f:else>
+    </f:if>
+</f:variable>
+
+<div class="card-double-text-element after-{spacingAfterClass -> f:spaceless()} before-{spacingBeforeClass -> f:spaceless()}" id="c{contentLocalizedUid}">
+    <div class="card-double-text-inner">
+        <div class="left-box">
+            <div class="card-box">
+                <f:for each="{data.tx_mask_image}" as="file">
+                    <div class="image-box">
+                        <f:render partial="Picture" arguments="{
+                                lazyload: 1,
+                                data: {
+                                    0: { file: file, width: '535c', height: '358c' }
+                                }
+                            }"/>
+                    </div>
+                </f:for>
+
+                <div class="info-box">
+                    <f:if condition="{data.tx_mask_cardinfo}">
+                        <f:for each="{data.tx_mask_cardinfo}" as="data_item">
+                            <div class="info-item-box">
+                                <f:if condition="{data_item.tx_mask_cardinfotitle}">
+                                    <div class="headline">
+                                        {data_item.tx_mask_cardinfotitle -> f:format.html()}
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_cardinfointro}">
+                                    <div class="intro">
+                                        {data_item.tx_mask_cardinfointro -> f:format.html()}
+                                    </div>
+                                </f:if>
+                            </div>
+                        </f:for>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <f:if condition="{data.tx_mask_cardsideinfo}">
+                <div class="card-text-list f_card-text-list">
+                    <f:for each="{data.tx_mask_cardsideinfo}" as="data_item">
+                        <div class="card-text-item f_card-text-item">
+                            <div class="card-text-header-box f_card-text-header-box">
+                                <f:if condition="{data_item.tx_mask_cardsideinfoicon}">
+                                    <div class="card-text-icon">
+                                        <f:for each="{data_item.tx_mask_cardsideinfoicon}" as="file">
+                                            <f:image image="{file}" width="200" />
+                                            {file.description}
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_cardsideinfoheadline}">
+                                    <div class="card-text-headline">
+                                        {data_item.tx_mask_cardsideinfoheadline -> f:format.html()}
+                                    </div>
+                                </f:if>
+
+                                <div class="open-icon"></div>
+                            </div>
+                            <f:if condition="{data_item.tx_mask_cardsideinfointromobile}">
+                                <div class="card-text-intro mobile-view">
+                                    {data_item.tx_mask_cardsideinfointromobile -> f:format.html()}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_cardsideinfointro}">
+                                <div class="card-text-intro desktop-view">
+                                    {data_item.tx_mask_cardsideinfointro -> f:format.html()}
+                                </div>
+                            </f:if>
+                        </div>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+
+

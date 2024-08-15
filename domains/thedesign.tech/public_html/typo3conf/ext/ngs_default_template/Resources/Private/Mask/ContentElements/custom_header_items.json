@@ -1,0 +1,340 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "custom_header_items": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_title",
+                        "tx_mask_header_links",
+                        "tx_mask_header_links_fixed"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "custom_header_items",
+                    "label": "Custom Header Items",
+                    "labels": [
+                        "Title",
+                        "Header Links",
+                        "Header Fixed Links"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 20
+                }
+            },
+            "sql": {
+                "tx_mask_header_links": {
+                    "tt_content": {
+                        "tx_mask_header_links": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_header_links_fixed": {
+                    "tt_content": {
+                        "tx_mask_header_links_fixed": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_title": {
+                    "tt_content": {
+                        "tx_mask_title": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_header_links": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_header_links",
+                    "key": "header_links",
+                    "type": "inline"
+                },
+                "tx_mask_header_links_fixed": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_header_links_fixed",
+                    "key": "header_links_fixed",
+                    "type": "inline"
+                },
+                "tx_mask_title": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_title",
+                    "key": "title",
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_header_links": {
+            "palettes": {
+                "tx_mask_315c5d6d581bc": {
+                    "description": "",
+                    "label": "Link",
+                    "showitem": [
+                        "tx_mask_link",
+                        "tx_mask_linktext",
+                        "tx_mask_eede83a6c657f",
+                        "tx_mask_linkclass",
+                        "tx_mask_displaylinkasbutton"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_displaylinkasbutton": {
+                    "tx_mask_header_links": {
+                        "tx_mask_displaylinkasbutton": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link": {
+                    "tx_mask_header_links": {
+                        "tx_mask_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linkclass": {
+                    "tx_mask_header_links": {
+                        "tx_mask_linkclass": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linktext": {
+                    "tx_mask_header_links": {
+                        "tx_mask_linktext": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_315c5d6d581bc": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_315c5d6d581bc",
+                    "inlineParent": "tx_mask_header_links",
+                    "key": "315c5d6d581bc",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "palette"
+                },
+                "tx_mask_displaylinkasbutton": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_displaylinkasbutton",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_315c5d6d581bc",
+                    "key": "displaylinkasbutton",
+                    "label": "Display link as button",
+                    "order": 5,
+                    "type": "check"
+                },
+                "tx_mask_eede83a6c657f": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "fullKey": "tx_mask_eede83a6c657f",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_315c5d6d581bc",
+                    "key": "eede83a6c657f",
+                    "order": 3,
+                    "type": "linebreak"
+                },
+                "tx_mask_link": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_link",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_315c5d6d581bc",
+                    "key": "link",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "link"
+                },
+                "tx_mask_linkclass": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linkclass",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_315c5d6d581bc",
+                    "key": "linkclass",
+                    "label": "Link form",
+                    "order": 4,
+                    "type": "string"
+                },
+                "tx_mask_linktext": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linktext",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_315c5d6d581bc",
+                    "key": "linktext",
+                    "label": "Link Text",
+                    "order": 2,
+                    "type": "string"
+                }
+            }
+        },
+        "tx_mask_header_links_fixed": {
+            "palettes": {
+                "tx_mask_f29ebe95c0cbb": {
+                    "description": "",
+                    "label": "Link",
+                    "showitem": [
+                        "tx_mask_link",
+                        "tx_mask_linktext",
+                        "tx_mask_d312c5aa96644",
+                        "tx_mask_linkclass",
+                        "tx_mask_displaylinkasbutton"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_displaylinkasbutton": {
+                    "tx_mask_header_links_fixed": {
+                        "tx_mask_displaylinkasbutton": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link": {
+                    "tx_mask_header_links_fixed": {
+                        "tx_mask_link": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linkclass": {
+                    "tx_mask_header_links_fixed": {
+                        "tx_mask_linkclass": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_linktext": {
+                    "tx_mask_header_links_fixed": {
+                        "tx_mask_linktext": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_d312c5aa96644": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "fullKey": "tx_mask_d312c5aa96644",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_f29ebe95c0cbb",
+                    "key": "d312c5aa96644",
+                    "order": 3,
+                    "type": "linebreak"
+                },
+                "tx_mask_displaylinkasbutton": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_displaylinkasbutton",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_f29ebe95c0cbb",
+                    "key": "displaylinkasbutton",
+                    "label": "Display link as button",
+                    "order": 5,
+                    "type": "check"
+                },
+                "tx_mask_f29ebe95c0cbb": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_f29ebe95c0cbb",
+                    "inlineParent": "tx_mask_header_links_fixed",
+                    "key": "f29ebe95c0cbb",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "palette"
+                },
+                "tx_mask_link": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_link",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_f29ebe95c0cbb",
+                    "key": "link",
+                    "label": "Link",
+                    "order": 1,
+                    "type": "link"
+                },
+                "tx_mask_linkclass": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linkclass",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_f29ebe95c0cbb",
+                    "key": "linkclass",
+                    "label": "Link form",
+                    "order": 4,
+                    "type": "string"
+                },
+                "tx_mask_linktext": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_linktext",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_f29ebe95c0cbb",
+                    "key": "linktext",
+                    "label": "Link Text",
+                    "order": 2,
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

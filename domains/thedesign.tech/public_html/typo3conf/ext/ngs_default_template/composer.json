@@ -1,0 +1,23 @@
+{
+    "name": "naghashyan-solutions-llc/ngs-default-template",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://naghashyan.com/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-rte-ckeditor": "^11.5",
+        "typo3/cms-fluid-styled-content": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NGS\\NgsDefaultTemplate\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "ngs_default_template"
+        }
+    }
+}

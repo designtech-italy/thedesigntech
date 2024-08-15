@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+	  xmlns:ftdb="http://typo3.org/ns/Lavitto/FormToDatabase/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:variable name="isNew"><f:if condition="{f:format.date(date: formResult.crdate, format:'U')} > {lastView}">1</f:if></f:variable>
+<tr>
+	<f:if condition="{newDataExists}">
+		<td><f:if condition="{isNew}">&nbsp;
+			<core:icon identifier="actions-dot"/>
+		</f:if></td>
+	</f:if>
+	<td>{formResult.crdate -> f:format.date(format: '{dateFormat} {timeFormat}')}</td>
+	<f:for each="{formRenderables}" as="renderable">
+		<f:if condition="{renderable.renderingOptions.listView}">
+			<td>
+				<f:format.raw>
+					<ftdb:formValue value="{formResult.resultAsArray.{renderable.identifier}}"
+									element="{renderable}" crop="true"/>
+				</f:format.raw>
+			</td>
+		</f:if>
+	</f:for>
+	<td class="col-control nowrap">
+		<div class="btn-group" role="group">
+			<a href="#" class="btn btn-default" data-bs-toggle="modal"
+			   data-bs-target="#resultDetail{formResult.uid}">
+				<core:icon identifier="actions-document-view"/>
+			</a>
+			<f:variable name="deleteActionUri"
+						value="{f:uri.action(action: 'deleteFormResult', arguments: '{formResult: formResult}')}"/>
+			<a href="#"
+			   class="btn btn-default t3js-record-delete"
+			   title="{f:translate(key: 'LLL:EXT:form_to_database/Resources/Private/Language/locallang_be.xlf:show.buttons.delete')}"
+			   onclick="top.TYPO3.Modal.confirm(TYPO3.lang.ftd_deleteTitle, TYPO3.lang.ftd_deleteDescription).on('button.clicked', function(e) { if (e.target.name == 'ok') { location.href='{deleteActionUri}'; } top.TYPO3.Modal.dismiss(); });">
+				<core:icon identifier="actions-delete"/>
+			</a>
+		</div>
+	</td>
+</tr>
+
+</html>

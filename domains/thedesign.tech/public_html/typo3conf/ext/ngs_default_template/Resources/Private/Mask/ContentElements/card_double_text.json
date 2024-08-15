@@ -1,0 +1,351 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "card_double_text": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_7cbad157087c5",
+                        "tx_mask_cardsideinfo"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "card_double_text",
+                    "label": "Card Double Text",
+                    "labels": [
+                        "Card",
+                        "Card Side Info"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 23
+                }
+            },
+            "palettes": {
+                "tx_mask_7cbad157087c5": {
+                    "description": "",
+                    "label": "Card",
+                    "showitem": [
+                        "tx_mask_image",
+                        "tx_mask_1b1ef256f97db",
+                        "tx_mask_cardinfo"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_cardinfo": {
+                    "tt_content": {
+                        "tx_mask_cardinfo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_cardsideinfo": {
+                    "tt_content": {
+                        "tx_mask_cardsideinfo": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_image": {
+                    "tt_content": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_1b1ef256f97db": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "card_double_text": ""
+                    },
+                    "fullKey": "tx_mask_1b1ef256f97db",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "card_double_text": "tx_mask_7cbad157087c5"
+                    },
+                    "key": "1b1ef256f97db",
+                    "label": {
+                        "card_double_text": ""
+                    },
+                    "order": {
+                        "card_double_text": 2
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_7cbad157087c5": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_7cbad157087c5",
+                    "key": "7cbad157087c5",
+                    "type": "palette"
+                },
+                "tx_mask_cardinfo": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "description": {
+                        "card_double_text": ""
+                    },
+                    "fullKey": "tx_mask_cardinfo",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "card_double_text": "tx_mask_7cbad157087c5"
+                    },
+                    "key": "cardinfo",
+                    "label": {
+                        "card_double_text": "Card Info"
+                    },
+                    "order": {
+                        "card_double_text": 3
+                    },
+                    "type": "inline"
+                },
+                "tx_mask_cardsideinfo": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_cardsideinfo",
+                    "key": "cardsideinfo",
+                    "type": "inline"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "description": {
+                        "card_double_text": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "card_double_text": "tx_mask_7cbad157087c5",
+                        "landing_page_banner": "tx_mask_b75420521c24e"
+                    },
+                    "key": "image",
+                    "label": {
+                        "card_double_text": "Image",
+                        "landing_page_banner": "Image"
+                    },
+                    "order": {
+                        "card_double_text": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "file"
+                }
+            }
+        },
+        "tx_mask_cardinfo": {
+            "sql": {
+                "tx_mask_cardinfointro": {
+                    "tx_mask_cardinfo": {
+                        "tx_mask_cardinfointro": "mediumtext"
+                    }
+                },
+                "tx_mask_cardinfotitle": {
+                    "tx_mask_cardinfo": {
+                        "tx_mask_cardinfotitle": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_cardinfointro": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_cardinfointro",
+                    "inlineParent": "tx_mask_cardinfo",
+                    "key": "cardinfointro",
+                    "label": "Card Info Intro",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_cardinfotitle": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_cardinfotitle",
+                    "inlineParent": "tx_mask_cardinfo",
+                    "key": "cardinfotitle",
+                    "label": "Card Info Title",
+                    "order": 1,
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_cardsideinfo": {
+            "palettes": {
+                "tx_mask_00e57cd8eac4b": {
+                    "description": "",
+                    "label": "Card Side Info Intro",
+                    "showitem": [
+                        "tx_mask_cardsideinfointro",
+                        "tx_mask_cardsideinfointromobile"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_cardsideinfoheadline": {
+                    "tx_mask_cardsideinfo": {
+                        "tx_mask_cardsideinfoheadline": "mediumtext"
+                    }
+                },
+                "tx_mask_cardsideinfoicon": {
+                    "tx_mask_cardsideinfo": {
+                        "tx_mask_cardsideinfoicon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_cardsideinfointro": {
+                    "tx_mask_cardsideinfo": {
+                        "tx_mask_cardsideinfointro": "mediumtext"
+                    }
+                },
+                "tx_mask_cardsideinfointromobile": {
+                    "tx_mask_cardsideinfo": {
+                        "tx_mask_cardsideinfointromobile": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_00e57cd8eac4b": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_00e57cd8eac4b",
+                    "inlineParent": "tx_mask_cardsideinfo",
+                    "key": "00e57cd8eac4b",
+                    "label": "Card Side Info Intro",
+                    "order": 2,
+                    "type": "palette"
+                },
+                "tx_mask_cardsideinfoheadline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_cardsideinfoheadline",
+                    "inlineParent": "tx_mask_cardsideinfo",
+                    "key": "cardsideinfoheadline",
+                    "label": "Card Side Info Headline",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_cardsideinfoicon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_cardsideinfoicon",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_cardsideinfo",
+                    "key": "cardsideinfoicon",
+                    "label": "Card Side Info Icon",
+                    "order": 3,
+                    "type": "file"
+                },
+                "tx_mask_cardsideinfointro": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_cardsideinfointro",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_00e57cd8eac4b",
+                    "key": "cardsideinfointro",
+                    "label": "Card Side Info Intro",
+                    "order": 1,
+                    "type": "richtext"
+                },
+                "tx_mask_cardsideinfointromobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_cardsideinfointromobile",
+                    "inPalette": 1,
+                    "inlineParent": "tx_mask_00e57cd8eac4b",
+                    "key": "cardsideinfointromobile",
+                    "label": "Card Side Info Intro Mobile",
+                    "order": 2,
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

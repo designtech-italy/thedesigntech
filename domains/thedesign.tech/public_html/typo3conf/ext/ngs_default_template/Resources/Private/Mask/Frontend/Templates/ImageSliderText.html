@@ -1,0 +1,187 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<f:variable name="spacingAfterClass">
+    <f:if condition="{data.space_after_class} == 'standard' or {data.space_after_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_after_class}</f:else>
+    </f:if>
+</f:variable>
+<f:variable name="spacingBeforeClass">
+    <f:if condition="{data.space_before_class} == 'standard' or {data.space_before_class} == ''">
+        <f:then>standard</f:then>
+        <f:else>{data.space_before_class}</f:else>
+    </f:if>
+</f:variable>
+
+<div class="image-slider-text-element after-{spacingAfterClass -> f:spaceless()} before-{spacingBeforeClass -> f:spaceless()}{f:if(condition: data.tx_mask_is_main_text_highlighted, then: ' bggallerybox')}"
+     style="background-color: {f:if(condition: data.tx_mask_backgroundcolor, then: data.tx_mask_backgroundcolor)}" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_text}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headlinemobile}">
+                <div class="headline t4 mobile-view">
+                    <div class="svg-line"></div>
+                    {data.tx_mask_headlinemobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="headline t4 desktop-view">
+                    {data.tx_mask_headline -> f:format.html()}
+                    <div class="svg-line"></div>
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_textmobile}">
+                <div class="description mobile-view">
+                    {data.tx_mask_textmobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description desktop-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+
+            <f:if condition="{data.tx_mask_link1} && {data.tx_mask_link1text}">
+                <div class="linkbox">
+                    <f:render partial="Downloadlink" arguments="{
+                        linkUrl: data.tx_mask_link1,
+                        linkText: data.tx_mask_link1text,
+                        download: 1,
+                        class: 'btn button2 btn-primary'
+                    }"/>
+                </div>
+            </f:if>
+        </div>
+    </f:if>
+
+    <f:if condition="{data.tx_mask_imageslidertext}">
+        <div class="image-text-list">
+            <f:for each="{data.tx_mask_imageslidertext}" as="data_item">
+                <div class="image-text-item">
+                    <f:variable name="sideheadlinemobiletop" value="{data_item.tx_mask_sideheadlinemobiletop}"/>
+
+                    <f:if condition="{sideheadlinemobiletop}">
+                        <f:if condition="{data_item.tx_mask_sideheadlinemobile} || {data_item.tx_mask_sideheadline}">
+                            <div class="sideheadline t3 mobile-view">
+                                <f:if condition="{data_item.tx_mask_sideheadlinemobile}">
+                                    <f:then>
+                                        {data_item.tx_mask_sideheadlinemobile -> f:format.html()}
+                                    </f:then>
+                                    <f:else>
+                                        {data_item.tx_mask_sideheadline -> f:format.html()}
+                                    </f:else>
+                                </f:if>
+                                <svg class="svg-line"></svg>
+                            </div>
+                        </f:if>
+                    </f:if>
+
+                    <f:if condition="{data_item.tx_mask_imageslider}">
+                        <div class="image-block f_slider-wrapper">
+                            <div class="image-list f_image-list">
+                                <f:for each="{data_item.tx_mask_imageslider}" as="data_item_item">
+                                    <div class="image-item">
+                                        <f:for each="{data_item_item.tx_mask_image}" as="file">
+                                            <f:render partial="Picture" arguments="{
+                                                lazyload: 1,
+                                                data: {
+                                                    1026: { file: file, width: '1305c', height: '670c' },
+                                                    767: { file: file, width: '676c', height: '351c' },
+                                                    414: { file: file, width: '341c', height: '175c' },
+                                                    0: { file: file, width: '836c', height: '520c' }
+                                                },
+                                                imageratiox: 676,
+                                                imageratioy: 351
+                                            }"/>
+                                            <f:if condition="{file.description}">
+                                                <div class="image-description t5-inverse">
+                                                    {file.description}
+                                                </div>
+                                            </f:if>
+                                        </f:for>
+                                    </div>
+                                </f:for>
+                            </div>
+                            <div class="arrows-headline">
+                                <f:if condition="{data_item.tx_mask_imageslider -> f:count()} > 1">
+                                    <div class="arrow-container">
+                                        <div class="cursor-to-left arrow-cursor-to-left f_cursor-left">
+                                            <svg class="svg-box">
+                                                <use xlink:href="#icon-arrow-left"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="cursor-to-right arrow-cursor-to-right f_cursor-right">
+                                            <svg class="svg-box">
+                                                <use xlink:href="#icon-arrow-right"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_headline}">
+                                    <div class="headline t3">
+                                        {data_item.tx_mask_headline -> f:format.html()}
+                                    </div>
+                                </f:if>
+                            </div>
+                        </div>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_text} || {data_item.tx_mask_location} || {data_item.tx_mask_sideheadline}">
+                        <div class="text-box">
+                            <f:if condition="{sideheadlinemobiletop}">
+                                <f:else>
+                                    <f:if condition="{data_item.tx_mask_sideheadlinemobile}">
+                                        <div class="sideheadline t3 mobile-view">
+                                            {data_item.tx_mask_sideheadlinemobile -> f:format.html()}
+                                        </div>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_sideheadline}">
+                                <div class="sideheadline t3 desktop-view{f:if(condition: sideheadlinemobiletop, then: ' hide-on-mob')}">
+                                    {data_item.tx_mask_sideheadline -> f:format.html()}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_textmobile}">
+                                <div class="description default mobile-view">
+                                    {data_item.tx_mask_textmobile -> f:format.html()}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_text}">
+                                <div class="description default desktop-view">
+                                    {data_item.tx_mask_text -> f:format.html()}
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{data_item.tx_mask_location}">
+                                <div class="location default">
+                                    <svg class="svg-box">
+                                        <use xlink:href="#svg-location"></use>
+                                    </svg>
+                                    {data_item.tx_mask_location -> f:format.html()}
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{data_item.tx_mask_link}">
+                                <f:link.typolink parameter="{data_item.tx_mask_link}" class="morelink">
+                                    <svg class="svg-box">
+                                        <use xlink:href="#download-icon"></use>
+                                    </svg>
+
+                                    <f:if condition="{data_item.tx_mask_link_title}">
+                                        <span>{data_item.tx_mask_link_title}</span>
+                                    </f:if>
+                                </f:link.typolink>
+                            </f:if>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

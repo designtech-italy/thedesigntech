@@ -1,0 +1,12 @@
+<div class="intro-simple">
+    <f:if condition="{data.tx_mask_headline}">
+        <div class="headline t1large">
+            {data.tx_mask_headline -> f:format.html()}
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_subheadline}">
+        <div class="subheadline large1">
+            {data.tx_mask_subheadline -> f:format.html()}
+        </div>
+    </f:if>
+</div>

@@ -1,0 +1,50 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="eccosystem-element bgweb2" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline}">
+        <div class="boxed-headline">
+            <div class="headline t4">
+                {data.tx_mask_headline -> f:format.html()}
+                <div class="svg-line"></div>
+            </div>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_partnerslist}">
+        <div class="eccosystem-list">
+            <f:for each="{data.tx_mask_partnerslist}" as="data_item">
+                <div class="eccosystem-item">
+                    <f:if condition="{data_item.tx_mask_partnersheadline}">
+                        <div class="subheadline t6">{data_item.tx_mask_partnersheadline -> f:format.html()}</div>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_partnerslogo}">
+                        <div class="logo-list">
+                            <f:for each="{data_item.tx_mask_partnerslogo}" as="data_item_item">
+                                <div class="logo-item">
+                                    <f:if condition="{data_item_item.tx_mask_partnerlink}">
+                                        <f:link.typolink parameter="{data_item_item.tx_mask_partnerlink}">
+                                            <f:for each="{data_item_item.tx_mask_partnerlogo}" as="file">
+                                                <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        0: { file: file, width: 'auto', height: 'auto' }
+                                                    }
+                                                }"/>
+                                            </f:for>
+                                        </f:link.typolink>
+                                    </f:if>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

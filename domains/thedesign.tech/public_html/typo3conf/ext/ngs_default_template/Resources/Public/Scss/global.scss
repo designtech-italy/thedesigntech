@@ -1,0 +1,166 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.svg-box {
+  width: 20px;
+  height: 20px;
+}
+
+.image-box {
+  font-size: 0;
+  line-height: 0;
+
+  picture {
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.main-section {
+  overflow: hidden;
+}
+
+.arrow-container {
+  justify-content: space-between;
+  position: absolute;
+  display: flex;
+  margin-top: 15px;
+
+  @include tablet {
+    margin-top: 8px;
+    right: 0;
+  }
+
+  & > div {
+    height: 38px;
+    display: flex;
+    cursor: pointer;
+    margin-right: 20px;
+    border-radius: 51px;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid $g-color3;
+
+    @include glob-map-get-fluid(width, 58, 58, 48, 42);
+    @include glob-map-get-fluid(margin-right, 22, 22, 14, 10);
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $g-color3;
+
+        svg {
+          fill: $g-color1;
+          color: $g-color1;
+        }
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    svg {
+      width: 22px;
+      height: 16px;
+      fill: $g-color3;
+      color: $g-color3;
+    }
+  }
+}
+
+/*----------Centered Containers-----------*/
+
+@mixin f-block-container-1() {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include glob-map-get-fluid(max-width, 1720, 1240, 730, 360);
+}
+
+.block-container-1 {
+  @include f-block-container-1();
+}
+
+@mixin f-block-container-2() {
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 722px;
+}
+
+.block-container-2 {
+  @include f-block-container-2();
+}
+
+/*------------Tns nav-----------*/
+
+.tns-nav {
+  display: flex;
+  margin-top: 28px;
+  align-items: center;
+  justify-content: center;
+
+  @include glob-map-get-fluid(height, 32, 32, 16, 16);
+  @include glob-map-get-fluid(margin-top, 53, 53, 28, 28);
+
+  button {
+    border: 0;
+    padding: 0;
+    outline: none;
+    margin: 0 6.5px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    background-color: $g-color1;
+    box-shadow: 2px -1px 9px rgba($g-color1, 0.4);
+
+    @include glob-map-get-fluid(width, 16, 16, 8, 8);
+    @include glob-map-get-fluid(height, 16, 16, 8, 8);
+
+    &.tns-nav-active {
+      width: 16px;
+      height: 16px;
+      box-shadow: 1px 3px 9px #FFFFFF;
+
+      @include glob-map-get-fluid(width, 32, 32, 16, 16);
+      @include glob-map-get-fluid(height, 32, 32, 16, 16);
+    }
+  }
+}
+
+/*------------before and after spaces--------------*/
+
+.after-medium {
+  @include glob-map-get-fluid(padding-bottom, 122, 74, 50, 33);
+}
+.before-medium {
+  @include glob-map-get-fluid(padding-top, 107, 74, 50, 41);
+}

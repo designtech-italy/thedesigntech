@@ -1,0 +1,15 @@
+plugin.tx_form.settings.yamlConfigurations {
+    20120401 = EXT:ngs_default_template/Configuration/Yaml/CustomFormSetup.yaml
+}
+
+module.tx_form.settings.yamlConfigurations {
+    20120401 = EXT:ngs_default_template/Configuration/Yaml/CustomFormSetup.yaml
+}
+
+plugin.tx_form {
+    settings {
+        yamlSettingsOverrides {
+
+        }
+    }
+}

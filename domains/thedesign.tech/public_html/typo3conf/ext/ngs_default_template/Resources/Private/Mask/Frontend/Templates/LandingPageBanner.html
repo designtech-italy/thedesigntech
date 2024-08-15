@@ -1,0 +1,142 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="landing-page-banner">
+    <div class="landing-page-banner-box" id="c{contentLocalizedUid}">
+        <div class="left-box">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="headline t4">
+                    {data.tx_mask_headline -> f:format.html()}
+                </div>
+            </f:if>
+
+            <f:if condition="{data.tx_mask_textmobile}">
+                <div class="description medium1 mobile-view">
+                    {data.tx_mask_textmobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description large1 desktop-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+
+            <div class="btn-container">
+                <f:if condition="{data.tx_mask_link1text}">
+                    <f:if condition="{data.tx_mask_linkform}">
+                        <f:then>
+                            <button class="btn button3 btn-primary f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_linkform}">
+                                {data.tx_mask_link1text}
+                            </button>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.tx_mask_link1}">
+                                <f:link.typolink class="btn button3 btn-primary" parameter="{data.tx_mask_link1}">
+                                    {data.tx_mask_link1text}
+                                </f:link.typolink>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:if>
+
+                <div class="righttext medium1">
+                    <f:if condition="{data.tx_mask_buttonrighttext}">
+                        <div>{data.tx_mask_buttonrighttext -> f:format.html()}</div>
+                    </f:if>
+
+                    <f:if condition="{data.tx_mask_rightlinktext}">
+                        <f:if condition="{data.tx_mask_rightlinkform}">
+                            <f:then>
+                                <a href="javascript:void(0)" class="f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_rightlinkform}">
+                                    {data.tx_mask_rightlinktext}
+                                </a>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{data.tx_mask_rightlink}">
+                                    <f:link.typolink class="" parameter="{data.tx_mask_rightlink}">
+                                        {data.tx_mask_rightlinktext}
+                                    </f:link.typolink>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        <div class="right-box">
+            <f:for each="{data.tx_mask_image}" as="file">
+                <div class="image-box desktop-image{f:if(condition: data.tx_mask_imagemobile, then: '', else: ' mobile-image')}">
+                    <f:render partial="Picture" arguments="{
+                            lazyload: 1,
+                            data: {
+                                1200: { file: file, width: '699c', height: '610c', cropVariant: 'desktop' },
+                                1024: { file: file, width: '1200c', height: '624c', cropVariant: 'desktop' },
+                                768: { file: file, width: '1024c', height: '532c', cropVariant: 'desktop' },
+                                414: { file: file, width: '768c', height: '400c', cropVariant: 'mobile' },
+                                0: { file: file, width: '414c', height: '215c', cropVariant: 'mobile' }
+                            },
+                            imageratiox: 699,
+                            imageratioy: 610
+                        }"/>
+                </div>
+            </f:for>
+            <f:for each="{data.tx_mask_imagemobile}" as="file">
+                <div class="image-box mobile-image{f:if(condition: data.tx_mask_image, then: '', else: ' desktop-image')}">
+                    <f:render partial="Picture" arguments="{
+                            lazyload: 1,
+                            data: {
+                                1200: { file: file, width: '699c', height: '610c', cropVariant: 'desktop' },
+                                1024: { file: file, width: '1200c', height: '624c', cropVariant: 'desktop' },
+                                768: { file: file, width: '1024c', height: '532c', cropVariant: 'desktop' },
+                                414: { file: file, width: '768c', height: '400c', cropVariant: 'mobile' },
+                                0: { file: file, width: '414c', height: '215c', cropVariant: 'mobile' }
+                            },
+                            imageratiox: 699,
+                            imageratioy: 610
+                        }"/>
+                </div>
+            </f:for>
+
+            <f:if condition="{data.tx_mask_circleiconheadline} || {data.tx_mask_circleiconsubheadline} || {data.tx_mask_circleiconpreheadline}">
+                <div class="circle-icon-box bggallerybox{f:if(condition: data.tx_mask_circleiconpreheadline, then: ' has-preheadline')}{f:if(condition: data.tx_mask_circleiconsubheadline, then: ' has-subheadline')}">
+                    <f:if condition="{data.tx_mask_circleiconpreheadline}">
+                        <div class="t6-inverse circle-icon-preheadline">
+                            {data.tx_mask_circleiconpreheadline}
+                        </div>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_circleiconheadline}">
+                        <div class="t5 circle-icon-headline">
+                            <span>{data.tx_mask_circleiconheadline}</span>
+                            <f:if condition="{data.tx_mask_circleiconsupheadline}">
+                                <sup class="t6-inverse">{data.tx_mask_circleiconsupheadline}</sup>
+                            </f:if>
+                        </div>
+                    </f:if>
+                    <f:if condition="{data.tx_mask_circleiconsubheadline}">
+                        <div class="t6-inverse circle-icon-subheadline">
+                            {data.tx_mask_circleiconsubheadline}
+                        </div>
+                    </f:if>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,250 @@
+.speakers-element {
+  overflow: hidden;
+  position: relative;
+
+  @include glob-map-get-fluid(padding-top, 45, 40, 60, 60);
+  @include glob-map-get-fluid(padding-bottom, 45, 40, 35, 30);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    z-index: -1;
+    left: -50px;
+    right: -50px;
+    display: block;
+    pointer-events: none;
+    background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/arch-desktop.svg") no-repeat center bottom;
+    background-size: cover;
+    height: 100vh;
+    min-height: 880px;
+
+    @include mobile {
+      background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/arch-mobile.svg") no-repeat center bottom;
+      background-size: cover;
+      height: 784px;
+      min-height: auto;
+    }
+  }
+
+  &.background-second {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+      pointer-events: none;
+      left: -50px;
+      right: -50px;
+      background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/blue-waves.svg") no-repeat center;
+      background-size: cover;
+
+      @include mobile {
+        top: 70px;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    max-width: 1089px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 40, 22);
+    @include glob-map-get-fluid(padding-right, 80, 80, 40, 26);
+
+    .headline {
+      color: $g-color3;
+
+      & + .subheadline {
+        margin-top: 31px;
+
+        @include glob-map-get-fluid(margin-top, 31, 31, 20, 16);
+      }
+    }
+
+    .subheadline {
+      font-family: Poppins;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 42px;
+
+      & + .description {
+        margin-top: 16px;
+
+        @include glob-map-get-fluid(margin-top, 16, 16, 12, 8);
+      }
+    }
+
+    .description {
+      margin: 0 auto;
+      max-width: 840px;
+      font-weight: 200;
+    }
+
+    .linkbox {
+      @include glob-map-get-fluid(margin-top, 23, 23, 16, 10);
+
+      .btn {
+        background-color: $g-color3;
+        border: 1px solid $g-color3;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        color: $g-color1;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: transparent;
+            color: $g-color3;
+          }
+        }
+      }
+    }
+  }
+
+  .tns-nav {
+    display: none;
+
+    @include tablet {
+      display: flex;
+    }
+
+    button {
+      background-color: $g-color3;
+      box-shadow: 1px 3px 9px $g-color3;
+    }
+  }
+
+  .speakers-block {
+    @include glob-map-get-fluid(margin-top, 80, 50, 30, 16);
+    @include glob-map-get-fluid(padding-left, 149, 149, 40, 22);
+    @include glob-map-get-fluid(padding-right, 149, 149, 40, 26);
+
+    .tns-nav {
+      position: static;
+      transform: none;
+      justify-content: center;
+      display: flex;
+      margin-top: 16px;
+    }
+  }
+
+  .speakers-list {
+    margin: 0 -12px;
+    pointer-events: none;
+    justify-content: center;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    .speakers-row {
+      font-size: 0;
+    }
+
+    .speakers-item {
+      padding: 0 12px;
+      margin-top: 36px;
+      width: 20%;
+      display: inline-block;
+      vertical-align: top;
+
+      @include glob-map-get-fluid(margin-top, 36, 26, 18, 12);
+
+      @include tablet {
+        width: 100%;
+        padding: 0;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
+      .speakers-inner {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .absolute-link {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        position: absolute;
+        pointer-events: all;
+
+        @media (hover: hover) {
+          &:hover {
+            & + .image-box {
+              & + .title-box {
+                opacity: 0.7;
+              }
+
+              img {
+                transform: scale(1.03);
+              }
+            }
+          }
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        text-decoration: underline;
+
+        @include glob-map-get-fluid(margin-top, 17, 17, 10, 0);
+
+        @include tablet {
+          margin-top: 0;
+          color: $g-color3;
+          font-family: Rische;
+        }
+      }
+
+      .subtitle {
+        @include glob-map-get-fluid(margin-top, 8, 8, 6, 6);
+      }
+
+      .description {
+        font-weight: 400;
+
+        @include glob-map-get-fluid(margin-top, 21, 21, 17, 13);
+      }
+
+      .image-box {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 100%;
+
+        @include tablet {
+          display: none;
+        }
+
+        picture {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          position: absolute;
+        }
+
+        img {
+          transform: scale(1);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+}

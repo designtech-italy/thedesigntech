@@ -1,0 +1,8 @@
+#############
+#### RTE ####
+#############
+RTE {
+    default {
+        preset = ngs_default_template
+    }
+}

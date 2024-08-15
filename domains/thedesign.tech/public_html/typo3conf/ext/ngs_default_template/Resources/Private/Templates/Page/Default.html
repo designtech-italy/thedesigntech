@@ -1,0 +1,19 @@
+<f:render partial="Sprite"/>
+
+<f:if condition="{data.page_nav_mask_id}">
+    <f:then>
+        <f:render partial="HeaderAdditiveDesign" arguments="{_all}"/>
+    </f:then>
+    <f:else>
+        <f:render partial="Header" arguments="{_all}"/>
+    </f:else>
+</f:if>
+
+<div class="main-container">
+    <div class="main-section" itemprop="mainContentOfPage">
+        <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}"/>
+    </div>
+</div>
+
+<f:render partial="Footer" arguments="{_all}"/>
+

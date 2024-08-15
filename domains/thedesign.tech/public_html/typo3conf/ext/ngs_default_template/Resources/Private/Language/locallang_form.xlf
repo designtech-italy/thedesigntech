@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:ngs_default_template/Resources/Private/Language/locallang_form.xlf" date="2023-10-19T11:22:22Z" product-name="ngs_default_template">
+		<header/>
+		<body>
+			<trans-unit id="contact.element.name.properties.label" resname="contact.element.name.properties.label">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="contact.element.name.properties.placeholder" resname="contact.element.name.properties.placeholder">
+				<source>Name*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.subject.properties.label" resname="contact.element.subject.properties.label">
+				<source>Surname
+</source>
+			</trans-unit>
+			<trans-unit id="contact.element.subject.properties.placeholder" resname="contact.element.subject.properties.placeholder">
+				<source>Surname*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.email.properties.label" resname="contact.element.email.properties.label">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="contact.element.email.properties.placeholder" resname="contact.element.email.properties.placeholder">
+				<source>Email*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.text-1.properties.label" resname="contact.element.text-1.properties.label">
+				<source>Phone number</source>
+			</trans-unit>
+			<trans-unit id="contact.element.text-1.properties.placeholder" resname="contact.element.text-1.properties.placeholder">
+				<source>Phone number</source>
+			</trans-unit>
+			<trans-unit id="contact.element.fieldset-1.properties.label" resname="contact.element.fieldset-1.properties.label">
+				<source>Field*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-1.properties.options.Startup" resname="contact.element.radiobutton-1.properties.options.Startup">
+				<source>Startup</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-1.properties.options.Corporate" resname="contact.element.radiobutton-1.properties.options.Corporate">
+				<source>Corporate</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-1.properties.options.Industry" resname="contact.element.radiobutton-1.properties.options.Industry">
+				<source>Industry professional</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-1.properties.options.Mentor" resname="contact.element.radiobutton-1.properties.options.Mentor">
+				<source>Mentor</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-1.properties.options.Altro" resname="contact.element.radiobutton-1.properties.options.Altro">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="contact.element.fieldset-2.properties.label" resname="contact.element.fieldset-2.properties.label">
+				<source>Area of interest*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-2.properties.options.Realizzare evento" resname="contact.element.radiobutton-2.properties.options.Realizzare evento">
+				<source>Create event</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-2.properties.options.Essere resident" resname="contact.element.radiobutton-2.properties.options.Essere resident">
+				<source>Be resident</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-2.properties.options.Diventare member" resname="contact.element.radiobutton-2.properties.options.Diventare member">
+				<source>Become member</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-2.properties.options.Partecipare ai Lab" resname="contact.element.radiobutton-2.properties.options.Partecipare ai Lab">
+				<source>Join Labs</source>
+			</trans-unit>
+			<trans-unit id="contact.element.radiobutton-2.properties.options.Altro" resname="contact.element.radiobutton-2.properties.options.Altro">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="contact.element.message.properties.label" resname="contact.element.message.properties.label">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="contact.element.message.properties.placeholder" resname="contact.element.message.properties.placeholder">
+				<source>Message*</source>
+			</trans-unit>
+			<trans-unit id="contact.element.checkbox-1.properties.label" resname="contact.element.checkbox-1.properties.label">
+				<source>I have read and accept the Privacy Police</source>
+			</trans-unit>
+			<trans-unit id="contact.element.checkbox-2.properties.label" resname="contact.element.checkbox-2.properties.label">
+				<source>Subscribe to our newsletter to stay updated on Designtech events and initiatives </source>
+			</trans-unit>
+			<trans-unit id="element.contact.renderingOptions.submitButtonLabel" resname="element.contact.renderingOptions.submitButtonLabel">
+				<source>Send</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-4.properties.label" resname="joinusDesign.element.text-4.properties.label">
+				<source>Company name</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-4.properties.placeholder" resname="joinusDesign.element.text-4.properties.placeholder">
+				<source>Company name</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-5.properties.label" resname="joinusDesign.element.text-5.properties.label">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-5.properties.placeholder" resname="joinusDesign.element.text-5.properties.placeholder">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-1.properties.label" resname="joinusDesign.element.text-1.properties.label">
+				<source>Name </source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-1.properties.placeholder" resname="joinusDesign.element.text-1.properties.placeholder">
+				<source>Name*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-2.properties.label" resname="joinusDesign.element.text-2.properties.label">
+				<source>Surname</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-2.properties.placeholder" resname="joinusDesign.element.text-2.properties.placeholder">
+				<source>Surname*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.email-1.properties.label" resname="joinusDesign.element.email-1.properties.label">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.email-1.properties.placeholder" resname="joinusDesign.element.email-1.properties.placeholder">
+				<source>Email*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-3.properties.label" resname="joinusDesign.element.text-3.properties.label">
+				<source>Phone number</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.text-3.properties.placeholder" resname="joinusDesign.element.text-3.properties.placeholder">
+				<source>Phone number</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.fieldset-1.properties.label" resname="joinusDesign.element.fieldset-1.properties.label">
+				<source>Field*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-1.properties.options.company" resname="joinusDesign.element.radiobutton-1.properties.options.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-1.properties.options.developer" resname="joinusDesign.element.radiobutton-1.properties.options.developer">
+				<source>Developer</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-1.properties.options.professional" resname="joinusDesign.element.radiobutton-1.properties.options.professional">
+				<source>Professional</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-1.properties.options.industrial_company" resname="joinusDesign.element.radiobutton-1.properties.options.industrial_company">
+				<source>Industrial Company</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-1.properties.options.other" resname="joinusDesign.element.radiobutton-1.properties.options.other">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.fieldset-2.properties.label" resname="joinusDesign.element.fieldset-2.properties.label">
+				<source>I am interested in*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-2.properties.options.attending_in_person" resname="joinusDesign.element.radiobutton-2.properties.options.attending_in_person">
+				<source>Attending in person</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.radiobutton-2.properties.options.participating_online" resname="joinusDesign.element.radiobutton-2.properties.options.participating_online">
+				<source>Participating online</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.textarea-1.properties.label" resname="joinusDesign.element.textarea-1.properties.label">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.textarea-1.properties.placeholder" resname="joinusDesign.element.textarea-1.properties.placeholder">
+				<source>Message*</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.checkbox-1.properties.label" resname="joinusDesign.element.checkbox-1.properties.label">
+				<source>I have read and I accept the Privacy Policy</source>
+			</trans-unit>
+			<trans-unit id="joinusDesign.element.checkbox-2.properties.label" resname="joinusDesign.element.checkbox-2.properties.label">
+				<source>Subscribe to our newsletter to stay updated on Designtech events and initiatives </source>
+			</trans-unit>
+			<trans-unit id="element.joinusDesign.renderingOptions.submitButtonLabel" resname="element.joinusDesign.renderingOptions.submitButtonLabel">
+				<source>Send </source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-2.properties.label" resname="joinUsDubai.element.text-2.properties.label">
+				<source>Company name </source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-2.properties.placeholder" resname="joinUsDubai.element.text-2.properties.placeholder">
+				<source>Company name*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-3.properties.label" resname="joinUsDubai.element.text-3.properties.label">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-3.properties.placeholder" resname="joinUsDubai.element.text-3.properties.placeholder">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.name.properties.label" resname="joinUsDubai.element.name.properties.label">
+				<source>Contact name </source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.name.properties.placeholder" resname="joinUsDubai.element.name.properties.placeholder">
+				<source>Contact name*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.subject.properties.label" resname="joinUsDubai.element.subject.properties.label">
+				<source>Contact surname</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.subject.properties.placeholder" resname="joinUsDubai.element.subject.properties.placeholder">
+				<source>Contact surname*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.email.properties.label" resname="joinUsDubai.element.email.properties.label">
+				<source>Contact email</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.email.properties.placeholder" resname="joinUsDubai.element.email.properties.placeholder">
+				<source>Contact email*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-1.properties.label" resname="joinUsDubai.element.text-1.properties.label">
+				<source>Contact phone number</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.text-1.properties.placeholder" resname="joinUsDubai.element.text-1.properties.placeholder">
+				<source>Contact phone number</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.fieldset-1.properties.label" resname="joinUsDubai.element.fieldset-1.properties.label">
+				<source>Field*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.radiobutton-1.properties.options.startup" resname="joinUsDubai.element.radiobutton-1.properties.options.startup">
+				<source>Startup</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.radiobutton-1.properties.options.azienda" resname="joinUsDubai.element.radiobutton-1.properties.options.azienda">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.radiobutton-1.properties.options.altro" resname="joinUsDubai.element.radiobutton-1.properties.options.altro">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.statictext-1.properties.label" resname="joinUsDubai.element.statictext-1.properties.label">
+				<source>Relevant area of expertise*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.statictext-1.properties.text" resname="joinUsDubai.element.statictext-1.properties.text">
+				<source>Select one or more options</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.multicheckbox-1.properties.options.augmented_construction" resname="joinUsDubai.element.multicheckbox-1.properties.options.augmented_construction">
+				<source>Augmented Construction</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.multicheckbox-1.properties.options.augmented_living" resname="joinUsDubai.element.multicheckbox-1.properties.options.augmented_living">
+				<source>Augmented Living</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.multicheckbox-1.properties.options.augmented_city" resname="joinUsDubai.element.multicheckbox-1.properties.options.augmented_city">
+				<source>Augmented City</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.multicheckbox-1.properties.options.altro" resname="joinUsDubai.element.multicheckbox-1.properties.options.altro">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.statictext-2.properties.label" resname="joinUsDubai.element.statictext-2.properties.label">
+				<source>Upload your pitch presentation here*</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.statictext-2.properties.text" resname="joinUsDubai.element.statictext-2.properties.text">
+				<source>We accept files in PDF or Power Point format</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.message.properties.label" resname="joinUsDubai.element.message.properties.label">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.message.properties.placeholder" resname="joinUsDubai.element.message.properties.placeholder">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.checkbox-1.properties.label" resname="joinUsDubai.element.checkbox-1.properties.label">
+				<source>I have read and I accept the Privacy Policy</source>
+			</trans-unit>
+			<trans-unit id="joinUsDubai.element.checkbox-2.properties.label" resname="joinUsDubai.element.checkbox-2.properties.label">
+				<source>Subscribe to our newsletter to stay updated on Designtech events and initiatives</source>
+			</trans-unit>
+			<trans-unit id="element.joinUsDubai.renderingOptions.submitButtonLabel" resname="element.joinUsDubai.renderingOptions.submitButtonLabel">
+				<source>Submit application</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

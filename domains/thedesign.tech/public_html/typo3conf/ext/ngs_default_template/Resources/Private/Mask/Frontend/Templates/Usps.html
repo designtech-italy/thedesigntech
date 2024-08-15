@@ -1,0 +1,39 @@
+<f:if condition="{data.tx_mask_usps}">
+    <f:if condition="{data._LOCALIZED_UID}">
+        <f:then>
+            <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+        </f:then>
+        <f:else>
+            <f:variable name="contentLocalizedUid" value="{data.uid}" />
+        </f:else>
+    </f:if>
+
+    <div class="usps-element bgweb2 f_slider-wrapper" id="c{contentLocalizedUid}">
+        <div class="usps-list f_usps-list">
+            <f:for each="{data.tx_mask_usps}" as="data_item">
+                <div class="usps-item">
+                    <div class="image-text-box">
+                        <f:for each="{data_item.tx_mask_icon}" as="file">
+                            <f:render partial="Picture" arguments="{
+                                lazyload: 1,
+                                data: {
+                                    0: { file: file, width: 'auto', height: 'auto' }
+                                }
+                            }"/>
+                        </f:for>
+                        <f:if condition="{data_item.tx_mask_headline}">
+                            <div class="headline t4-inverse">
+                                {data_item.tx_mask_headline -> f:format.html()}
+                            </div>
+                        </f:if>
+                    </div>
+                    <f:if condition="{data_item.tx_mask_text}">
+                        <div class="description t6-inverse">
+                            {data_item.tx_mask_text -> f:format.html()}
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>

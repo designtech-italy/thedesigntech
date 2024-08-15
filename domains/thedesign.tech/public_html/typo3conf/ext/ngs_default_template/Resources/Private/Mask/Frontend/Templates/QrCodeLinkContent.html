@@ -1,0 +1,44 @@
+<div class="qr-code-element f_text-table-element">
+    <div class="boxed-headline">
+        <f:if condition="{data.tx_mask_preheadline}">
+            <div class="small preheadline">{data.tx_mask_preheadline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="headline">{data.tx_mask_headline -> f:format.html()}</div>
+        </f:if>
+        <f:for each="{data.tx_mask_image}" as="file">
+            <div class="image-box">
+                <f:media file="{file}" loading="lazy" />
+                <f:for each="{data.tx_mask_qritems}" as="data_item" iteration="loop">
+                    <f:if condition="{data_item.tx_mask_title}">
+                        <div class="qr-title-{loop.cycle} circle f_qr-title" data-tab-target="#qr-item-{data.uid}-{loop.cycle}"></div>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:for>
+    </div>
+    <f:if condition="{data.tx_mask_qritems}">
+        <div class="qr-list f_qr-list" id="f_qr-list">
+            <f:for each="{data.tx_mask_qritems}" as="data_item" iteration="loop">
+                <div class="qr-item{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}" id="qr-item-{data.uid}-{loop.cycle}" data-tab-content>
+                    <f:if condition="{data_item.tx_mask_title}">
+                        <div class="qr-title t6">{data_item.tx_mask_title -> f:format.html()}</div>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_buttonslist}">
+                        <div class="button-list">
+                            <f:for each="{data_item.tx_mask_buttonslist}" as="data_item_item">
+                                <div class="button-item">
+                                    <f:if condition="{data_item_item.tx_mask_link} || {data_item_item.tx_mask_linktext}">
+                                        <f:link.typolink parameter="{data_item_item.tx_mask_link}" class="morelink">
+                                            {data_item_item.tx_mask_linktext}
+                                        </f:link.typolink>
+                                    </f:if>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

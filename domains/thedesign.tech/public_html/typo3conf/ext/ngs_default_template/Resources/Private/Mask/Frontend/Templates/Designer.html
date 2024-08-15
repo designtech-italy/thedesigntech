@@ -1,0 +1,63 @@
+<div class="designer-list f_text-table-element">
+    <div class="boxed-headline">
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="t3 headline">{data.tx_mask_headline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_subheadline}">
+            <div class="subheadline">{data.tx_mask_subheadline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_textmobile}">
+            <div class="description mobile-view">
+                {data.tx_mask_textmobile -> f:format.html()}
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_text}">
+            <div class="description desktop-view">
+                {data.tx_mask_text -> f:format.html()}
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_link1text}">
+            <div class="linkbox">
+                <a href="#" class="btn button2 f_join-us-design f_modal-form-open-btn" data-modal-form-btn="join-us-design">{data.tx_mask_link1text}</a>
+            </div>
+        </f:if>
+    </div>
+    <div class="tablet-view">
+        <f:for each="{data.tx_mask_designerlist}" as="data_item" iteration="loop">
+            <div class="designers-block-item">
+                <f:if condition="{data_item.tx_mask_headline}">
+                    <div class="headline t6{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}" data-tab-target="#designer-item-{data.uid}-{loop.cycle}">{data_item.tx_mask_headline -> f:format.html()}</div>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+    <f:if condition="{data.tx_mask_designerlist}">
+        <div class="designers-block-list">
+            <f:for each="{data.tx_mask_designerlist}" as="data_item" iteration="loop">
+                <div class="designers-block-item{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}" id="designer-item-{data.uid}-{loop.cycle}" data-tab-content>
+                    <f:if condition="{data_item.tx_mask_headline}">
+                        <div class="headline t6">{data_item.tx_mask_headline -> f:format.html()}</div>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_items}">
+                        <div class="designers-list">
+                            <f:for each="{data_item.tx_mask_items}" as="data_item_item">
+                                <div class="designers-item">
+                                    <f:if condition="{data_item_item.tx_mask_link} && {data_item_item.tx_mask_linktext}">
+                                        <div class="designers-inner">
+                                            <f:link.typolink parameter="{data_item_item.tx_mask_link}" class="morelink">
+                                                {data_item_item.tx_mask_linktext}
+                                                <svg class="svg-box">
+                                                    <use xlink:href="#icon-arrow-right"></use>
+                                                </svg>
+                                            </f:link.typolink>
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

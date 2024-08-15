@@ -1,0 +1,85 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="criteria-list-element" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headlinemobile}">
+        <div class="headline t4 mobile-view">
+            {data.tx_mask_headlinemobile -> f:format.html()}
+            <svg class="svg-line"></svg>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_headline}">
+        <div class="headline t4 desktop-view">
+            {data.tx_mask_headline -> f:format.html()}
+            <svg class="svg-line"></svg>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_textmobile}">
+        <div class="description mobile-view">
+            {data.tx_mask_textmobile -> f:format.html()}
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_text}">
+        <div class="description desktop-view">
+            {data.tx_mask_text -> f:format.html()}
+        </div>
+    </f:if>
+
+    <f:if condition="{data.tx_mask_criterialist}">
+        <div class="criteria-list f_criteria-list">
+            <f:for each="{data.tx_mask_criterialist}" as="data_item">
+                <div class="criteria-item f_criteria-item">
+                    <div class="criteria-header-box f_criteria-header-box">
+                        <f:if condition="{data_item.tx_mask_criterialogo}">
+                            <div class="criteria-icon">
+                                <f:for each="{data_item.tx_mask_criterialogo}" as="file">
+                                    <f:image image="{file}" width="200" />
+                                    {file.description}
+                                </f:for>
+                            </div>
+                        </f:if>
+                        <f:if condition="{data_item.tx_mask_criteriaheadline}">
+                            <div class="criteria-headline">
+                                {data_item.tx_mask_criteriaheadline -> f:format.html()}
+                            </div>
+                        </f:if>
+
+                        <div class="open-icon"></div>
+                    </div>
+                    <f:if condition="{data_item.tx_mask_criteriaintro}">
+                        <div class="criteria-intro">
+                            {data_item.tx_mask_criteriaintro -> f:format.html()}
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <f:if condition="{data.tx_mask_link1text}">
+        <div class="btn-container">
+            <f:if condition="{data.tx_mask_linkform}">
+                <f:then>
+                    <button class="btn button3 btn-primary f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_linkform}">
+                        {data.tx_mask_link1text}
+                    </button>
+                </f:then>
+                <f:else>
+                    <f:if condition="{data.tx_mask_link1}">
+                        <f:link.typolink class="btn button3 btn-primary" parameter="{data.tx_mask_link1}">
+                            {data.tx_mask_link1text}
+                        </f:link.typolink>
+                    </f:if>
+                </f:else>
+            </f:if>
+        </div>
+    </f:if>
+</div>
+
+

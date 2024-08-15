@@ -1,0 +1,137 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "usps": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_usps"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "fa-bars",
+                    "iconOverlay": "",
+                    "key": "usps",
+                    "label": "USPs",
+                    "labels": [
+                        "Elements"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 2
+                }
+            },
+            "sql": {
+                "tx_mask_usps": {
+                    "tt_content": {
+                        "tx_mask_usps": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_usps": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_usps",
+                    "key": "usps",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_usps": {
+            "sql": {
+                "tx_mask_headline": {
+                    "tx_mask_usps": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_icon": {
+                    "tx_mask_usps": {
+                        "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tx_mask_usps": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inlineParent": "tx_mask_usps",
+                    "key": "headline",
+                    "label": "Headline",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_icon",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_usps",
+                    "key": "icon",
+                    "label": "Icon",
+                    "order": 1,
+                    "type": "file"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inlineParent": "tx_mask_usps",
+                    "key": "text",
+                    "label": "Text",
+                    "order": 3,
+                    "type": "richtext"
+                }
+            }
+        }
+    }
+}

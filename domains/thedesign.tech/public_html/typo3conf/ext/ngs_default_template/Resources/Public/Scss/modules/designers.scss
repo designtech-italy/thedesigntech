@@ -1,0 +1,296 @@
+.designer-list {
+  overflow: hidden;
+  position: relative;
+
+  @include glob-map-get-fluid(padding-top, 45, 40, 60, 60);
+  @include glob-map-get-fluid(padding-bottom, 45, 40, 35, 30);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    left: -50px;
+    right: -50px;
+    background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/blue-waves.svg") no-repeat center;
+    background-size: cover;
+
+    @include mobile {
+      top: 70px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    max-width: 1189px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 40, 22);
+    @include glob-map-get-fluid(padding-right, 80, 80, 40, 26);
+
+    .headline {
+      color: $g-color3;
+    }
+
+    .subheadline {
+      @include glob-map-get-fluid(margin-top, 32, 32, 20, 8);
+      @include glob-map-get-fluid(font-size, 28, 28, 22, 22);
+      @include glob-map-get-fluid(line-height, 42, 42, 34, 32);
+    }
+
+    .description {
+      margin: 0 auto;
+      max-width: 840px;
+      font-weight: 200;
+
+      @include glob-map-get-fluid(margin-top, 16, 16, 8, 4);
+      @include glob-map-get-fluid(margin-bottom, 54, 54, 40, 34);
+
+      &.mobile-view {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      @include mobile {
+        &.desktop-view {
+          display: none;
+        }
+      }
+    }
+
+    .linkbox {
+      @include glob-map-get-fluid(margin-top, 32, 32, 24, 14);
+
+      .btn {
+        background-color: $g-color3;
+        border: 1px solid $g-color3;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        color: $g-color1;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: transparent;
+            color: $g-color3;
+          }
+        }
+      }
+    }
+  }
+  .tablet-view {
+    display: none;
+    margin-top: 38px;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 33, 18);
+    @include glob-map-get-fluid(padding-right, 80, 80, 32, 25);
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    .designers-block-item {
+      .headline {
+        color: $g-color5;
+        margin-right: 32px;
+        position: relative;
+
+        &:before {
+          content: '';
+          left: 0;
+          height: 2px;
+          bottom: -5px;
+          position: absolute;
+          transition: width 0.3s ease;
+          background-color: currentColor;
+        }
+
+        &.is_active {
+          color: $g-color3;
+
+          &:before {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+  .designers-block-item {
+    .headline {
+      letter-spacing: 0.3px;
+      color: $g-color3;
+
+      em {
+        font-style: inherit;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+  .designers-block-list {
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1450px;
+    display: flex;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 33, 18);
+    @include glob-map-get-fluid(padding-right, 80, 80, 32, 25);
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    .designers-block-item {
+      @include tablet {
+        display: none;
+
+        &.is_active {
+          display: block;
+        }
+      }
+
+      &:first-child {
+        flex: 0 0 55%;
+        max-width: 55%;
+
+        @include desktop {
+          flex: 0 0 45%;
+          max-width: 45%;
+        }
+
+        @include tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        .designers-list {
+          .designers-item {
+            margin-right: 0;
+            flex: 0 0 33.333334%;
+            max-width: 33.333334%;
+
+            @media screen and (max-width: 1300px) {
+              flex: none;
+              max-width: none;
+            }
+
+            .morelink {
+              max-width: 100%;
+              color: $g-color2;
+              border: 1px solid $g-color3;
+              background-color: transparent;
+
+              @media (hover: hover) {
+                &:hover {
+                  color: $g-color1;
+                  background-color: $g-color3;
+
+                  svg {
+                    fill: $g-color1;
+                  }
+                }
+              }
+
+              svg {
+                fill: $g-color3;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        flex: 0 0 38.6%;
+        max-width: 38.6%;
+
+        @include desktop {
+          flex: 0 0 47.6%;
+          max-width: 47.6%;
+        }
+
+        @include tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+
+      .headline {
+        @include tablet {
+          display: none;
+        }
+      }
+
+      .designers-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include glob-map-get-fluid(margin-top, 20, 18, 16, 16);
+        @include glob-map-get-fluid(margin-left, -16, -16, -12, -12);
+        @include glob-map-get-fluid(margin-right, -16, -16, -12, -12);
+
+        @include tablet {
+          @include glob-map-get-fluid(margin-top, 30, 20, 20, 20);
+        }
+
+        .designers-item {
+          @include glob-map-get-fluid(margin-top, 16, 11, 9, 8);
+
+          .designers-inner {
+            padding: 0 16px;
+
+            @include glob-map-get-fluid(padding-left, 16, 16, 12, 12);
+            @include glob-map-get-fluid(padding-right, 16, 16, 12, 12);
+          }
+
+          .morelink {
+            color: $g-color1;
+            align-items: center;
+            text-align: center;
+            white-space: nowrap;
+            border-radius: 25px;
+            display: inline-flex;
+            padding: 8px 15px 6px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background-color: $g-color3;
+            border: 1px solid $g-color3;
+
+            @include mobile {
+              font-size: 14px;
+              line-height: 22px;
+            }
+
+            @media (hover: hover) {
+              &:hover {
+                color: $g-color3;
+                background-color: transparent;
+
+                svg {
+                  fill: $g-color3;
+                }
+              }
+            }
+
+            svg {
+              height: 13px;
+              min-width: 17px;
+              fill: $g-color1;
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

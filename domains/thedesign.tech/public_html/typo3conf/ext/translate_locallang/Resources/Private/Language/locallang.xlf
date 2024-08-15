@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:translate_locallang/Resources/Private/Language/locallang.xlf" date="2022-09-06T14:52:29Z" product-name="translate_locallang">
+		<header/>
+		<body>
+			<trans-unit id="title" resname="title">
+				<source>Translate</source>
+			</trans-unit>
+			<trans-unit id="choose_extension" resname="choose_extension">
+				<source>Select extension</source>
+			</trans-unit>
+			<trans-unit id="choose_file" resname="choose_file">
+				<source>Select file</source>
+			</trans-unit>
+			<trans-unit id="choose_language" resname="choose_language">
+				<source>Select language</source>
+			</trans-unit>
+			<trans-unit id="save" resname="save">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="export" resname="export">
+				<source>Export CSV</source>
+			</trans-unit>
+			<trans-unit id="import" resname="import">
+				<source>Import CSV</source>
+			</trans-unit>
+			<trans-unit id="sort_by_key" resname="sort_by_key">
+				<source>Sort by key</source>
+			</trans-unit>
+			<trans-unit id="search" resname="search">
+				<source>Search</source>
+			</trans-unit>
+			<trans-unit id="search_results" resname="search_results">
+				<source>Results</source>
+			</trans-unit>
+			<trans-unit id="search_results_none" resname="search_results_none">
+				<source>Nothing found.</source>
+			</trans-unit>
+			<trans-unit id="search_all" resname="search_all">
+				<source>Search in all extensions</source>
+			</trans-unit>
+			<trans-unit id="search_text" resname="search_text">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="create_file" resname="create_file">
+				<source>Create file</source>
+			</trans-unit>
+			<trans-unit id="load_labels_from_csv_file" resname="load_labels_from_csv_file">
+				<source>Load labels from CSV file</source>
+			</trans-unit>
+			<trans-unit id="add" resname="add">
+				<source>Add</source>
+			</trans-unit>
+			<trans-unit id="remove" resname="remove">
+				<source>Remove</source>
+			</trans-unit>
+			<trans-unit id="move" resname="move">
+				<source>Move</source>
+			</trans-unit>
+			<trans-unit id="default" resname="default">
+				<source>default</source>
+			</trans-unit>
+			<trans-unit id="key" resname="key">
+				<source>key</source>
+			</trans-unit>
+			<trans-unit id="dummy_filename" resname="dummy_filename">
+				<source>filename.xlf</source>
+			</trans-unit>
+			<trans-unit id="actionmenu.list" resname="actionmenu.list">
+				<source>Translate</source>
+			</trans-unit>
+			<trans-unit id="actionmenu.search" resname="actionmenu.search">
+				<source>Search</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

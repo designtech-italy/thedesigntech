@@ -1,0 +1,30 @@
+<f:if condition="{data.tx_mask_sliders}">
+    <div class="slider-element f_slider-wrapper">
+        <div class="slider-list f_slider-list">
+            <f:for each="{data.tx_mask_sliders}" as="data_item" iteration="counter">
+                <div class="slider-item f_slider-item" data-index="{counter.index}">
+                    <f:if condition="{data_item.tx_mask_slideritem}">
+                        <f:for each="{data_item.tx_mask_slideritem}" as="data_item_item">
+                            <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item_item.uid}</f:cObject>
+                        </f:for>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+        <div class="tns-nav f_slider-nav is_hoverable">
+            <f:for each="{data.tx_mask_sliders}" as="data_item" iteration="loop">
+                <div class="tns-nav-item">
+                    <f:if condition="{loop.cycle} < 10">
+                        <f:else>
+                            <span>{loop.cycle}</span>
+                        </f:else>
+                        <f:then>
+                            <span>0{loop.cycle}</span>
+                        </f:then>
+                    </f:if>
+                    <i class="point-item"></i>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>

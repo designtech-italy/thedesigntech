@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers" data-namespace-typo3-fluid="true">
+<formvh:renderRenderable renderable="{element}">
+    <div class="element fileUpload form-group row">
+        <f:render partial="Field/Field" arguments="{element: element}" contentAs="elementContent">
+            <div class="js-file-dropzone file-dropzone" data-success-text="{f:translate(key:'uploadSuccessText', extensionName:'ngs_default_template')}">
+                <formvh:form.uploadedResource
+                        property="{element.identifier}"
+                        as="resource"
+                        id="{element.uniqueIdentifier}"
+                        class="{element.properties.elementClassAttribute}"
+                        errorClass="{element.properties.elementErrorClassAttribute}"
+                        additionalAttributes="{formvh:translateElementProperty(element: element, property: 'fluidAdditionalAttributes')}"
+                        accept="{element.properties.allowedMimeTypes}"
+                >
+                    <f:if condition="{resource}">
+                        <div id="{element.uniqueIdentifier}-preview">
+                            {resource.originalResource.originalFile.name}
+                        </div>
+                    </f:if>
+                </formvh:form.uploadedResource>
+
+
+                <div class="upload-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="54" height="44" viewBox="0 0 54 44" fill="none">
+                        <path d="M48.8128 40.3603C48.5775 41.5919 48.107 41.5919 47.8718 41.5919H5.64582C5.17533 41.5919 4.70485 40.9761 4.70485 40.4834L1.88194 16.8368H51.4004L48.8128 40.3603ZM53.1648 15.3589C53.0471 15.1126 52.8119 14.9894 52.459 14.9894H0.940971C0.705728 14.9894 0.470485 15.1126 0.235243 15.3589C0.117622 15.6052 0 15.8515 0 16.0978L2.94053 40.7297C3.17577 42.3308 4.35198 43.4393 5.64582 43.4393H47.7542C48.5775 43.4393 49.989 43.0698 50.4595 40.7297L53.4 16.0978C53.4 15.7284 53.4 15.482 53.1648 15.3589ZM6.23392 12.1567C6.70441 12.1567 7.17489 11.7873 7.17489 11.1715V3.53557C7.17489 3.04293 7.52775 2.79661 7.99824 2.79661H17.4079C17.996 2.79661 18.2313 3.28925 18.7018 4.644C19.0546 5.75244 19.5251 7.35351 21.0542 7.35351H45.637C46.1075 7.35351 46.4604 7.72299 46.4604 8.21563V11.2946C46.4604 11.7873 46.8132 12.2799 47.4013 12.2799C47.9894 12.2799 48.3423 11.9104 48.3423 11.2946V8.21563C48.3423 6.73772 47.1661 5.50612 45.7546 5.50612H20.9366C20.7013 5.50612 20.4661 4.76716 20.2308 4.15137C19.878 2.91977 19.2899 0.949219 17.2903 0.949219H7.88062C6.46916 0.949219 5.41057 2.05765 5.29295 3.53557V11.2946C5.41057 11.7873 5.76344 12.1567 6.23392 12.1567Z" fill="#5458F6"/>
+                        <mask id="mask0_2614_12040" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="54" height="44">
+                            <path d="M48.8128 40.3603C48.5775 41.5919 48.107 41.5919 47.8718 41.5919H5.64582C5.17533 41.5919 4.70485 40.9761 4.70485 40.4834L1.88194 16.8368H51.4004L48.8128 40.3603ZM53.1648 15.3589C53.0471 15.1126 52.8119 14.9894 52.459 14.9894H0.940971C0.705728 14.9894 0.470485 15.1126 0.235243 15.3589C0.117622 15.6052 0 15.8515 0 16.0978L2.94053 40.7297C3.17577 42.3308 4.35198 43.4393 5.64582 43.4393H47.7542C48.5775 43.4393 49.989 43.0698 50.4595 40.7297L53.4 16.0978C53.4 15.7284 53.4 15.482 53.1648 15.3589ZM6.23392 12.1567C6.70441 12.1567 7.17489 11.7873 7.17489 11.1715V3.53557C7.17489 3.04293 7.52775 2.79661 7.99824 2.79661H17.4079C17.996 2.79661 18.2313 3.28925 18.7018 4.644C19.0546 5.75244 19.5251 7.35351 21.0542 7.35351H45.637C46.1075 7.35351 46.4604 7.72299 46.4604 8.21563V11.2946C46.4604 11.7873 46.8132 12.2799 47.4013 12.2799C47.9894 12.2799 48.3423 11.9104 48.3423 11.2946V8.21563C48.3423 6.73772 47.1661 5.50612 45.7546 5.50612H20.9366C20.7013 5.50612 20.4661 4.76716 20.2308 4.15137C19.878 2.91977 19.2899 0.949219 17.2903 0.949219H7.88062C6.46916 0.949219 5.41057 2.05765 5.29295 3.53557V11.2946C5.41057 11.7873 5.76344 12.1567 6.23392 12.1567Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_2614_12040)">
+                            <path d="M59.2829 -5.20898H-5.7616V49.597H59.2829V-5.20898Z" fill="#5458F6"/>
+                        </g>
+                    </svg>
+                    <span class="max-upload-text small">
+                         <f:translate key="uploadBoxText" extensionName="ngs_default_template"/>
+                    </span>
+                </div>
+            </div>
+        </f:render>
+
+    </div>
+</formvh:renderRenderable>
+</html>

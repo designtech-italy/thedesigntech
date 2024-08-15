@@ -1,0 +1,21 @@
+<f:if condition="{data.0.file}">
+	<f:variable name="imagewidth">{data.0.width -> v:format.replace(substring: 'c')}</f:variable>
+	<f:variable name="imageheight">{data.0.height -> v:format.replace(substring: 'c')}</f:variable>
+	<f:variable name="imgalt">{f:if(condition: '{data.0.file.alternative}', then: '{data.0.file.alternative}', else: '{elementname}')}</f:variable>
+
+	<picture>
+		<f:for each="{data}" as="source" key="breakpoint">
+			<f:if condition="{source.cropVariant}">
+				<f:then>
+					<source srcset="{f:uri.image(image:source.file, width:'{source.width}', height:'{source.height}', cropVariant:'{source.cropVariant}')}"{f:if(condition: '{breakpoint} != 0', then: ' media="(min-width: {breakpoint}px)"', else: '')} />
+				</f:then>
+				<f:else>
+					<f:variable name="cropVariant">{f:if(condition: '{breakpoint}', then: 'desktop', else: 'mobile')}</f:variable>
+					<source srcset="{f:uri.image(image:source.file, width:'{source.width}', height:'{source.height}', cropVariant:'{cropVariant}')}"{f:if(condition: '{breakpoint} != 0', then: ' media="(min-width: {breakpoint}px)"', else: '')} />
+				</f:else>
+			</f:if>
+		</f:for>
+		<f:variable name="cropVariant">{f:if(condition: '{data.0.cropVariant}', then: '{data.0.cropVariant}', else: 'mobile')}</f:variable>
+		<img{f:if(condition: '{lazyload} != "0"', then: ' loading="lazy"')} src="{f:uri.image(image:data.0.file, width:'{data.0.width}', height:'{data.0.height}', cropVariant:'{cropVariant}')}"{f:if(condition: '{data.0.file.title}', then: ' title="{data.0.file.title}"')} alt="{imgalt}">
+	</picture>
+</f:if>

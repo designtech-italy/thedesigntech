@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://thedesign.tech/en/sitemap.xml
+Sitemap: https://thedesign.tech/it/sitemap.xml
+

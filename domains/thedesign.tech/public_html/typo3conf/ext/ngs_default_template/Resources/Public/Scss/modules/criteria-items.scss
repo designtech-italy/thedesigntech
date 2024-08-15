@@ -1,0 +1,233 @@
+.criteria-list-element {
+  @include glob-map-get-fluid(padding-top, 119, 96, 60, 38);
+  @include glob-map-get-fluid(padding-bottom, 92, 92, 75, 58);
+  @include glob-map-get-fluid(padding-left, 97, 97, 60, 23);
+  @include glob-map-get-fluid(padding-right, 97, 97, 60, 23);
+
+  .mobile-view {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  .svg-line {
+    position: static;
+    width: 111px;
+    height: 8px;
+  }
+  .headline {
+    padding-top: 5px;
+
+    @include glob-map-get-fluid(margin-bottom, 31, 31, 25, 10);
+
+    @include mobile {
+      padding-left: 18px;
+    }
+
+    strong {
+      font-weight: 500;
+      color: $g-color3;
+    }
+    p {
+      margin: 0;
+    }
+    .svg-line {
+      display: none;
+
+      @include mobile {
+        display: block;
+        margin-bottom: 36px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .description {
+    max-width: 1370px;
+
+    @include glob-map-get-fluid(margin-bottom, 61, 46, 36, 18);
+
+    @media screen and (min-width: $mediaDesktopLarge) {
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .criteria-list {
+    box-shadow: 0 0 100px 0 rgba(0,0,0,0.1);
+    background-color: $g-color1;
+    padding: 35px 0 34px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include glob-map-get-fluid(margin-bottom, 49, 46, 36, 26);
+    @include glob-map-get-fluid(padding-top, 35, 15, 15, 15);
+    @include glob-map-get-fluid(padding-bottom, 34, 20, 20, 20);
+
+    @media screen and (max-width: 1280px) {
+      padding: 0;
+      background-color: transparent;
+      box-shadow: 0 0 0;
+    }
+
+    .criteria-item {
+      padding: 0 29px 0 27px;
+      border-right: 1px solid rgba(0,0,0,0.5);
+      width: 20%;
+
+      @include glob-map-get-fluid(padding-left, 27, 15, 10, 10);
+      @include glob-map-get-fluid(padding-right, 29, 15, 10, 10);
+
+      @media screen and (max-width: 1280px) {
+        width: 100%;
+        border-right: 0;
+        border-top: 1px solid rgba(0,0,0,0.5);
+        padding: 13px 0 9px !important;
+
+        &:last-child {
+          border-bottom: 1px solid rgba(0,0,0,0.5);
+        }
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.is_active {
+        .criteria-header-box {
+          @media screen and (max-width: 1280px) {
+            margin-bottom: 19px !important;
+          }
+
+          .open-icon {
+            @media screen and (max-width: 1280px) {
+              &:before {
+                content: "-";
+              }
+            }
+          }
+        }
+        .criteria-intro {
+          @media screen and (max-width: 1280px) {
+            max-height: 500px;
+            padding-bottom: 18px;
+          }
+        }
+      }
+
+      .criteria-header-box {
+        display: flex;
+        align-items: center;
+
+        @include glob-map-get-fluid(margin-bottom, 24, 15, 10, 10);
+
+        @media screen and (max-width: 1280px) {
+          margin-bottom: 0 !important;
+          transition: margin-bottom 0.5s ease;
+        }
+
+        .criteria-icon {
+          margin-right: 15px;
+
+          @include glob-map-get-fluid(width, 48, 30, 30, 30);
+          @include glob-map-get-fluid(min-width, 48, 30, 30, 30);
+          @include glob-map-get-fluid(height, 53, 30, 30, 30);
+
+          @media screen and (max-width: 1280px) {
+            margin-right: 33px;
+          }
+          @include mobile {
+            width: 45px;
+            min-width: 45px;
+            height: 50px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .criteria-headline {
+          flex: 1;
+          color: $g-color3;
+          display: flex;
+          align-items: center;
+          font-size: 29px;
+          line-height: 34px;
+
+          @include glob-map-get-fluid(min-height, 68, 60, 60, 60);
+
+          @include desktopLargest {
+            font-size: globFluidSizeValue(29, 18, 1850, 1280);
+            line-height: globFluidSizeValue(34, 28, 1850, 1280);
+          }
+
+          @media screen and (max-width: 1280px) {
+            font-size: 22px;
+            line-height: 28px;
+            min-height: unset;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+        .open-icon {
+          @media screen and (max-width: 1280px) {
+            &:before {
+              content: "+";
+            }
+          }
+        }
+      }
+      .criteria-intro {
+        line-height: 24px;
+        text-align: center;
+
+        @include glob-map-get-fluid(font-size, 17, 15, 15, 15);
+
+        @media screen and (max-width: 1280px) {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+          text-align: left;
+          max-width: 500px;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .btn-container {
+    display: flex;
+    justify-content: flex-end;
+
+    @media screen and (max-width: 1280px) {
+      justify-content: flex-start;
+    }
+
+    .btn {
+      text-align: center;
+
+      @include glob-map-get-fluid(min-width, 238, 180, 107, 107);
+
+      @include mobile {
+        margin-left: 13px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,281 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "autoplay_video": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_3dfram",
+                        "tx_mask_headline",
+                        "tx_mask_link1text",
+                        "tx_mask_link1",
+                        "tx_mask_video",
+                        "tx_mask_widgetcode"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-video-camera",
+                    "iconOverlay": "",
+                    "key": "autoplay_video",
+                    "label": "Autoplay video",
+                    "labels": [
+                        "3D Frame",
+                        "Headline",
+                        "Link text",
+                        "Link",
+                        "Video",
+                        "Widget code"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_3dfram": {
+                    "tt_content": {
+                        "tx_mask_3dfram": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_link1": {
+                    "tt_content": {
+                        "tx_mask_link1": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_link1text": {
+                    "tt_content": {
+                        "tx_mask_link1text": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_video": {
+                    "tt_content": {
+                        "tx_mask_video": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_widgetcode": {
+                    "tt_content": {
+                        "tx_mask_widgetcode": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_3dfram": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "fullKey": "tx_mask_3dfram",
+                    "key": "3dfram",
+                    "type": "check"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_link1": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1",
+                    "label": {
+                        "criteria_items": "Link",
+                        "image_slider_text": "Link",
+                        "intro": "Link",
+                        "labs": "Link",
+                        "landing_page_banner": "Link",
+                        "simple_text": "Link"
+                    },
+                    "order": {
+                        "criteria_items": 1,
+                        "image_slider_text": 2,
+                        "intro": 2,
+                        "labs": 2,
+                        "landing_page_banner": 2,
+                        "simple_text": 2
+                    },
+                    "type": "link"
+                },
+                "tx_mask_link1text": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1text",
+                    "label": {
+                        "criteria_items": "Link text",
+                        "image_slider_text": "Link text",
+                        "intro": "Link text",
+                        "labs": "Link text",
+                        "landing_page_banner": "Link text",
+                        "simple_text": "Link text"
+                    },
+                    "order": {
+                        "criteria_items": 2,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "labs": 1,
+                        "landing_page_banner": 1,
+                        "simple_text": 1
+                    },
+                    "type": "string"
+                },
+                "tx_mask_video": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileByUrlAllowed": 1,
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        }
+                    },
+                    "fullKey": "tx_mask_video",
+                    "key": "video",
+                    "onlineMedia": [
+                        "youtube",
+                        "vimeo"
+                    ],
+                    "type": "media"
+                },
+                "tx_mask_widgetcode": {
+                    "cTypes": [
+                        "html"
+                    ],
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "tt_content",
+                        "overrideChildTca": {
+                            "columns": {
+                                "colPos": {
+                                    "config": {
+                                        "default": 999
+                                    }
+                                }
+                            }
+                        },
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_widgetcode",
+                    "key": "widgetcode",
+                    "type": "content"
+                }
+            }
+        }
+    }
+}

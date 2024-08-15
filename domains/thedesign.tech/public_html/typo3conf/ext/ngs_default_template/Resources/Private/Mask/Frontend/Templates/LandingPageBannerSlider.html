@@ -1,0 +1,161 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="landing-page-banner f_landing-page-banner-slider">
+    <f:if condition="{data.tx_mask_sliderlist}">
+        <f:if condition="{data.tx_mask_timeout}">
+            <f:then>
+                <f:variable name="slideTimeout" value="{data.tx_mask_timeout}"/>
+            </f:then>
+            <f:else>
+                <f:variable name="slideTimeout" value="4000"/>
+            </f:else>
+        </f:if>
+
+        <div class="landing-page-banner-list f_landing-page-banner-slider-inner" data-slideTimeout="{slideTimeout}">
+            <f:for each="{data.tx_mask_sliderlist}" as="data_item">
+                <div class="landing-page-banner-item">
+                    <div class="landing-page-banner-box" id="c{contentLocalizedUid}">
+                        <div class="left-box">
+                            <f:if condition="{data_item.tx_mask_slideheadline}">
+                                <div class="headline t4">
+                                    {data_item.tx_mask_slideheadline -> f:format.html()}
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{data_item.tx_mask_slidetextmobile}">
+                                <div class="description medium1 mobile-view">
+                                    {data_item.tx_mask_slidetextmobile -> f:format.html()}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_slidetext}">
+                                <div class="description large1 desktop-view">
+                                    {data_item.tx_mask_slidetext -> f:format.html()}
+                                </div>
+                            </f:if>
+
+                            <div class="btn-container">
+                                <f:if condition="{data_item.tx_mask_slidelink1text}">
+                                    <f:if condition="{data_item.tx_mask_slidelinkform}">
+                                        <f:then>
+                                            <button class="btn button3 btn-primary f_modal-form-open-btn" data-modal-form-btn="{data_item.tx_mask_slidelinkform}">
+                                                {data_item.tx_mask_slidelink1text}
+                                            </button>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{data_item.tx_mask_slidelink1}">
+                                                <f:link.typolink class="btn button3 btn-primary" parameter="{data_item.tx_mask_slidelink1}">
+                                                    {data_item.tx_mask_slidelink1text}
+                                                </f:link.typolink>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </f:if>
+
+                                <div class="righttext medium1">
+                                    <f:if condition="{data_item.tx_mask_slidebuttonrighttext}">
+                                        <div>{data_item.tx_mask_slidebuttonrighttext -> f:format.html()}</div>
+                                    </f:if>
+
+                                    <f:if condition="{data_item.tx_mask_sliderightlinktext}">
+                                        <f:if condition="{data_item.tx_mask_sliderightlinkform}">
+                                            <f:then>
+                                                <a href="javascript:void(0)" class="f_modal-form-open-btn" data-modal-form-btn="{data_item.tx_mask_sliderightlinkform}">
+                                                    {data_item.tx_mask_sliderightlinktext}
+                                                </a>
+                                            </f:then>
+                                            <f:else>
+                                                <f:if condition="{data_item.tx_mask_sliderightlink}">
+                                                    <f:link.typolink class="" parameter="{data_item.tx_mask_sliderightlink}">
+                                                        {data_item.tx_mask_sliderightlinktext}
+                                                    </f:link.typolink>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-box">
+                            <f:for each="{data_item.tx_mask_slideimage}" as="file">
+                                <div class="image-box desktop-image{f:if(condition: data_item.tx_mask_slideimagemobile, then: '', else: ' mobile-image')}">
+                                    <f:render partial="Picture" arguments="{
+                                lazyload: 1,
+                                data: {
+                                    1200: { file: file, width: '699c', height: '610c', cropVariant: 'desktop' },
+                                    1024: { file: file, width: '1200c', height: '624c', cropVariant: 'desktop' },
+                                    768: { file: file, width: '1024c', height: '532c', cropVariant: 'desktop' },
+                                    414: { file: file, width: '768c', height: '400c', cropVariant: 'mobile' },
+                                    0: { file: file, width: '414c', height: '215c', cropVariant: 'mobile' }
+                                },
+                                imageratiox: 699,
+                                imageratioy: 610
+                            }"/>
+                                </div>
+                            </f:for>
+                            <f:for each="{data_item.tx_mask_slideimagemobile}" as="file">
+                                <div class="image-box mobile-image{f:if(condition: data_item.tx_mask_slideimage, then: '', else: ' desktop-image')}">
+                                    <f:render partial="Picture" arguments="{
+                                lazyload: 1,
+                                data: {
+                                    1200: { file: file, width: '699c', height: '610c', cropVariant: 'desktop' },
+                                    1024: { file: file, width: '1200c', height: '624c', cropVariant: 'desktop' },
+                                    768: { file: file, width: '1024c', height: '532c', cropVariant: 'desktop' },
+                                    414: { file: file, width: '768c', height: '400c', cropVariant: 'mobile' },
+                                    0: { file: file, width: '414c', height: '215c', cropVariant: 'mobile' }
+                                },
+                                imageratiox: 699,
+                                imageratioy: 610
+                            }"/>
+                                </div>
+                            </f:for>
+
+                            <f:if condition="{data_item.tx_mask_slidecircleiconheadline} || {data_item.tx_mask_slidecircleiconsubheadline} || {data_item.tx_mask_slidecircleiconpreheadline}">
+                                <div class="circle-icon-box bggallerybox{f:if(condition: data_item.tx_mask_slidecircleiconpreheadline, then: ' has-preheadline')}{f:if(condition: data_item.tx_mask_slidecircleiconsubheadline, then: ' has-subheadline')}">
+                                    <f:if condition="{data_item.tx_mask_slidecircleiconpreheadline}">
+                                        <div class="t6-inverse circle-icon-preheadline">
+                                            {data_item.tx_mask_slidecircleiconpreheadline}
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{data_item.tx_mask_slidecircleiconheadline}">
+                                        <div class="t5 circle-icon-headline">
+                                            <span>{data_item.tx_mask_slidecircleiconheadline}</span>
+                                            <f:if condition="{data_item.tx_mask_slidecircleiconsupheadline}">
+                                                <sup class="t6-inverse">{data_item.tx_mask_slidecircleiconsupheadline}</sup>
+                                            </f:if>
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{data_item.tx_mask_slidecircleiconsubheadline}">
+                                        <div class="t6-inverse circle-icon-subheadline">
+                                            {data_item.tx_mask_slidecircleiconsubheadline}
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+        <f:if condition="{data.tx_mask_sliderlist -> f:count()} > 1">
+            <div class="arrow-container">
+                <div class="cursor-to-left arrow-cursor-to-left f_cursor-left">
+                    <svg class="svg-box">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg>
+                </div>
+                <div class="cursor-to-right arrow-cursor-to-right f_cursor-right">
+                    <svg class="svg-box">
+                        <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                </div>
+            </div>
+        </f:if>
+    </f:if>
+</div>

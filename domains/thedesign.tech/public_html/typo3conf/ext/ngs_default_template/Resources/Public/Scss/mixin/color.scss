@@ -1,0 +1,307 @@
+// Colors
+
+$g-color1: #ffffff;
+$g-color2: #000000;
+$g-color3: #5458F6;
+$g-color4: #161734;
+$g-color5: #AEB0BB;
+$g-color6: #0057FF;
+
+
+// for Notifications
+$n-color1: #FF0000;
+$n-color2: #31EFA3;
+$n-color3: #FFE81D;
+
+$ln-gradient: linear-gradient(180.02deg, $g-color3 0.02%, rgba(217, 217, 217, 0) 79.47%);
+
+$shadow1: 0 5px 14px 0 $g-color3 inset;
+
+$bgweb: (
+        "colors": (
+                "background-color": $g-color1,
+                "color": $g-color4
+        ),
+        "title": (
+                "default": (
+                        "color": $g-color4
+                ),
+                "t1large": (
+                        "color": $g-color4
+                ),
+                "t1": (
+                        "color": $g-color4
+                ),
+                "t2": (
+                        "color": $g-color4
+                ),
+                "t3": (
+                        "color": $g-color4
+                ),
+                "t4": (
+                        "color": $g-color4
+                ),
+                "t5": (
+                        "color": $g-color4
+                ),
+                "t6": (
+                        "color": $g-color4
+                )
+        ),
+        "border": (
+                "color": $g-color4
+        ),
+        "link": (
+                "default": (
+                        "color": $g-color2,
+                        "text-decoration": none,
+                        "cursor": pointer
+                ),
+                "hover": (
+                        "color": $g-color2,
+                        "text-decoration": none,
+                        "opacity": 0.8
+                )
+        ),
+        "morelink": (
+                "default": (
+                        "color": $g-color2,
+                        "text-decoration": none,
+                        "cursor": pointer,
+                        "outline": 0
+                ),
+                "hover": (
+                        "color": $g-color2,
+                        "text-decoration": none,
+                        "opacity": 0.8,
+                        "background": transparent,
+                        "outline": 0
+                )
+        ),
+        "buttons": (
+                "btn-primary": (
+                        "default": (
+                                "background": $g-color3,
+                                "border-color": transparent,
+                                "color": $g-color1,
+                                "opacity": 1
+                        ),
+                        "hover": (
+                                "background": $g-color2,
+                                "border-color": $g-color2,
+                                "color": $g-color1,
+                                "text-decoretion": none,
+                                "opacity": 0.8,
+                                "box-shadow": 0 0 0
+                        )
+                ),
+                "btn-secondary": (
+                        "default": (
+                                "background": transparent,
+                                "border-color": transparent,
+                                "color": $g-color2,
+                                "opacity": 1
+                        ),
+                        "hover": (
+                                "background": transparent,
+                                "border-color": transparent,
+                                "color": $g-color2,
+                                "text-decoretion": none,
+                                "opacity": 0.8,
+                                "box-shadow": 0 0 0
+                        )
+                )
+        ),
+        "form": (
+                "default": (
+                        "background-color": $g-color1,
+                        "color": $g-color2
+                ),
+                "border": (
+                        "color": $g-color4
+                )
+        ),
+        "form-checkbox": (
+                "outbox": (
+                        "unchecked": (
+                                "default": (
+                                        "border-color": $g-color2,
+                                ),
+                                "hover": (
+                                )
+                        ),
+                        "checked": (
+                                "default": (
+                                ),
+                                "hover": (
+                                )
+                        )
+                ),
+                "inbox": (
+                        "unchecked": (
+                                "default": (
+                                        "background-color": transparent,
+                                ),
+                                "hover": (
+                                )
+                        ),
+                        "checked": (
+                                "default": (
+                                        "background-color": transparent,
+                                        "color": $g-color2
+                                ),
+                                "hover": (
+                                )
+                        )
+                )
+        ),
+        "form-radio": (
+                "outbox": (
+                        "unchecked": (
+                                "default": (
+                                ),
+                                "hover": (
+                                )
+                        ),
+                        "checked": (
+                                "default": (
+                                ),
+                                "hover": (
+                                )
+                        )
+                ),
+                "inbox": (
+                        "unchecked": (
+                                "default": (
+                                ),
+                                "hover": (
+                                )
+                        ),
+                        "checked": (
+                                "default": (
+                                ),
+                                "hover": (
+                                )
+                        )
+                )
+        ),
+        "scrollbar": (
+                "scrollbar-color": $g-color3,
+                "scrollbar-inner-color": $g-color1,
+                "scrollbar-width": 8px
+        )
+);
+
+$bgColors: (
+        "bgweb2": (
+                "colors": (
+                        "background-color": $g-color4,
+                        "color": $g-color1
+                ),
+                "title": (
+                        "default": (
+                                "color": $g-color1
+                        ),
+                        "t1large": (
+                                "color": $g-color1
+                        ),
+                        "t1": (
+                                "color": $g-color1
+                        ),
+                        "t2": (
+                                "color": $g-color1
+                        ),
+                        "t3": (
+                                "color": $g-color1
+                        ),
+                        "t4": (
+                                "color": $g-color1
+                        ),
+                        "t5": (
+                                "color": $g-color1
+                        ),
+                        "t6": (
+                                "color": $g-color1
+                        )
+                ),
+        ),
+        "bgweb3": (
+        ),
+        "bglist": (
+        ),
+        "bglistalternate": (
+        ),
+        "bgbar": (
+        ),
+        "bghighlight": (
+                "colors": (
+                        "background-color": $g-color2,
+                        "color": $g-color1
+                ),
+                "title": (
+                        "default": (
+                                "color": $g-color1
+                        ),
+                        "t1large": (
+                                "color": $g-color1
+                        ),
+                        "t1": (
+                                "color": $g-color1
+                        ),
+                        "t2": (
+                                "color": $g-color1
+                        ),
+                        "t3": (
+                                "color": $g-color1
+                        ),
+                        "t4": (
+                                "color": $g-color1
+                        ),
+                        "t5": (
+                                "color": $g-color1
+                        ),
+                        "t6": (
+                                "color": $g-color1
+                        )
+                ),
+        ),
+        "bghighlight2": (
+        ),
+        "bggallerybox": (
+                "colors": (
+                        "color": $g-color1
+                ),
+                "title": (
+                        "default": (
+                                "color": $g-color1
+                        ),
+                        "t1large": (
+                                "color": $g-color1
+                        ),
+                        "t1": (
+                                "color": $g-color1
+                        ),
+                        "t2": (
+                                "color": $g-color1
+                        ),
+                        "t3": (
+                                "color": $g-color1
+                        ),
+                        "t4": (
+                                "color": $g-color1
+                        ),
+                        "t5": (
+                                "color": $g-color1
+                        ),
+                        "t6": (
+                                "color": $g-color1
+                        )
+                ),
+        ),
+        "bgheader": (
+        ),
+        "bgheader2": (
+        ),
+        "bgmobile": (
+        )
+);

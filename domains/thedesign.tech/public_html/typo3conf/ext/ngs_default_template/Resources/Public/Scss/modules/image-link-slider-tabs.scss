@@ -1,0 +1,251 @@
+.image-link-slider-tabs-element {
+  overflow: hidden;
+
+  @include glob-map-get-fluid(padding-top, 65, 65, 54, 46);
+  @include glob-map-get-fluid(padding-right, 93, 93, 50, 25);
+  @include glob-map-get-fluid(padding-left, 93, 93, 50, 25);
+
+  .mobile-view {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  .headline {
+    padding-top: 5px;
+
+    @include glob-map-get-fluid(margin-bottom, 31, 31, 25, 10);
+
+    @include mobile {
+      padding-left: 18px;
+    }
+
+    strong {
+      font-weight: 500;
+      color: $g-color3;
+    }
+    p {
+      margin: 0;
+    }
+    .svg-line {
+      position: static;
+      width: 111px;
+      height: 8px;
+      display: none;
+
+      @include mobile {
+        display: block;
+        margin-bottom: 36px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .link-action {
+    text-align: right;
+
+    @include glob-map-get-fluid(margin-top, 100, 80, 43, 25);
+    @include glob-map-get-fluid(padding-bottom, 100, 80, 43, 25);
+
+    @include mobile {
+      text-align: left;
+    }
+
+    .morelink {
+      display: inline-flex;
+      color: currentColor;
+
+      span {
+        text-decoration: underline;
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      svg {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .tab-list {
+    display: flex;
+    margin-bottom: 38px;
+
+    @include glob-map-get-fluid(margin-left, -22, -22, -19, -17);
+    @include glob-map-get-fluid(margin-right, -22, -22, -19, -17);
+    @include glob-map-get-fluid(margin-bottom, 38, 38, 35, 33);
+
+    .tab-item {
+      margin: 0 22px;
+      cursor: pointer;
+      font-size: 26px;
+      color: $g-color5;
+      line-height: 25px;
+      position: relative;
+      white-space: nowrap;
+      font-family: 'Rische';
+
+      @include glob-map-get-fluid(margin-left, 22, 22, 19, 17);
+      @include glob-map-get-fluid(margin-right, 22, 22, 19, 17);
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: none;
+        height: 2px;
+        left: 0;
+        right: 0;
+        bottom: -4px;
+        background-color: currentColor;
+      }
+
+      &.is_active {
+        display: block;
+        color: $g-color3;
+
+        &:before {
+          display: block;
+        }
+      }
+
+      em {
+        font-style: inherit;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .video-container {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+
+    video, iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      object-fit: cover;
+      display: block;
+
+      &.is-hidden {
+        display: none;
+      }
+    }
+  }
+
+  .tns-outer {
+    @include glob-map-get-fluid(margin-left, -19.5, -19.5, -8, -5.5);
+    @include glob-map-get-fluid(margin-right, -19.5, -19.5, -8, -36);
+  }
+
+  .tns-ovh {
+    overflow: visible;
+  }
+
+  .video-list-tabs {
+    .video-list-inner {
+      display: none;
+
+      &.is_active {
+        display: block;
+      }
+      &.desktop-hide-arrows {
+        .arrow-container {
+          display: none;
+        }
+      }
+    }
+
+    .video-list {
+      .video-item {
+        @include glob-map-get-fluid(padding-left, 19.5, 19.5, 8, 5.5);
+        @include glob-map-get-fluid(padding-right, 19.5, 19.5, 8, 5.5);
+
+        a {
+          text-decoration: none;
+        }
+
+        .text-box {
+          @include glob-map-get-fluid(margin-top, 18, 18, 13, 9);
+        }
+
+        .title {
+          text-decoration: underline;
+
+          @include mobile {
+            text-decoration: none;
+            line-height: 20px;
+            font-size: 15px;
+          }
+        }
+
+        .description {
+          @include mobile {
+            display: none;
+          }
+        }
+
+        .image-box {
+          aspect-ratio: 2/1.13;
+
+          @include mobile {
+            aspect-ratio: 2.1/3;
+            border-radius: 5px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .tns-nav {
+    display: none;
+
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  .arrow-container {
+    margin-top: 19px;
+    right: 41px;
+
+    @include mobile {
+      display: none;
+    }
+
+    & > div {
+      display: flex !important;
+      border-color: $g-color1;
+
+      @include glob-map-get-fluid(margin-right, 17, 17, 14, 10);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      svg {
+        fill: currentColor;
+      }
+    }
+  }
+}

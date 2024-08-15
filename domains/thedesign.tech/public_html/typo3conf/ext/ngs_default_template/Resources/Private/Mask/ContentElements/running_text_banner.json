@@ -1,0 +1,47 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "running_text_banner": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_text1"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "fa-bank",
+                    "iconOverlay": "",
+                    "key": "running_text_banner",
+                    "label": "Running text banner",
+                    "labels": [
+                        "Text"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 5
+                }
+            },
+            "sql": {
+                "tx_mask_text1": {
+                    "tt_content": {
+                        "tx_mask_text1": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_text1": {
+                    "config": {
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_text1",
+                    "key": "text1",
+                    "type": "text"
+                }
+            }
+        }
+    }
+}

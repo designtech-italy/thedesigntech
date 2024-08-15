@@ -1,0 +1,56 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="discover-box-element" id="c{contentLocalizedUid}">
+    <div class="discover-box-bg">
+        <f:for each="{data.tx_mask_image}" as="file">
+            <div class="image-box">
+                <f:render partial="Picture" arguments="{
+                    lazyload: 1,
+                    data: {
+                        1400: { file: file, width: '1920c', height: '573c', cropVariant: 'desktop' },
+                        1200: { file: file, width: '1400c', height: '472c', cropVariant: 'desktop' },
+                        1024: { file: file, width: '1200c', height: '430c', cropVariant: 'desktop' },
+                        768: { file: file, width: '1024c', height: '599c', cropVariant: 'desktop' },
+                        414: { file: file, width: '768c', height: '490c', cropVariant: 'mobile' },
+                        0: { file: file, width: '414c', height: '421c', cropVariant: 'mobile' }
+                    }
+                }"/>
+            </div>
+        </f:for>
+    </div>
+    <div class="discover-box-main-content bghighlight">
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="headline">
+                {data.tx_mask_headline -> f:format.html()}
+            </div>
+        </f:if>
+
+        <f:if condition="{data.tx_mask_linklist}">
+            <div class="link-box">
+                <f:for each="{data.tx_mask_linklist}" as="data_item">
+                    <div class="link-item">
+                        <f:if condition="{data_item.tx_mask_link}">
+                            <f:link.typolink parameter="{data_item.tx_mask_link}" class="btn button2 btn-primary">
+                                <f:if condition="{data_item.tx_mask_linktext}">
+                                    {data_item.tx_mask_linktext}
+                                </f:if>
+                                <svg class="svg-box">
+                                    <use xlink:href="#icon-arrow-right"></use>
+                                </svg>
+                            </f:link.typolink>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</div>
+
+

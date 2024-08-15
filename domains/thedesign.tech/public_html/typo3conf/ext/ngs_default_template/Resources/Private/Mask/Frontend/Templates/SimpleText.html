@@ -1,0 +1,84 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="simple-text-module{f:if(condition: data.tx_mask_is_main_text_highlighted, then: ' bggallerybox')}" style="background-color: {f:if(condition: data.tx_mask_backgroundcolor, then: data.tx_mask_backgroundcolor)}" id="c{contentLocalizedUid}">
+    <div class="simple-text-module-inner">
+        <div class="left-box">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="headline t4">
+                    <svg class="svg-line"></svg>
+
+                    {data.tx_mask_headline -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description desktop-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+        <div class="right-box">
+            <div class="card-box bgweb insideClass">
+                <f:if condition="{data.tx_mask_cardintrotext}">
+                    <div class="card-intro-text">
+                        {data.tx_mask_cardintrotext -> f:format.html()}
+                    </div>
+                </f:if>
+
+                <div class="btn-container">
+                    <f:if condition="{data.tx_mask_link1text}">
+                        <f:if condition="{data.tx_mask_linkform}">
+                            <f:then>
+                                <button class="btn button3 btn-primary f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_linkform}">
+                                    {data.tx_mask_link1text}
+                                </button>
+                            </f:then>
+                            <f:else>
+                                <f:if condition="{data.tx_mask_link1}">
+                                    <f:link.typolink class="btn button3 btn-primary" parameter="{data.tx_mask_link1}">
+                                        {data.tx_mask_link1text}
+                                    </f:link.typolink>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:if>
+
+                    <f:if condition="{data.tx_mask_buttonrighttext}">
+                        <div class="righttext medium1">
+                            <div>{data.tx_mask_buttonrighttext -> f:format.html()}</div>
+
+                            <f:if condition="{data.tx_mask_rightlinktext}">
+                                <f:if condition="{data.tx_mask_rightlinkform}">
+                                    <f:then>
+                                        <a href="javascript:void(0)" class="f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_rightlinkform}">
+                                            {data.tx_mask_rightlinktext}
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{data.tx_mask_rightlink}">
+                                            <f:link.typolink class="" parameter="{data.tx_mask_rightlink}">
+                                                {data.tx_mask_rightlinktext}
+                                            </f:link.typolink>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </f:if>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description mobile-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>

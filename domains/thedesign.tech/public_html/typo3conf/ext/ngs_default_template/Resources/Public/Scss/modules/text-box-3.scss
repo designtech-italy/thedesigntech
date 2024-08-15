@@ -1,0 +1,158 @@
+.text-box-3-element {
+  overflow: hidden;
+
+  @include glob-map-get-fluid(padding-bottom, 71, 71, 30, 0);
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    max-width: 1326px;
+
+    @include glob-map-get-fluid(padding-top, 123, 123, 75, 41);
+    @include glob-map-get-fluid(padding-right, 134, 134, 60, 23);
+    @include glob-map-get-fluid(padding-bottom, 74, 74, 50, 33);
+    @include glob-map-get-fluid(padding-left, 134, 134, 60, 23);
+
+    & + .image-text-list {
+      margin-top: 86px;
+
+      @include glob-map-get-fluid(margin-top, 86, 86, 40, 20);
+    }
+
+    .headline {
+      position: relative;
+
+      @include glob-map-get-fluid(padding-right, 280, 280, 160, 0);
+
+      @include mobile {
+        padding-left: 17px;
+        line-height: 39px;
+      }
+
+      strong {
+        font-weight: 400;
+        color: $g-color3;
+      }
+
+      .svg-line {
+        right: 2px;
+        top: 33px;
+
+        @include glob-map-get-fluid(width, 270, 270, 150, 111);
+        @include glob-map-get-fluid(height, 16, 16, 12, 8);
+
+        @include mobile {
+          bottom: -22px;
+          right: auto;
+          left: 18px;
+          top: auto;
+        }
+      }
+    }
+
+    .description {
+      margin-top: 15px;
+
+      @include mobile {
+        margin-top: 58px;
+      }
+
+      &.mobile-view {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      @include mobile {
+        &.desktop-view {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .text-list {
+    display: flex;
+
+    @include glob-map-get-fluid(padding-left, 99, 99, 60, 24);
+    @include glob-map-get-fluid(padding-right, 99, 99, 60, 24);
+    @include glob-map-get-fluid(margin-left, -28, -28, -10, 0);
+    @include glob-map-get-fluid(margin-right, -28, -28, -10, 0);
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .text-item {
+      flex: 0 0 33.33334%;
+      max-width: 33.33334%;
+
+      @include glob-map-get-fluid(padding-left, 28, 28, 10, 0);
+      @include glob-map-get-fluid(padding-right, 28, 28, 10, 0);
+
+      @include mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 37px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .inner {
+        height: 100%;
+        background-color: rgba($g-color1,0.9);
+        box-shadow: 12.35px 12.35px 24.7px rgba(255, 255, 255, 0.1);
+
+        .text-box {
+          padding: 25px 25px 21px;
+
+          @include mobile {
+            padding: 25px 13px 34px;
+          }
+        }
+
+        .title {
+          color: $g-color3;
+          text-align: center;
+          font-size: 26px;
+          line-height: 24px;
+          font-weight: 500;
+        }
+
+        .description {
+          @include glob-map-get-fluid(margin-top, 26, 26, 27, 27);
+
+          li {
+            padding-left: 38px;
+            position: relative;
+            margin-top: 23px;
+
+            @include glob-map-get-fluid(padding-left, 38, 38, 36, 35);
+
+            &:first-child {
+              margin-top: 0;
+            }
+
+            &:before {
+              background-color: $g-color4;
+              border-radius: 50%;
+              position: absolute;
+              content: '';
+              left: 8px;
+              top: 8px;
+
+              @include glob-map-get-fluid(width, 9, 9, 8, 8);
+              @include glob-map-get-fluid(height, 9, 9, 8, 8);
+            }
+          }
+        }
+      }
+    }
+  }
+}

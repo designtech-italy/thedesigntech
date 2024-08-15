@@ -1,0 +1,380 @@
+.carousel-with-text-logo-element {
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+
+  @include glob-map-get-fluid(padding-top, 45, 40, 60, 60);
+  @include glob-map-get-fluid(padding-bottom, 45, 40, 35, 30);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+  }
+
+  &.bgweb {
+    &:before {
+      left: -50px;
+      right: -50px;
+      background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/blue-waves.svg") no-repeat center;
+      background-size: cover;
+
+      @include mobile {
+        background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/blue-waves-mobile.svg") no-repeat center;
+        background-size: cover;
+      }
+    }
+  }
+
+  &.bow-background {
+    &:before {
+      left: 0;
+      right: 0;
+      background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/subtract.svg") no-repeat center top;
+      background-size: cover;
+      height: 1643px;
+
+      @include mobileSmall {
+        background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/subtract-mobile.svg") no-repeat center top;
+        height: 1455px;
+      }
+    }
+
+    .boxed-headline {
+      .linkbox {
+        .btn {
+          @media (hover: hover) {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.rotate-background {
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      top: -35px;
+      z-index: -1;
+      left: -50px;
+      right: -50px;
+      display: block;
+      pointer-events: none;
+      background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/arch-desktop.svg") no-repeat center bottom;
+      background-size: cover;
+      height: 100vh;
+      min-height: 880px;
+
+      @include mobile {
+        background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/arch-mobile.svg") no-repeat center bottom;
+        background-size: cover;
+        height: 784px;
+        min-height: auto;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &.bgweb {
+    .boxed-headline {
+      .headline {
+        color: $g-color3;
+      }
+    }
+  }
+
+  &.only-logos {
+    .boxed-headline {
+      flex: auto;
+    }
+    .bottom-box {
+      height: 100%;
+      padding-bottom: 20px;
+
+      @include mobile {
+        align-items: flex-start;
+      }
+
+      .logo-inner {
+        margin-top: 80px;
+        @include glob-map-get-fluid(margin-top, 120, 80, 60, 40);
+        @include glob-map-get-fluid(padding-left, 230, 180, 100, 20);
+        @include glob-map-get-fluid(padding-right, 230, 180, 100, 20);
+
+        &:first-child {
+          margin-top: 0;
+
+          @include mobile {
+            margin-top: 30px;
+          }
+        }
+      }
+
+      .logo-list {
+        .logo-item {
+          margin: 0 30px;
+
+          @include glob-map-get-fluid(margin-right, 30, 30, 20, 10);
+          @include glob-map-get-fluid(margin-left, 30, 30, 20, 10);
+
+          @include mobile {
+            margin-top: 16px;
+          }
+
+          img {
+            @include glob-map-get-fluid(max-height, 127, 127, 60, 33);
+            @include glob-map-get-fluid(max-width, 296, 296, 250, 180);
+          }
+        }
+      }
+    }
+  }
+
+  .boxed-headline {
+    flex: 1;
+    max-width: 1189px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 40, 22);
+    @include glob-map-get-fluid(padding-right, 80, 80, 40, 26);
+
+    .logo-box {
+      max-width: 253px;
+      margin: 0 auto;
+
+      & + .headline {
+        @include glob-map-get-fluid(margin-top, 18, 18, 8, -1);
+      }
+
+      img {
+        @include glob-map-get-fluid(max-width, 241, 241, 238, 238);
+        @include glob-map-get-fluid(max-height, 71, 71, 53, 42);
+      }
+    }
+
+    .subheadline {
+      @include glob-map-get-fluid(margin-top, 16, 16, 8, 4);
+      @include glob-map-get-fluid(font-size, 28, 28, 22, 20);
+      @include glob-map-get-fluid(line-height, 42, 42, 34, 30);
+    }
+
+    .description {
+      margin: 0 auto;
+      max-width: 840px;
+      font-weight: 200;
+
+      @include glob-map-get-fluid(margin-top, 16, 16, 8, 4);
+
+      &.mobile-view {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      @include mobile {
+        &.desktop-view {
+          display: none;
+        }
+      }
+    }
+
+    .linkbox {
+      @include glob-map-get-fluid(margin-top, 32, 32, 24, 14);
+
+      .btn {
+        background-color: $g-color3;
+        border: 1px solid $g-color3;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        color: $g-color1;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .image-slider-block {
+    padding-top: 36px;
+    height: 100%;
+    flex: auto;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 33, 25);
+    @include glob-map-get-fluid(padding-right, 80, 80, 32, 24);
+
+    .image-item {
+      height: 100%;
+      position: relative;
+
+      .image-box {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+  .location {
+    max-width: 1189px;
+    color: $g-color2;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .tns-outer {
+    max-width: 1189px;
+    margin: 0 auto;
+    width: 100%;
+
+    .image-list {
+      height: 100%;
+      pointer-events: none;
+      transition-timing-function: linear;
+
+      .image-box {
+        height: 100%;
+      }
+    }
+  }
+  .bottom-box {
+    display: flex;
+    margin-top: 26px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+
+    @include mobile {
+      justify-content: left;
+    }
+
+    .logo-block {
+      width: 100%;
+      display: flex;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include mobile {
+        justify-content: left;
+      }
+    }
+
+    .logo-inner {
+      display: flex;
+      padding: 0 20px;
+      align-items: center;
+
+      @include glob-map-get-fluid(margin-top, 31, 31, 20, 15);
+
+      @include mobile {
+        margin-top: 20px;
+        align-items: flex-start;
+      }
+
+      &.align-center {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .subheadline {
+          flex: 0 0 100%;
+          max-width: 100%;
+          color: $g-color3;
+          text-align: center;
+
+          @include glob-map-get-fluid(margin-bottom, 20, 20, 16, 12);
+        }
+
+        .logo-list {
+          justify-content: center;
+          margin-left: 0;
+        }
+      }
+    }
+
+    .subheadline {
+      font-family: Rische;
+      text-align: center;
+      max-width: 160px;
+      color: $g-color2;
+
+      @include mobile {
+        text-align: left;
+        padding-top: 6px;
+
+        &.large1 {
+          font-size: 15px;
+          line-height: 21px;
+        }
+      }
+
+      & + .logo-list {
+        @include glob-map-get-fluid(margin-left, 26, 26, 20, 16);
+      }
+    }
+
+    .logo-list {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .logo-item {
+        font-size: 0;
+        line-height: 0;
+        margin-right: 21px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        img {
+          @include glob-map-get-fluid(max-height, 50, 50, 32, 40);
+          @include glob-map-get-fluid(max-width, 120, 120, 90, 70);
+        }
+
+        picture {
+          &:first-child {
+            @include mobile {
+              display: none;
+
+              &:last-child {
+                display: block;
+              }
+            }
+          }
+
+          &:last-child {
+            display: none;
+
+            &:first-child {
+              display: block;
+            }
+
+            @include mobile {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

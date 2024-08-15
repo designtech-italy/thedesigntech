@@ -1,0 +1,33 @@
+base: /approve
+languages:
+  -
+    title: English
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-us
+    direction: ltr
+    flag: us
+  -
+    title: Italian
+    enabled: true
+    base: /it/
+    typo3Language: it
+    locale: it_IT
+    iso-639-1: it
+    websiteTitle: ''
+    navigationTitle: Italian
+    hreflang: it-IT
+    direction: ''
+    fallbackType: fallback
+    fallbacks: ''
+    flag: it
+    languageId: 1
+rootPageId: 34
+websiteTitle: ''
+imports:
+  - resource: 'EXT:ngs_approve_request/Configuration/Routes/Default.yaml'

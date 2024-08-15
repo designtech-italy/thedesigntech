@@ -1,0 +1,279 @@
+.text-table-element {
+  position: relative;
+  overflow: hidden;
+
+  @include glob-map-get-fluid(padding-top, 45, 40, 60, 60);
+  @include glob-map-get-fluid(padding-bottom, 45, 40, 35, 30);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    pointer-events: none;
+    left: -50px;
+    right: -50px;
+    background: url("/typo3conf/ext/ngs_default_template/Resources/Public/Images/blue-waves.svg") no-repeat center;
+    background-size: cover;
+
+    @include mobile {
+      top: 70px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .boxed-headline {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+
+    @include glob-map-get-fluid(padding-left, 80, 80, 60, 22);
+    @include glob-map-get-fluid(padding-right, 80, 80, 60, 26);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .headline {
+      position: relative;
+      color: $g-color3;
+
+      @include mobile {
+        margin-top: -3px;
+        order: 2;
+      }
+
+      & + .subheadline {
+        margin-top: 4px;
+      }
+
+      .svg-line {
+        transform: translate(-50%,0);
+        top: -35px;
+        left: 50%;
+
+        @include glob-map-get-fluid(width, 270, 270, 210, 170);
+        @include glob-map-get-fluid(height, 16, 16, 12, 9.6);
+
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+
+    .subheadline {
+      color: $g-color5;
+      font-weight: 500;
+
+      @include mobile {
+        order: 1;
+      }
+    }
+
+    .description {
+      @include glob-map-get-fluid(margin-top, 23, 23, 18, 18);
+
+      @include mobile {
+        order: 3;
+      }
+
+      &.mobile-view {
+        display: none;
+
+        @include mobile {
+          display: block;
+        }
+      }
+
+      @include mobile {
+        &.desktop-view {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .table-list {
+    margin: 0 auto;
+    padding-bottom: 76px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      max-width: 1300px;
+      flex-direction: column;
+      width: 100% !important;
+      transform: none !important;
+    }
+
+    .item {
+      @include glob-map-get-fluid(padding-left, 80, 80, 60, 17);
+      @include glob-map-get-fluid(padding-right, 80, 80, 60, 26);
+
+      @media screen and (min-width: 768px) {
+        width: 100% !important;
+      }
+    }
+
+    .table-item {
+      .date-box {
+        flex: 0 0 15.1%;
+        max-width: 15.1%;
+        letter-spacing: 1px;
+        padding-right: 16px;
+
+        @include tablet {
+          flex: 0 0 100%;
+          max-width: 100%;
+          font-weight: 500;
+          letter-spacing: 0;
+          margin-bottom: 17px;
+
+          br {
+            display: none;
+          }
+
+          p {
+            position: relative;
+            display: inline-block;
+
+            &:before {
+              content: '';
+              left: -5px;
+              right: -3px;
+              height: 2px;
+              bottom: -12px;
+              display: block;
+              position: absolute;
+              background-color: $g-color3;
+            }
+          }
+        }
+
+        @include mobile {
+          padding-left: 5px;
+        }
+
+        strong, b {
+           letter-spacing: 4px;
+           font-weight: 500;
+
+          @include tablet {
+            letter-spacing: 0.4px;
+          }
+         }
+      }
+
+      .row-list {
+        flex: 1;
+        font-weight: 600;
+      }
+
+      .date-box, .name-box {
+        color: $g-color3;
+      }
+
+      .table-row {
+        letter-spacing: 2.4px;
+        padding-bottom: 17px;
+        margin-top: 17px;
+        display: flex;
+
+        @include tablet {
+          flex-wrap: wrap;
+          @include glob-map-get-fluid(margin-top, 33, 33, 23, 10);
+          @include glob-map-get-fluid(padding-bottom, 17, 17, 17, 12);
+        }
+
+        @include mobile {
+          border-bottom: 0;
+        }
+
+        &:last-child {
+          border-bottom: 2px solid $g-color2;
+        }
+
+        .row-inner {
+          display: flex;
+
+          @include mobile {
+            padding-top: 34px;
+            flex-wrap: wrap;
+          }
+
+          &:first-child {
+            @include tablet {
+              padding-top: 9px;
+            }
+          }
+        }
+
+        .time-box {
+          flex: 0 0 20%;
+          max-width: 20%;
+          font-weight: 600;
+          min-width: 166px;
+          letter-spacing: 2px;
+          padding-right: 16px;
+
+          @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: 16px;
+            padding-right: 0;
+            line-height: 24px;
+            letter-spacing: 0;
+          }
+        }
+        .name-box {
+          flex: 1;
+          font-weight: 600;
+          max-width: 624px;
+          padding-top: 5px;
+          font-family: Rische;
+          line-height: 22px;
+          padding-right: 16px;
+
+          @include mobile {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-top: 9px;
+            padding-right: 0;
+          }
+        }
+        .type-box {
+          max-width: 300px;
+          font-weight: 600;
+          text-align: right;
+          font-family: Rische;
+
+          @include mobile {
+            margin-top: 8px;
+            font-size: 14px;
+            text-align: left;
+            line-height: 13.3px;
+            letter-spacing: 0.1px;
+          }
+        }
+      }
+    }
+  }
+
+  .tns-nav {
+    display: none;
+
+    @include mobile {
+      display: flex;
+    }
+
+    button {
+      background-color: $g-color3;
+      box-shadow: 1px 3px 9px $g-color3;
+    }
+  }
+}

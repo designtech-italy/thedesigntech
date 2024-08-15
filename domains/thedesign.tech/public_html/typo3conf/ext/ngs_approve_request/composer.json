@@ -1,0 +1,20 @@
+{
+    "name": "naghashyan-solutions-llc/ngs-approve-request",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://naghashyan.com/",
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "NGS\\NgsApproveRequest\\": "Classes/"
+        }
+    }
+
+}

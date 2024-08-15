@@ -1,0 +1,182 @@
+.not-homepage {
+  .intro-element {
+    .headline {
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+
+.intro-simple {
+  text-align: center;
+
+  .headline {
+    strong {
+      font-weight: 500;
+      color: $g-color3;
+    }
+  }
+
+  .subheadline {
+    margin-top: 25px;
+  }
+}
+
+.intro-element {
+  padding: 0 23px 30px;
+
+  @include glob-map-get-fluid(padding-top, 150, 150, 80, 43);
+
+  .mobile-view {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .link-action {
+    margin: 0 auto;
+    padding-left: 7px;
+
+    @include glob-map-get-fluid(max-width, 910, 910, 550, 350);
+    @include glob-map-get-fluid(margin-top, 174, 120, 70, 52);
+    @include glob-map-get-fluid(padding-bottom, 100, 80, 43, 25);
+
+    .btn {
+      text-align: center;
+      margin-bottom: 20px;
+
+      @include glob-map-get-fluid(margin-right, 56, 35, 25, 18);
+      @include glob-map-get-fluid(min-width, 238, 180, 130, 107);
+    }
+    .morelink {
+      display: inline-flex;
+      color: currentColor;
+      vertical-align: middle;
+
+      span {
+        text-decoration: underline;
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      svg {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+  .inner {
+    position: relative;
+    margin: 0 auto;
+
+    @include glob-map-get-fluid(max-width, 910, 910, 550, 350);
+
+    &.change-first-character {
+      & > .svg-line {
+        @include glob-map-get-fluid(left, -135, -135, -60, -27);
+        @include glob-map-get-fluid(top, -5, -5, -6, -2);
+      }
+    }
+
+    & > .svg-line {
+      transform: rotate(-42.3deg);
+      z-index: 10;
+
+      @include glob-map-get-fluid(width, 276, 276, 120, 72);
+      @include glob-map-get-fluid(height, 18, 18, 12, 8);
+      @include glob-map-get-fluid(left, -175, -175, -60, -27);
+      @include glob-map-get-fluid(top, -35, -35, -6, -2);
+
+      @include mobile {
+        transform: rotate(-40deg);
+      }
+    }
+  }
+
+  .headline {
+    position: relative;
+
+    @include glob-map-get-fluid(margin-bottom, 34, 34, 37, 37);
+
+    @include mobile {
+      letter-spacing: -2.1px;
+    }
+
+    strong {
+      color: $g-color3;
+      font-weight: 600;
+      padding-left: 0.4em;
+
+      @include mobile {
+        padding-left: 0.3em;
+      }
+
+      @media screen and (max-width: 480px) {
+        padding-left: 0;
+        display: block;
+        height: 56px;
+      }
+
+      em {
+        font-style: inherit;
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        white-space: nowrap;
+        transition: opacity 0.45s ease;
+        transform: translateZ(0);
+        -webkit-font-smoothing: subpixel-antialiased;
+
+        &.is_active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    p {
+      margin: 0;
+    }
+    svg {
+      position: absolute;
+      left: 8px;
+      top: 2px;
+
+      @include glob-map-get-fluid(min-width, 59, 59, 36, 27);
+      @include glob-map-get-fluid(height, 67, 67, 40, 32);
+      @include glob-map-get-fluid(left, 8, 8, 4, 1);
+      @include glob-map-get-fluid(top, 2, 2, 6, 10);
+    }
+  }
+
+  .subheadline {
+    margin-bottom: 13px;
+    text-align: center;
+
+    @include glob-map-get-fluid(margin-bottom, 13, 13, 8, 8);
+
+    @include mobile {
+      text-align: left;
+    }
+  }
+
+  .description {
+    opacity: 0.64;
+
+    @include glob-map-get-fluid(padding-left, 7, 7, 0, 0);
+
+    @include mobile {
+      overflow: auto;
+    }
+  }
+}

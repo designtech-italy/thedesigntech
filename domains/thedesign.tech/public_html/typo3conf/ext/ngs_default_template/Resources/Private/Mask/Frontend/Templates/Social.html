@@ -1,0 +1,41 @@
+<f:if condition="{data.tx_mask_sociallinks}">
+    <ul class="social-links">
+        <f:for each="{data.tx_mask_sociallinks}" as="data_item">
+            <f:if condition="{data_item.tx_mask_linkitem}">
+                <li>
+                    <f:variable name="social" value="{data_item.tx_mask_social}"/>
+                    <f:link.typolink class="social-link" parameter="{data_item.tx_mask_linkitem}">
+                        <f:if condition="{social} == 'facebook'">
+                            <svg class="svg-box">
+                                <use xlink:href="#social-{social}"></use>
+                            </svg>
+                        </f:if>
+                        <f:if condition="{social} == 'insta'">
+                            <svg class="svg-box">
+                                <use xlink:href="#social-{social}"></use>
+                            </svg>
+                        </f:if>
+                        <f:if condition="{social} == 'youtube'">
+                            <svg class="svg-box">
+                                <use xlink:href="#social-{social}"></use>
+                            </svg>
+                        </f:if>
+                        <f:if condition="{social} == linkedin">
+                            <svg class="svg-box">
+                                <use xlink:href="#social-{social}"></use>
+                            </svg>
+                        </f:if>
+                        <f:if condition="{social} == 'pinterest'">
+                            <svg class="svg-box">
+                                <use xlink:href="#social-{social}"></use>
+                            </svg>
+                        </f:if>
+                        <f:if condition="{social} != 'facebook' && {social} != 'insta' && {social} != 'youtube' && {social} != 'pinterest' && {social} != 'linkedin'">
+                            <i class="icon-{social}"></i>
+                        </f:if>
+                    </f:link.typolink>
+                </li>
+            </f:if>
+        </f:for>
+    </ul>
+</f:if>

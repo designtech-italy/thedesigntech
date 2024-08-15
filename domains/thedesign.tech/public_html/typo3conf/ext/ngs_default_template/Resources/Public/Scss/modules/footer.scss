@@ -1,0 +1,132 @@
+.footer-main {
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+
+  @include glob-map-get-fluid(padding-bottom, 99, 99, 40, 16);
+  @include glob-map-get-fluid(padding-right, 91, 91, 45, 24);
+  @include glob-map-get-fluid(padding-left, 61, 61, 45, 24);
+
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  &:before {
+    background: linear-gradient(360deg, $g-color3 -101.48%, rgba(84, 88, 246, 0) 95.05%);
+    pointer-events: none;
+    position: absolute;
+    content: '';
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+
+  .left-box {
+    @include mobile {
+      display: flex;
+      flex: 0 0 100%;
+      max-width: 100%;
+      flex-direction: column;
+    }
+
+    .logo-container {
+      svg {
+        @include glob-map-get-fluid(max-width, 205, 205, 150, 133);
+        @include glob-map-get-fluid(max-height, 37, 37, 27, 24);
+      }
+    }
+
+    .navigation-footer-logo {
+      @include mobile {
+        order: 1;
+      }
+    }
+
+    .subheadline {
+      font-size: 14px;
+      margin-top: -1px;
+      max-width: 220px;
+      line-height: 19px;
+      letter-spacing: 0.4px;
+      font-family: Poppins;
+
+      @include glob-map-get-fluid(font-size, 14, 14, 12, 11);
+      @include glob-map-get-fluid(line-height, 19, 19, 16, 15);
+      @include glob-map-get-fluid(max-width, 220, 220, 185, 170);
+
+      @include mobile {
+        order: 2;
+        font-size: 11px;
+        max-width: 220px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+        font-family: Poppins;
+      }
+
+      @include mobileSmall {
+        margin-top: -3px;
+      }
+    }
+
+    .linkbox {
+      margin-top: 28px;
+
+      @include mobile {
+        order: 4;
+        margin-top: 17px;
+      }
+
+      a {
+        margin-right: 6px;
+        position: relative;
+        transition: opacity 0.3s ease;
+
+        @media (hover: hover) {
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        &:last-child {
+          &:before {
+            display: none;
+          }
+        }
+
+        &:before {
+          content: "";
+          width: 1px;
+          height: 10px;
+          position: absolute;
+          right: -6px;
+          top: 5px;
+          background-color: currentColor;
+        }
+      }
+    }
+
+    .copyright-box {
+      font-family: Rische;
+      margin-top: 18px;
+
+      @include mobile {
+        margin-top: 27px;
+        order: 3;
+      }
+    }
+  }
+
+  .right-box {
+    padding-left: 40px;
+
+    @include mobile {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 0;
+      margin-top: 21px;
+    }
+  }
+}

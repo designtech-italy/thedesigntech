@@ -1,0 +1,193 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}"/>
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}"/>
+    </f:else>
+</f:if>
+
+<div class="image-link-slider-tabs-element bgweb2 f_slider-wrapper f_text-table-element" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headlinemobile}">
+        <div class="headline t4 mobile-view">
+            {data.tx_mask_headlinemobile -> f:format.html()}
+            <svg class="svg-line"></svg>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_headline}">
+        <div class="headline t4 desktop-view">
+            {data.tx_mask_headline -> f:format.html()}
+            <svg class="svg-line"></svg>
+        </div>
+    </f:if>
+
+    <f:if condition="{data.tx_mask_slidertabs}">
+        <div class="tab-list">
+            <f:for each="{data.tx_mask_slidertabs}" as="data_item" iteration="loop">
+                <f:if condition="{data_item.tx_mask_tabtitle}">
+                    <div class="tab-item headline default{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}"
+                         data-tab-target="#video-item-{data.uid}-{loop.cycle}">{data_item.tx_mask_tabtitle ->
+                        f:format.html()}
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_slidertabs}">
+        <div class="video-list-tabs">
+            <f:for each="{data.tx_mask_slidertabs}" as="data_item" iteration="loop">
+                <div class="video-list-inner f_video-list-inner-{loop.index}{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}{f:if(condition: '{data_item.tx_mask_videolist -> f:count()} < 5', then: ' desktop-hide-arrows')}"
+                     id="video-item-{data.uid}-{loop.cycle}" data-tab-content>
+                    <div class="video-list f_video-list">
+                        <f:for each="{data_item.tx_mask_videolist}" as="data_item_item">
+                            <div class="video-item">
+                                <f:if condition="{data_item_item.tx_mask_link}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{data_item_item.tx_mask_link}">
+                                            <f:for each="{data_item_item.tx_mask_imagemobile}" as="file">
+                                                <div class="image-box mobile-view">
+                                                    <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        1701: { file: file, width: '550c', height: '309c' },
+                                                        1026: { file: file, width: '334c', height: '188c' },
+                                                        767: { file: file, width: '270c', height: '152c' },
+                                                        0: { file: file, width: '270c', height: '384c' }
+                                                    },
+                                                    imageratiox: 334,
+                                                    imageratioy: 188
+                                                }"/>
+                                                </div>
+                                            </f:for>
+
+                                            <f:for each="{data_item_item.tx_mask_image}" as="file">
+                                                <div class="image-box desktop-view">
+                                                    <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        1701: { file: file, width: '550c', height: '309c' },
+                                                        1026: { file: file, width: '334c', height: '188c' },
+                                                        767: { file: file, width: '270c', height: '152c' },
+                                                        0: { file: file, width: '270c', height: '384c' }
+                                                    },
+                                                    imageratiox: 334,
+                                                    imageratioy: 188
+                                                }"/>
+                                                </div>
+                                            </f:for>
+
+                                            <f:if condition="{data_item_item.tx_mask_title} || {data_item_item.tx_mask_text}">
+                                                <div class="text-box">
+                                                    <f:if condition="{data_item_item.tx_mask_title}">
+                                                        <div class="title default{f:if(condition: '{data_item_item.tx_mask_mobiletext}', then: ' desktop-view')}">
+                                                            {data_item_item.tx_mask_title -> f:format.html()}
+                                                        </div>
+                                                    </f:if>
+                                                    <f:if condition="{data_item_item.tx_mask_mobiletext}">
+                                                        <div class="title default{f:if(condition: '{data_item_item.tx_mask_title}', then: ' mobile-view')}">
+                                                            {data_item_item.tx_mask_mobiletext -> f:format.html()}
+                                                        </div>
+                                                    </f:if>
+                                                    <f:if condition="{data_item_item.tx_mask_text}">
+                                                        <div class="description default">
+                                                            {data_item_item.tx_mask_text -> f:format.html()}
+                                                        </div>
+                                                    </f:if>
+                                                </div>
+                                            </f:if>
+                                        </f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        <f:for each="{data_item_item.tx_mask_imagemobile}" as="file">
+                                            <div class="image-box mobile-view">
+                                                <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        1701: { file: file, width: '550c', height: '309c' },
+                                                        1026: { file: file, width: '334c', height: '188c' },
+                                                        767: { file: file, width: '270c', height: '152c' },
+                                                        0: { file: file, width: '270c', height: '384c' }
+                                                    },
+                                                    imageratiox: 334,
+                                                    imageratioy: 188
+                                                }"/>
+                                            </div>
+                                        </f:for>
+
+                                        <f:for each="{data_item_item.tx_mask_image}" as="file">
+                                            <div class="image-box desktop-view">
+                                                <f:render partial="Picture" arguments="{
+                                                    lazyload: 1,
+                                                    data: {
+                                                        1701: { file: file, width: '550c', height: '309c' },
+                                                        1026: { file: file, width: '334c', height: '188c' },
+                                                        767: { file: file, width: '270c', height: '152c' },
+                                                        0: { file: file, width: '270c', height: '384c' }
+                                                    },
+                                                    imageratiox: 334,
+                                                    imageratioy: 188
+                                                }"/>
+                                            </div>
+                                        </f:for>
+
+                                        <f:if condition="{data_item_item.tx_mask_title} || {data_item_item.tx_mask_text}">
+                                            <div class="text-box">
+                                                <f:if condition="{data_item_item.tx_mask_title}">
+                                                    <div class="title default desktop-view">
+                                                        {data_item_item.tx_mask_title -> f:format.html()}
+                                                    </div>
+                                                </f:if>
+                                                <f:if condition="{data_item_item.tx_mask_mobiletext}">
+                                                    <div class="title default mobile-view">
+                                                        {data_item_item.tx_mask_mobiletext -> f:format.html()}
+                                                    </div>
+                                                </f:if>
+                                                <f:if condition="{data_item_item.tx_mask_text}">
+                                                    <div class="description default">
+                                                        {data_item_item.tx_mask_text -> f:format.html()}
+                                                    </div>
+                                                </f:if>
+                                            </div>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </f:for>
+                    </div>
+                    <f:if condition="{data_item.tx_mask_videolist -> f:count()} > 2">
+                        <div class="arrow-container">
+                            <div class="cursor-to-left arrow-cursor-to-left f_cursor-left">
+                                <svg class="svg-box">
+                                    <use xlink:href="#icon-arrow-left"></use>
+                                </svg>
+                            </div>
+                            <div class="cursor-to-right arrow-cursor-to-right f_cursor-right">
+                                <svg class="svg-box">
+                                    <use xlink:href="#icon-arrow-right"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+
+    <div class="link-action">
+        <f:if condition="{data.tx_mask_downloadlinks}">
+            <f:variable name="downloadlinks">
+                <ngs:ArrayCollectFilePaths key="tx_mask_downloadlink" array="{data.tx_mask_downloadlinks}" />
+            </f:variable>
+
+            <a href="javascript:void(0)" class="morelink f_download-links" data-links="{downloadlinks}">
+                <svg class="svg-box">
+                    <use xlink:href="#download-icon"></use>
+                </svg>
+
+                <f:if condition="{data.tx_mask_link1text}">
+                    <span>{data.tx_mask_link1text}</span>
+                </f:if>
+            </a>
+        </f:if>
+    </div>
+</div>

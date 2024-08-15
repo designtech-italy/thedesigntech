@@ -1,0 +1,67 @@
+<div class="text-table-element text-table-with-tabs-element f_text-table-element{f:if(condition: '{data.tx_mask_backgroundchange}', then: ' background-second')}" id="c{data.uid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_subheadline} || {data.tx_mask_text}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="t3 headline">{data.tx_mask_headline -> f:format.html()}</div>
+            </f:if>
+            <f:if condition="{data.tx_mask_subheadline}">
+                <div class="subheadline">{data.tx_mask_subheadline -> f:format.html()}</div>
+            </f:if>
+            <f:if condition="{data.tx_mask_textmobile}">
+                <div class="description mobile-view">
+                    {data.tx_mask_textmobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description desktop-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+    </f:if>
+    <div class="tab-list">
+        <f:for each="{data.tx_mask_texttablelist}" as="data_item" iteration="loop">
+            <f:if condition="{data_item.tx_mask_tabtitle}">
+                <div class="tab-item headline default{f:if(condition: '{loop.cycle} == 1', then: ' is_active')}" data-tab-target="#table-item-{data.uid}-{loop.cycle}">{data_item.tx_mask_tabtitle -> f:format.html()}</div>
+            </f:if>
+        </f:for>
+    </div>
+    <f:if condition="{data.tx_mask_texttablelist}">
+        <div class="table-list">
+            <f:for each="{data.tx_mask_texttablelist}" as="data_item" iteration="loop">
+                <div class="table-item t5-inverse {f:if(condition: '{loop.cycle} == 1', then: ' is_active')}" id="table-item-{data.uid}-{loop.cycle}" data-tab-content>
+                    <f:if condition="{data_item.tx_mask_tabtitle} || {data_item.tx_mask_subtitle}">
+                        <div class="title-block">
+                            <f:if condition="{data_item.tx_mask_tabtitle}">
+                                <div class="title t5-inverse">{data_item.tx_mask_tabtitle -> f:format.html()}</div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_subtitle}">
+                                <div class="subtitle t5-inverse"> - {data_item.tx_mask_subtitle}</div>
+                            </f:if>
+                        </div>
+                    </f:if>
+
+                    <f:if condition="{data_item.tx_mask_eventlist}">
+                        <div class="table-inner">
+                            <f:for each="{data_item.tx_mask_eventlist}" as="data_item_item">
+                                <div class="table-row">
+                                    <f:if condition="{data_item_item.tx_mask_time}">
+                                        <div class="time-box t5-inverse">{data_item_item.tx_mask_time}</div>
+                                    </f:if>
+                                    <f:if condition="{data_item_item.tx_mask_title}">
+                                        <div class="name-box t6-inverse">{data_item_item.tx_mask_title -> f:format.html()}</div>
+                                    </f:if>
+                                    <f:if condition="{data_item_item.tx_mask_bywhom}">
+                                        <div class="type-box t6-inverse">{data_item_item.tx_mask_bywhom}</div>
+                                    </f:if>
+                                </div>
+                            </f:for>
+                        </div>
+                    </f:if>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>
+
+

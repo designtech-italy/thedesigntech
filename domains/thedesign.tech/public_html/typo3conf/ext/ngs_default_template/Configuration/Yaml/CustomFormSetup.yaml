@@ -1,0 +1,52 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateVariant: version1
+                translation:
+                  translationFiles:
+                    30: 'EXT:ngs_default_template/Resources/Private/Language/locallang_form.xlf'
+                templateRootPaths:
+                  20120401: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Templates/'
+                partialRootPaths:
+                  20120401: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Partials/'
+                layoutRootPaths:
+                  20120401: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Layouts/'
+          finishersDefinition:
+            EmailToReceiver:
+              options:
+                templateRootPaths:
+                  20120401: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Templates/Finishers/Email/'
+            EmailToSender:
+              options:
+                templateRootPaths:
+                  20120401: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Templates/Finishers/Email/'
+      persistenceManager:
+        allowedExtensionPaths:
+          10: EXT:ngs_default_template/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: false
+
+#TYPO3:
+#  CMS:
+#    Form:
+#      renderingOptions:
+#        translation:
+#          translationFiles:
+#            # custom translation file
+#            20: 'EXT:ngs_default_template/Resources/Private/Language/locallang_form.xlf'
+#        templateRootPaths:
+#          20: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Templates/'
+#        partialRootPaths:
+#          20: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Partials/'
+#        layoutRootPaths:
+#          20: 'EXT:ngs_default_template/Resources/Private/Plugins/Form/Layouts/'
+#      persistenceManager:
+#        allowedExtensionPaths:
+#          10: EXT:ngs_default_template/Resources/Private/Forms/
+#        allowSaveToExtensionPaths: true
+#        allowDeleteFromExtensionPaths: false

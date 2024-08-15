@@ -1,0 +1,53 @@
+<f:if condition="{data.tx_mask_header_links}">
+    <div class="main-items f_mainNavigation">
+        <f:for each="{data.tx_mask_header_links}" as="data_item">
+            <f:if condition="{data_item.tx_mask_linktext}">
+                <f:if condition="{data_item.tx_mask_linkclass}">
+                    <f:then>
+                        <div class="main-category join-us">
+                            <button class="main-category-item small f_modal-form-open-btn" data-modal-form-btn="{data_item.tx_mask_linkclass}">
+                                {data_item.tx_mask_linktext}
+                            </button>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{data_item.tx_mask_link}">
+                            <div class="main-category{f:if(condition: data_item.tx_mask_displaylinkasbutton, then: ' join-us')}">
+                                <f:link.typolink class="main-category-item small" parameter="{data_item.tx_mask_link}">
+                                    {data_item.tx_mask_linktext}
+                                </f:link.typolink>
+                            </div>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:if>
+        </f:for>
+    </div>
+</f:if>
+
+<f:if condition="{data.tx_mask_header_links_fixed}">
+    <div class="main-items-right">
+        <f:for each="{data.tx_mask_header_links_fixed}" as="data_item">
+            <f:if condition="{data_item.tx_mask_linktext}">
+                <f:if condition="{data_item.tx_mask_linkclass}">
+                    <f:then>
+                        <div class="main-category join-us">
+                            <button class="main-category-item small f_modal-form-open-btn" data-modal-form-btn="{data_item.tx_mask_linkclass}">
+                                {data_item.tx_mask_linktext}
+                            </button>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{data_item.tx_mask_link}">
+                            <div class="main-category{f:if(condition: data_item.tx_mask_displaylinkasbutton, then: ' join-us')}">
+                                <f:link.typolink class="main-category-item small" parameter="{data_item.tx_mask_link}">
+                                    {data_item.tx_mask_linktext}
+                                </f:link.typolink>
+                            </div>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:if>
+        </f:for>
+    </div>
+</f:if>

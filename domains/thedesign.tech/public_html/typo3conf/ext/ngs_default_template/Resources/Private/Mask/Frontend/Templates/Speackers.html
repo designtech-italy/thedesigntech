@@ -1,0 +1,65 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="speakers-element{f:if(condition: '{data.tx_mask_backgroundchange}', then: ' background-second')}" id="c{contentLocalizedUid}">
+    <div class="boxed-headline">
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="t3 headline">{data.tx_mask_headline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_subheadline}">
+            <div class="subheadline">{data.tx_mask_subheadline -> f:format.html()}</div>
+        </f:if>
+        <f:if condition="{data.tx_mask_text}">
+            <div class="description">{data.tx_mask_text -> f:format.html()}</div>
+        </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_speakers}">
+        <div class="speakers-block">
+            <div class="speakers-list f_speakers-list">
+                <f:for each="{data.tx_mask_speakers}" as="data_item" iteration="loop">
+                    <f:if condition="{loop.cycle} % 5 == 1">
+                        <div class="speakers-row"></f:if><div class="speakers-item">
+                            <div class="speakers-inner">
+                                <f:if condition="{data_item.tx_mask_link}">
+                                    <f:link.typolink parameter="{data_item.tx_mask_link}" class="absolute-link"></f:link.typolink>
+                                </f:if>
+                                <f:for each="{data_item.tx_mask_image}" as="file">
+                                    <div class="image-box">
+                                        <f:render partial="Picture" arguments="{
+                                            lazyload: 1,
+                                            data: {
+                                                1026: { file: file, width: '510c', height: '510c' },
+                                                767: { file: file, width: '350c', height: '350c' },
+                                                0: { file: file, width: '209c', height: '209c' }
+                                            },
+                                            imageratiox: 420,
+                                            imageratioy: 420
+                                        }"/>
+                                    </div>
+                                </f:for>
+                                <div class="title-box">
+                                    <f:if condition="{data_item.tx_mask_title}">
+                                        <div class="title t6-inverse">
+                                            {data_item.tx_mask_title}
+                                        </div>
+                                    </f:if>
+                                    <f:if condition="{data_item.tx_mask_subtitle}">
+                                        <div class="subtitle default">
+                                            {data_item.tx_mask_subtitle}
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </div>
+                        </div><f:if condition="{loop.cycle} % 5 == 0 || {loop.isLast}"></div>
+                    </f:if>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+</div>

@@ -1,0 +1,344 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+  fieldState:
+    gridrow-1:
+      type: GridRow
+      identifier: gridrow-1
+      label: 'Grid: Row'
+      renderingOptions:
+        deleted: 0
+        listView: 1
+    text-1:
+      type: Text
+      identifier: text-1
+      label: Name
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    text-2:
+      type: Text
+      identifier: text-2
+      label: Cognome
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    email-1:
+      type: Email
+      identifier: email-1
+      label: Email
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    text-3:
+      type: Text
+      identifier: text-3
+      label: 'Numero di telefono'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    gridrow-2:
+      type: GridRow
+      identifier: gridrow-2
+      label: 'Grid: Row'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    radiobutton-1:
+      type: RadioButton
+      identifier: radiobutton-1
+      label: 'Radio button'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    fieldset-1:
+      type: Fieldset
+      identifier: fieldset-1
+      label: 'Field*'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    radiobutton-2:
+      type: RadioButton
+      identifier: radiobutton-2
+      label: 'Radio button'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    textarea-1:
+      type: Textarea
+      identifier: textarea-1
+      label: Messaggio
+      renderingOptions:
+        deleted: 0
+        listView: 0
+    checkbox-1:
+      type: Checkbox
+      identifier: checkbox-1
+      label: Checkbox
+      renderingOptions:
+        deleted: 0
+        listView: 0
+    checkbox-2:
+      type: Checkbox
+      identifier: checkbox-2
+      label: Checkbox
+      renderingOptions:
+        deleted: 0
+        listView: 0
+    fieldset-2:
+      type: Fieldset
+      identifier: fieldset-2
+      label: 'Sono interessato a*'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    text-4:
+      type: Text
+      identifier: text-4
+      label: 'Company name'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    text-5:
+      type: Text
+      identifier: text-5
+      label: Country
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    gridrow-3:
+      type: GridRow
+      identifier: gridrow-3
+      label: 'Grid: Row'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+type: Form
+identifier: joinusDesign
+label: 'Join us Design'
+prototypeName: standard
+finishers:
+  -
+    identifier: FormToDatabase
+  -
+    options:
+      subject: 'Join us Design'
+      recipients:
+        info@thedesign.tech: Designtech
+      senderAddress: info@thedesign.tech
+      senderName: Designtech
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      useFluidEmail: true
+      title: 'Confirmation of your message'
+    identifier: EmailToReceiver
+  -
+    options:
+      message: ''
+      contentElementUid: '43'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: Step
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-3
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-4
+            label: 'Company name'
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Company name'
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-5
+            label: Country
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: Country
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: Name
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Name*'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Fill in'
+                -
+                  code: 1221560718
+                  message: 'Fill in'
+                -
+                  code: 1347992400
+                  message: 'Fill in'
+                -
+                  code: 1347992453
+                  message: 'Fill in'
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-2
+            label: Cognome
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Cognome*'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Fill in'
+                -
+                  code: 1221560718
+                  message: 'Fill in'
+                -
+                  code: 1347992400
+                  message: 'Fill in'
+                -
+                  code: 1347992453
+                  message: 'Fill in'
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            type: Email
+            identifier: email-1
+            label: Email
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Email*'
+                required: required
+              validationErrorMessages:
+                -
+                  code: 1221560910
+                  message: 'Fill in'
+                -
+                  code: 1221560718
+                  message: 'Fill in'
+                -
+                  code: 1347992400
+                  message: 'Fill in'
+                -
+                  code: 1347992453
+                  message: 'Fill in'
+            validators:
+              -
+                identifier: EmailAddress
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-3
+            label: 'Numero di telefono'
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Numero di telefono'
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: 'Field*'
+        renderables:
+          -
+            properties:
+              options:
+                company: Company
+                developer: Developer
+                professional: Professional
+                industrial_company: 'Industrial Company'
+                other: Other
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-1
+            label: 'Radio button'
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        type: Fieldset
+        identifier: fieldset-2
+        label: 'Sono interessato a*'
+        renderables:
+          -
+            properties:
+              options:
+                attending_in_person: 'Attending in person'
+                participating_online: 'Participating online'
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-2
+            label: 'Radio button'
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Messaggio
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Messaggio*'
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: Checkbox
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Fill in'
+            -
+              code: 1221560718
+              message: 'Fill in'
+            -
+              code: 1347992400
+              message: 'Fill in'
+            -
+              code: 1347992453
+              message: 'Fill in'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: Checkbox
+        properties:
+          elementDescription: ''

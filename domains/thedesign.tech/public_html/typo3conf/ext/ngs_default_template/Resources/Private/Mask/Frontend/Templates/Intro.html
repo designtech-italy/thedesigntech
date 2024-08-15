@@ -1,0 +1,122 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="intro-themestage">
+    <div class="intro-element bgweb2" id="c{contentLocalizedUid}">
+        <f:variable name="changefirstcharacter" value="{data.tx_mask_changefirstcharacter}"/>
+
+        <div class="inner{f:if(condition: changefirstcharacter, then: ' change-first-character')}">
+            <div class="svg-line"></div>
+            <f:if condition="{data.tx_mask_headline}">
+
+                <div class="headline t1large f_themestage-word-carousel">
+                    <f:if condition="{changefirstcharacter}">
+                        <f:then>
+                            <svg class="svg-box">
+                                <use xlink:href="#d-svg"></use>
+                            </svg>
+                        </f:then>
+                    </f:if>
+                    {data.tx_mask_headline -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_subheadline}">
+                <div class="subheadline t4-inverse">
+                    {data.tx_mask_subheadline -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_textmobile}">
+                <div class="description t6-inverse mobile-view">
+                    {data.tx_mask_textmobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description t6-inverse desktop-view">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+        <f:if condition="{data.tx_mask_link1text} || {data.tx_mask_link2}">
+            <div class="link-action">
+                <f:if condition="{data.tx_mask_link1text}">
+                    <f:if condition="{data.tx_mask_linkform}">
+                        <f:then>
+                            <button class="btn button3 btn-primary f_{data.tx_mask_linkform} f_modal-form-open-btn" data-modal-form-btn="{data.tx_mask_linkform}">
+                                {data.tx_mask_link1text}
+                            </button>
+                        </f:then>
+                        <f:else>
+                            <f:if condition="{data.tx_mask_link1}">
+                                <f:link.typolink class="btn button3 btn-primary" parameter="{data.tx_mask_link1}">
+                                    {data.tx_mask_link1text}
+                                </f:link.typolink>
+                            </f:if>
+                        </f:else>
+                    </f:if>
+                </f:if>
+
+                <f:if condition="{data.tx_mask_link2}">
+                    <f:link.typolink parameter="{data.tx_mask_link2}" class="morelink">
+                        <svg class="svg-box">
+                            <use xlink:href="#download-icon"></use>
+                        </svg>
+
+                        <f:if condition="{data.tx_mask_link2text}">
+                            <span>{data.tx_mask_link2text}</span>
+                        </f:if>
+                    </f:link.typolink>
+                </f:if>
+            </div>
+        </f:if>
+    </div>
+    <f:if condition="{data.tx_mask_image} || {data.tx_mask_imagemobile}">
+        <div class="ThemestageT1 transparent-header bgweb2 f_slider-wrapper" id="mask-{data.uid}">
+            <div class="component component-themestage f_themestage-item">
+                <div class="themestage f_slider-wrapper">
+                    <f:for each="{data.tx_mask_image}" as="file">
+                        <div class="image-box desktop-image{f:if(condition: data.tx_mask_imagemobile, then: '', else: ' mobile-image')}">
+                            <f:render partial="Picture" arguments="{
+                            lazyload: 1,
+                            data: {
+                                1701: { file: file, width: '2500c', height: '981c', cropVariant: 'desktop' },
+                                1025: { file: file, width: '1700c', height: '667c', cropVariant: 'desktop' },
+                                601: { file: file, width: '1024c', height: '600c', cropVariant: 'desktop' },
+                                0: { file: file, width: '600c', height: '350c', cropVariant: 'mobile' }
+                            },
+                            imageratiox: 1700,
+                            imageratioy: 667
+                        }"/>
+                        </div>
+                    </f:for>
+                    <f:for each="{data.tx_mask_imagemobile}" as="file">
+                        <div class="image-box mobile-box{f:if(condition: data.tx_mask_image, then: '', else: ' desktop-image')}">
+                            <f:render partial="Picture" arguments="{
+                            lazyload: 1,
+                            data: {
+                                1701: { file: file, width: '2500c', height: '981c', cropVariant: 'desktop' },
+                                1025: { file: file, width: '1700c', height: '667c', cropVariant: 'desktop' },
+                                601: { file: file, width: '1024c', height: '600c', cropVariant: 'desktop' },
+                                0: { file: file, width: '600c', height: '350c', cropVariant: 'mobile' }
+                            },
+                            imageratiox: 1700,
+                            imageratioy: 667
+                        }"/>
+                        </div>
+                    </f:for>
+
+                    <div class="cursor-box">
+                        <div class="cursor-main" id="cursor-main" style=""></div>
+                        <div class="cursor-inner-border" id="cursor-inner-border" style=""></div>
+                        <div class="cursor-inner" id="cursor-inner" style=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:if>
+</div>

@@ -1,0 +1,64 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "flowing_text_banner": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_text1",
+                        "tx_mask_text2"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-bandcamp",
+                    "iconOverlay": "",
+                    "key": "flowing_text_banner",
+                    "label": "Flowing text banner",
+                    "labels": [
+                        "Text 1",
+                        "Text 2"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 3
+                }
+            },
+            "sql": {
+                "tx_mask_text1": {
+                    "tt_content": {
+                        "tx_mask_text1": "mediumtext"
+                    }
+                },
+                "tx_mask_text2": {
+                    "tt_content": {
+                        "tx_mask_text2": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_text1": {
+                    "config": {
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_text1",
+                    "key": "text1",
+                    "type": "text"
+                },
+                "tx_mask_text2": {
+                    "config": {
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_text2",
+                    "key": "text2",
+                    "type": "text"
+                }
+            }
+        }
+    }
+}

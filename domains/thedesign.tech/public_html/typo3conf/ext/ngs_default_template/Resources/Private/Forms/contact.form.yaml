@@ -1,0 +1,275 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+  fieldState:
+    name:
+      identifier: name
+      label: Nome
+      type: Text
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    subject:
+      identifier: subject
+      label: Cognome
+      type: Text
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    email:
+      identifier: email
+      label: Email
+      type: Text
+      renderingOptions:
+        deleted: 1
+        listView: 1
+    message:
+      identifier: message
+      label: Messaggio
+      type: Textarea
+      renderingOptions:
+        deleted: 0
+        listView: 1
+    checkbox-1:
+      type: Checkbox
+      identifier: checkbox-1
+      label: 'Ho letto e accetto la Privacy Policy*'
+      renderingOptions:
+        deleted: 0
+        listView: 0
+    text-1:
+      type: Text
+      identifier: text-1
+      label: 'Numero di telefono'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    multiselect-1:
+      type: MultiSelect
+      identifier: multiselect-1
+      label: Campo
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    singleselect-1:
+      type: SingleSelect
+      identifier: singleselect-1
+      label: 'Area di interesse'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    checkbox-2:
+      type: Checkbox
+      identifier: checkbox-2
+      label: 'Iscriviti alla nostra newsletter per restare aggiornato sugli eventi e le iniziative Designtech'
+      renderingOptions:
+        deleted: 0
+        listView: 0
+    radiobutton-1:
+      type: RadioButton
+      identifier: radiobutton-1
+      label: Campo
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    radiobutton-2:
+      type: RadioButton
+      identifier: radiobutton-2
+      label: 'Area di interesse'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+    gridrow-1:
+      type: GridRow
+      identifier: gridrow-1
+      label: 'Grid: Row'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    gridrow-2:
+      type: GridRow
+      identifier: gridrow-2
+      label: 'Grid: Row'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    fieldset-2:
+      type: Fieldset
+      identifier: fieldset-2
+      label: 'Area di interesse*'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    fieldset-1:
+      type: Fieldset
+      identifier: fieldset-1
+      label: 'Campo*'
+      renderingOptions:
+        listView: 0
+        deleted: 0
+    linkedcheckbox-1:
+      type: LinkedCheckbox
+      identifier: linkedcheckbox-1
+      label: 'Linked checkbox'
+      renderingOptions:
+        deleted: 1
+        listView: 0
+identifier: contact
+label: 'Join us'
+type: Form
+prototypeName: standard
+finishers:
+  -
+    identifier: FormToDatabase
+  -
+    options:
+      subject: 'Your message: Designtech application'
+      recipients:
+        info@thedesign.tech: Designtech
+      senderAddress: info@thedesign.tech
+      senderName: Designtech
+      format: html
+      attachUploads: true
+      translation:
+        language: default
+      useFluidEmail: true
+      title: 'Confirmation of your message'
+    identifier: EmailToReceiver
+  -
+    options:
+      message: ''
+      contentElementUid: '43'
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    identifier: page-1
+    label: 'Contact Form'
+    type: Page
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            identifier: name
+            label: Nome
+            type: Text
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Name*'
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+          -
+            defaultValue: ''
+            identifier: subject
+            label: Cognome
+            type: Text
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Cognome*'
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        type: GridRow
+        identifier: gridrow-2
+        label: 'Grid: Row'
+        renderables:
+          -
+            defaultValue: ''
+            identifier: email
+            label: Email
+            type: Text
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Email address*'
+                required: required
+            validators:
+              -
+                identifier: NotEmpty
+              -
+                identifier: EmailAddress
+          -
+            defaultValue: ''
+            type: Text
+            identifier: text-1
+            label: 'Numero di telefono'
+            properties:
+              fluidAdditionalAttributes:
+                placeholder: 'Numero di telefono*'
+      -
+        type: Fieldset
+        identifier: fieldset-1
+        label: 'Campo*'
+        renderables:
+          -
+            properties:
+              options:
+                Startup: Startup
+                Corporate: Corporate
+                'Industry professional': 'Industry professional'
+                Mentor: Mentor
+                Altro: Altro
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-1
+            label: Campo
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        type: Fieldset
+        identifier: fieldset-2
+        label: 'Area di interesse*'
+        renderables:
+          -
+            properties:
+              options:
+                'Realizzare evento': 'Realizzare evento'
+                'Essere resident': 'Essere resident'
+                'Diventare member': 'Diventare member'
+                'Partecipare ai Lab': 'Partecipare ai Lab'
+                Altro: Altro
+              fluidAdditionalAttributes:
+                required: required
+            type: RadioButton
+            identifier: radiobutton-2
+            label: 'Area di interesse'
+            validators:
+              -
+                identifier: NotEmpty
+      -
+        defaultValue: ''
+        identifier: message
+        label: Messaggio
+        type: Textarea
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            placeholder: 'Messaggio*'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-1
+        label: 'Ho letto e accetto la Privacy Policy*'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        type: Checkbox
+        identifier: checkbox-2
+        label: 'Iscriviti alla nostra newsletter per restare aggiornato sugli eventi e le iniziative Designtech'

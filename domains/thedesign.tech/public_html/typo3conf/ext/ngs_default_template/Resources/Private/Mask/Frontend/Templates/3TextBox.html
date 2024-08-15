@@ -1,0 +1,64 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="text-box-3-element bgweb2" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_subheadline}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="t4 headline">
+                    {data.tx_mask_headline -> f:format.html()}
+                    <div class="svg-line"></div>
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_textmobile}">
+                <div class="description{f:if(condition: '{data.tx_mask_subheadline}', then: ' mobile-view')}">
+                    {data.tx_mask_textmobile -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_subheadline}">
+                <div class="description{f:if(condition: '{data.tx_mask_textmobile}', then: ' desktop-view')}">
+                    {data.tx_mask_subheadline -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_boxelements}">
+        <div class="text-list">
+            <f:for each="{data.tx_mask_boxelements}" as="data_item">
+                <div class="text-item">
+                    <div class="inner bgweb">
+                        <f:for each="{data_item.tx_mask_image}" as="file">
+                            <div class="image-box">
+                                <f:render partial="Picture" arguments="{
+                                    lazyload: 1,
+                                    data: {
+                                        1440: { file: file, width: '730c', height: '492c' },
+                                        1026: { file: file, width: '376c', height: '251c' },
+                                        768: { file: file, width: '280c', height: '187c' },
+                                        0: { file: file, width: '342c', height: '176c' }
+                                    }
+                                }"/>
+                            </div>
+                        </f:for>
+                        <div class="text-box">
+                            <f:if condition="{data_item.tx_mask_title}">
+                                <div class="title">{data_item.tx_mask_title -> f:format.html()}</div>
+                            </f:if>
+                            <f:if condition="{data_item.tx_mask_text}">
+                                <div class="description">
+                                    {data_item.tx_mask_text -> f:format.html()}
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </div>
+    </f:if>
+</div>

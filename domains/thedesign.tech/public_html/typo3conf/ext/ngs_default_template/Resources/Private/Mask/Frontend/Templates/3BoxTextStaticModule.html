@@ -1,0 +1,216 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+
+<div class="box-text-static-module{f:if(condition: data.tx_mask_is_main_text_highlighted, then: ' bggallerybox')}" style="background-color: {f:if(condition: data.tx_mask_backgroundcolor, then: data.tx_mask_backgroundcolor)}" id="c{contentLocalizedUid}">
+    <div class="background-image-box">
+        <f:for each="{data.tx_mask_image}" as="file">
+            <div class="image-box">
+                <f:render partial="Picture" arguments="{
+                    lazyload: 1,
+                    data: {
+                        0: { file: file, width: '2233c', height: '1442c' }
+                    }
+                }"/>
+            </div>
+        </f:for>
+    </div>
+    <div class="box-text-static-module-inner">
+        <f:if condition="{data.tx_mask_headline}">
+            <div class="headline t4 desktop-view">
+                {data.tx_mask_headline -> f:format.html()}
+                <svg class="svg-line"></svg>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_headlinemobile}">
+            <div class="headline t4 mobile-view">
+                {data.tx_mask_headlinemobile -> f:format.html()}
+                <svg class="svg-line"></svg>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_text}">
+            <div class="description desktop-view">
+                {data.tx_mask_text -> f:format.html()}
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_textmobile}">
+            <div class="description mobile-view">
+                {data.tx_mask_textmobile -> f:format.html()}
+            </div>
+        </f:if>
+
+        <f:variable name="standartType" value="{data.tx_mask_cards -> f:count()  < 3}"/>
+        <div class="card-list{f:if(condition: standartType, then: ' standart-type')}">
+            <f:if condition="{data.tx_mask_cards}">
+                <f:for each="{data.tx_mask_cards}" as="data_item">
+                    <div class="card-item">
+                        <div class="card-item-inner bgweb insideClass">
+                            <div class="card-item-main">
+                                <div class="card-item-header">
+                                    <f:if condition="{data_item.tx_mask_headlineicon}">
+                                        <div class="card-item-icon">
+                                            <f:for each="{data_item.tx_mask_headlineicon}" as="file">
+                                                <f:image image="{file}" width="200" />
+                                                {file.description}
+                                            </f:for>
+                                        </div>
+                                    </f:if>
+
+                                    <f:if condition="{data_item.tx_mask_headline}">
+                                        <svg class="svg-line"></svg>
+
+                                        <div class="card-item-headline">
+                                            {data_item.tx_mask_headline}
+                                        </div>
+                                    </f:if>
+                                </div>
+
+                                <f:if condition="{data_item.tx_mask_text}">
+                                    <div class="card-item-description desktop-view">
+                                        {data_item.tx_mask_text -> f:format.html()}
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_textmobile}">
+                                    <div class="card-item-description mobile-view">
+                                        {data_item.tx_mask_textmobile -> f:format.html()}
+                                    </div>
+                                </f:if>
+                            </div>
+
+                            <div class="btn-container">
+                                <f:if condition="{data_item.tx_mask_linktext}">
+                                    <f:if condition="{data_item.tx_mask_linkclass}">
+                                        <f:then>
+                                            <button class="btn button3 btn-primary f_{data_item.tx_mask_linkclass} f_modal-form-open-btn" data-modal-form-btn="{data_item.tx_mask_linkclass}">
+                                                {data_item.tx_mask_linktext}
+                                            </button>
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{data_item.tx_mask_link}">
+                                                <f:link.typolink class="btn button3 btn-primary" parameter="{data_item.tx_mask_link}">
+                                                    {data_item.tx_mask_linktext}
+                                                </f:link.typolink>
+                                            </f:if>
+                                        </f:else>
+                                    </f:if>
+                                </f:if>
+
+                                <f:if condition="{data_item.tx_mask_linkaditionaltext}">
+                                    <div class="righttext small">
+                                        {data_item.tx_mask_linkaditionaltext -> f:format.html()}
+                                    </div>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:if>
+
+            <f:if condition="{data.tx_mask_circleiconheadline} || {data.tx_mask_circleiconsubheadline} || {data.tx_mask_circleiconpreheadline} ||
+                {data.tx_mask_circleiconintro} || {data.tx_mask_circleicon} || {data.tx_mask_static_module_items}">
+
+                <div class="static-card">
+                    <svg class="svg-line"></svg>
+
+                    <f:if condition="{data.tx_mask_circleiconheadline} || {data.tx_mask_circleiconsubheadline} || {data.tx_mask_circleiconpreheadline} || {data.tx_mask_circleiconintro}">
+                        <div class="circle-icon-box bggallerybox{f:if(condition: data.tx_mask_circleiconpreheadline, then: ' has-preheadline')}{f:if(condition: data.tx_mask_circleiconsubheadline, then: ' has-subheadline')}">
+                            <f:if condition="{data.tx_mask_circleiconpreheadline}">
+                                <div class="t6-inverse circle-icon-preheadline">
+                                    {data.tx_mask_circleiconpreheadline}
+                                </div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_circleiconheadline}">
+                                <div class="t5 circle-icon-headline">
+                                    <span>{data.tx_mask_circleiconheadline}</span>
+                                    <f:if condition="{data.tx_mask_circleiconsupheadline}">
+                                        <sup class="t6-inverse">{data.tx_mask_circleiconsupheadline}</sup>
+                                    </f:if>
+                                </div>
+                            </f:if>
+                            <f:if condition="{data.tx_mask_circleiconsubheadline}">
+                                <div class="medium1 circle-icon-subheadline">
+                                    {data.tx_mask_circleiconsubheadline}
+                                </div>
+                            </f:if>
+
+                            <f:if condition="{data.tx_mask_circleiconintro}">
+                                <div class="small circle-icon-intro">
+                                    {data.tx_mask_circleiconintro -> f:format.html()}
+                                </div>
+                            </f:if>
+                        </div>
+                    </f:if>
+
+                    <div class="static-card-items">
+                        <f:if condition="{data.tx_mask_static_module_items}">
+                            <f:for each="{data.tx_mask_static_module_items}" as="data_item">
+                                <div class="static-card-item">
+                                    <div class="static-card-item-wrapper">
+                                        <f:for each="{data_item.tx_mask_icon}" as="file">
+                                            <f:image image="{file}" width="200" />
+                                            {file.description}
+                                        </f:for>
+
+                                        <div class="static-card-item-main">
+                                            <f:if condition="{data_item.tx_mask_headline}">
+                                                <div class="t5 static-card-item-headline">
+                                                    {data_item.tx_mask_headline}
+                                                </div>
+                                            </f:if>
+
+                                            <f:if condition="{data_item.tx_mask_intro}">
+                                                <div class="static-card-item-intro large1 mobile-view">
+                                                    {data_item.tx_mask_intro -> f:format.html()}
+                                                </div>
+                                            </f:if>
+                                        </div>
+                                    </div>
+
+                                    <f:if condition="{data_item.tx_mask_intro}">
+                                        <div class="static-card-item-intro large1 desktop-vew">
+                                            {data_item.tx_mask_intro -> f:format.html()}
+                                        </div>
+                                    </f:if>
+                                </div>
+                            </f:for>
+
+                            <f:if condition="{data.tx_mask_circleiconheadline} || {data.tx_mask_circleiconsubheadline} || {data.tx_mask_circleiconintro}">
+                                <div class="static-card-item mobile-view">
+                                    <div class="static-card-item-wrapper">
+                                        <f:for each="{data.tx_mask_circleicon}" as="file">
+                                            <f:image image="{file}" width="200" />
+                                            {file.description}
+                                        </f:for>
+
+                                        <div class="static-card-item-main">
+                                            <f:if condition="{data.tx_mask_circleiconheadline} || {data.tx_mask_circleiconsubheadline}">
+                                                <div class="t5 static-card-item-headline">
+                                                    <f:if condition="{data.tx_mask_circleiconpreheadline}">{data.tx_mask_circleiconpreheadline}</f:if> <f:if condition="{data.tx_mask_circleiconheadline}">{data.tx_mask_circleiconheadline}</f:if><f:if condition="{data.tx_mask_circleiconsupheadline}"><sup>{data.tx_mask_circleiconsupheadline}</sup></f:if> <f:if condition="{data.tx_mask_circleiconsubheadline}">{data.tx_mask_circleiconsubheadline}</f:if>
+                                                </div>
+                                            </f:if>
+
+                                            <f:if condition="{data.tx_mask_circleiconintro}">
+                                                <div class="static-card-item-intro">
+                                                    {data.tx_mask_circleiconintro -> f:format.html()}
+                                                </div>
+                                            </f:if>
+                                        </div>
+                                    </div>
+                                </div>
+                            </f:if>
+                        </f:if>
+                    </div>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+
+
+

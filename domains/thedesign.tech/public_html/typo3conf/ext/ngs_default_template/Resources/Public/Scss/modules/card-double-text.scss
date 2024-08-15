@@ -1,0 +1,245 @@
+.card-double-text-element {
+  @include glob-map-get-fluid(padding-top, 102, 70, 44, 44);
+  @include glob-map-get-fluid(padding-bottom, 90, 70, 44, 44);
+
+  .mobile-view {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      & + .desktop-view {
+        display: none;
+      }
+    }
+  }
+
+  .card-double-text-inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include glob-map-get-fluid(padding-left, 201, 106, 60, 23);
+
+    @include tablet {
+      padding-left: 23px;
+      padding-right: 23px;
+    }
+
+    .left-box {
+      margin-top: 7px;
+
+      @include glob-map-get-fluid(width, 535, 480, 400, 400);
+      @include glob-map-get-fluid(min-width, 535, 480, 400, 400);
+      @include glob-map-get-fluid(margin-right, 118, 80, 40, 40);
+
+      @include tablet {
+        width: 100% !important;
+        min-width: auto !important;
+        margin-right: 0 !important;
+        margin-bottom: 53px;
+        margin-top: 0;
+      }
+
+      .card-box {
+        box-shadow: 0 0 100px 0 rgba(0,0,0,0.1);
+        background-color: $g-color1;
+
+        @include tablet {
+          max-width: 535px;
+          margin: 0 auto;
+          box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.07);
+        }
+      }
+
+      .image-box {
+        img {
+          aspect-ratio: 1/0.67;
+        }
+      }
+      .info-box {
+        @include glob-map-get-fluid(padding-top, 86, 70, 55, 45);
+        @include glob-map-get-fluid(padding-bottom, 88, 70, 55, 45);
+        @include glob-map-get-fluid(padding-left, 45, 45, 38, 38);
+        @include glob-map-get-fluid(padding-right, 45, 45, 38, 38);
+
+        @include tablet {
+          text-align: center;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .info-item-box {
+          @include glob-map-get-fluid(padding-bottom, 74, 55, 45, 36);
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
+        .headline {
+          color: $g-color3;
+          font-size: 29px;
+          line-height: 34px;
+          font-weight: 600;
+
+          @include glob-map-get-fluid(margin-bottom, 20, 15, 15, 8);
+
+          @include desktopLargest {
+            font-size: globFluidSizeValue(29, 26, 1850, 1024);
+            line-height: globFluidSizeValue(34, 30, 1850, 1024);
+          }
+
+          @include tablet {
+            font-size: 26px;
+            line-height: 30px;
+          }
+        }
+        .intro {
+          font-size: 22px;
+          line-height: 24px;
+
+          @include desktopLargest {
+            font-size: globFluidSizeValue(22, 16, 1850, 1024);
+            line-height: globFluidSizeValue(24, 24, 1850, 1024);
+          }
+
+          @include tablet {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+    .right-box {
+      height: auto;
+      flex: 1;
+
+      .card-text-list {
+        height: 100%;
+
+        .card-text-item {
+          box-shadow: 0 0 100px 0 rgba(0,0,0,0.1);
+          background-color: rgba($g-color1, 0.8);
+          border-top: 9px solid $g-color3;
+          min-height: 50%;
+
+          @include glob-map-get-fluid(padding-left, 50, 38, 30, 30);
+          @include glob-map-get-fluid(padding-right, 50, 38, 30, 30);
+          @include glob-map-get-fluid(padding-top, 71, 38, 30, 30);
+          @include glob-map-get-fluid(padding-bottom, 53, 38, 30, 30);
+
+          @include tablet {
+            box-shadow: 0 0 0;
+            border-right: 0;
+            border-top: 1px solid rgba(0,0,0,0.5);
+            padding: 13px 0 9px !important;
+            min-height: unset;
+
+            &:last-child {
+              border-bottom: 1px solid rgba(0,0,0,0.5);
+            }
+          }
+
+          &.is_active {
+            .card-text-header-box {
+              @include tablet {
+                margin-bottom: 19px !important;
+              }
+
+              .open-icon {
+                @include tablet {
+                  &:before {
+                    content: "-";
+                  }
+                }
+              }
+            }
+            .card-text-intro {
+              @include tablet {
+                max-height: 500px;
+                padding-bottom: 18px;
+              }
+            }
+          }
+
+          .card-text-header-box {
+            display: flex;
+            align-items: center;
+
+            @include glob-map-get-fluid(margin-bottom, 19, 15, 10, 10);
+
+            @include tablet {
+              margin-bottom: 0 !important;
+              transition: margin-bottom 0.5s ease;
+            }
+
+            .card-text-icon {
+              display: none;
+
+              @include tablet {
+                display: block;
+                margin-right: 26px;
+                width: 40px;
+                min-width: 40px;
+                height: 50px;
+                margin-left: 12px;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+            .card-text-headline {
+              flex: 1;
+              color: $g-color3;
+              font-size: 29px;
+              line-height: 34px;
+              font-weight: 600;
+
+              @include desktopLargest {
+                font-size: globFluidSizeValue(29, 18, 1850, 1024);
+                line-height: globFluidSizeValue(34, 28, 1850, 1024);
+              }
+
+              @include tablet {
+                font-size: 22px;
+                line-height: 28px;
+              }
+
+              p {
+                margin: 0;
+              }
+            }
+            .open-icon {
+              @include tablet {
+                &:before {
+                  content: "+";
+                }
+              }
+            }
+          }
+          .card-text-intro {
+            line-height: 24px;
+            max-width: 545px;
+
+            @include glob-map-get-fluid(font-size, 17, 15, 15, 15);
+
+            @include tablet {
+              max-height: 0;
+              overflow: hidden;
+              transition: max-height 0.5s ease, padding-bottom 0.5s ease;
+              max-width: 500px;
+            }
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

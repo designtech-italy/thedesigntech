@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="/var/www/designtech-web/typo3conf/ext/ngs_default_template/Resources/Private/Forms/l10n/contact.xlf" date="" product-name="form">
+    <header/>
+    <body>
+      <trans-unit id="contact.element.checkbox-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.checkbox-2.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.email.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.email.properties.placeholder">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.fieldset-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.fieldset-2.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.gridrow-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.gridrow-2.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.message.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.message.properties.placeholder">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.name.properties.label">
+        <source>zzzzzzzzzzzzzzzzzzz</source>
+      </trans-unit>
+      <trans-unit id="contact.element.name.properties.placeholder">
+        <source>ttttttttttttttttttttttttt</source>
+      </trans-unit>
+      <trans-unit id="contact.element.page-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.page-1.renderingOptions.nextButtonLabel">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.page-1.renderingOptions.previousButtonLabel">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-1.properties.options.Corporate">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-1.properties.options.Industry professional">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-1.properties.options.Mentor">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-1.properties.options.Startup">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-2.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-2.properties.options.Diventare member">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-2.properties.options.Essere resident">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-2.properties.options.Partecipare ai Lab">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.radiobutton-2.properties.options.Realizzare evento">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.subject.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.subject.properties.placeholder">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.summarypage.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.summarypage.renderingOptions.nextButtonLabel">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.summarypage.renderingOptions.previousButtonLabel">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.text-1.properties.label">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.element.text-1.properties.placeholder">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.finisher.EmailToReceiver.senderName">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.finisher.EmailToReceiver.subject">
+        <source/>
+      </trans-unit>
+      <trans-unit id="contact.finisher.EmailToReceiver.title">
+        <source/>
+      </trans-unit>
+      <trans-unit id="element.contact.renderingOptions.submitButtonLabel">
+        <source/>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

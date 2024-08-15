@@ -1,0 +1,67 @@
+<f:if condition="{data._LOCALIZED_UID}">
+    <f:then>
+        <f:variable name="contentLocalizedUid" value="{data._LOCALIZED_UID}" />
+    </f:then>
+    <f:else>
+        <f:variable name="contentLocalizedUid" value="{data.uid}" />
+    </f:else>
+</f:if>
+
+<div class="team-slider-element bgweb2" id="c{contentLocalizedUid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_text}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="headline t4">
+                    <svg class="svg-line"></svg>
+                    {data.tx_mask_headline -> f:format.html()}
+                </div>
+            </f:if>
+            <f:if condition="{data.tx_mask_text}">
+                <div class="description default">
+                    {data.tx_mask_text -> f:format.html()}
+                </div>
+            </f:if>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_teamslider}">
+        <div class="team-slider-block">
+            <div class="team-list f_team-list">
+                <f:for each="{data.tx_mask_teamslider}" as="data_item">
+                    <div class="team-item">
+                        <f:for each="{data_item.tx_mask_image}" as="file">
+                            <div class="image-box">
+                                <f:render partial="Picture" arguments="{
+                                    lazyload: 1,
+                                    data: {
+                                        1026: { file: file, width: '558c', height: '488c' },
+                                        768: { file: file, width: '447c', height: '391c' },
+                                        0: { file: file, width: '573c', height: '685c' }
+                                    }
+                                }"/>
+                            </div>
+                        </f:for>
+                        <f:if condition="{data_item.tx_mask_name} || {data_item.tx_mask_position} || {data_item.tx_mask_description}">
+                            <div class="text-box">
+                                <f:if condition="{data_item.tx_mask_name}">
+                                    <div class="headline">
+                                        {data_item.tx_mask_name}
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_position}">
+                                    <div class="position-box large1">
+                                        {data_item.tx_mask_position}
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_description}">
+                                    <div class="description">
+                                        {data_item.tx_mask_description -> f:format.html()}
+                                    </div>
+                                </f:if>
+                            </div>
+                        </f:if>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </f:if>
+</div>

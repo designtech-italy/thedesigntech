@@ -1,0 +1,45 @@
+.flowing-text-banner {
+  @include glob-map-get-fluid(padding-top, 65, 65, 38, 22);
+  @include glob-map-get-fluid(padding-bottom, 63, 63, 38, 21);
+
+  .flowing-banner {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    --gap: 1rem;
+    user-select: none;
+    gap: var(--gap);
+
+    .text-banner {
+      justify-content: space-between;
+      align-items: center;
+      min-width: 30%;
+      gap: var(--gap);
+      flex-shrink: 0;
+      display: flex;
+      opacity: 0.4;
+      font-family: Rische;
+
+      @include glob-map-get-fluid(font-size, 120, 120, 90, 80);
+      @include glob-map-get-fluid(line-height, 116, 116, 86, 76);
+      @include glob-map-get-fluid(padding-bottom, 20, 20, 25, 25);
+    }
+  }
+
+  [marquee] {
+    -webkit-animation: marquee 40s linear infinite;
+    -moz-animation: marquee 40s linear infinite;
+    -ms-animation: marquee 40s linear infinite;
+    -o-animation: marquee 40s linear infinite;
+    animation: marquee 40s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}

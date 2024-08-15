@@ -1,0 +1,609 @@
+{
+    "version": "7.2.0",
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "juri_list": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_4c41c6e46137c",
+                        "tx_mask_link1",
+                        "tx_mask_e571ad581c685",
+                        "tx_mask_ab5c83b997a82",
+                        "tx_mask_jurilist"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "juri_list",
+                    "label": "Juri List",
+                    "labels": [
+                        "Box Style",
+                        "Back Btn Link",
+                        "Headline",
+                        "Text",
+                        "Juri list"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "palettes": {
+                "tx_mask_4c41c6e46137c": {
+                    "description": "",
+                    "label": "Box Style",
+                    "showitem": [
+                        "tx_mask_backgroundcolor",
+                        "tx_mask_is_main_text_highlighted",
+                        "tx_mask_331ccd50a60f2",
+                        "tx_mask_backgroundchange"
+                    ]
+                },
+                "tx_mask_ab5c83b997a82": {
+                    "description": "",
+                    "label": "Text",
+                    "showitem": [
+                        "tx_mask_text",
+                        "tx_mask_textmobile"
+                    ]
+                },
+                "tx_mask_e571ad581c685": {
+                    "description": "",
+                    "label": "Headline",
+                    "showitem": [
+                        "tx_mask_headline",
+                        "tx_mask_headlinemobile"
+                    ]
+                }
+            },
+            "sql": {
+                "tx_mask_backgroundchange": {
+                    "tt_content": {
+                        "tx_mask_backgroundchange": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_backgroundcolor": {
+                    "tt_content": {
+                        "tx_mask_backgroundcolor": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_headline": {
+                    "tt_content": {
+                        "tx_mask_headline": "mediumtext"
+                    }
+                },
+                "tx_mask_headlinemobile": {
+                    "tt_content": {
+                        "tx_mask_headlinemobile": "mediumtext"
+                    }
+                },
+                "tx_mask_is_main_text_highlighted": {
+                    "tt_content": {
+                        "tx_mask_is_main_text_highlighted": "int(11) DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_jurilist": {
+                    "tt_content": {
+                        "tx_mask_jurilist": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_link1": {
+                    "tt_content": {
+                        "tx_mask_link1": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tt_content": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                },
+                "tx_mask_textmobile": {
+                    "tt_content": {
+                        "tx_mask_textmobile": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_331ccd50a60f2": {
+                    "config": {
+                        "type": "linebreak"
+                    },
+                    "description": {
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_331ccd50a60f2",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "331ccd50a60f2",
+                    "label": {
+                        "juri_list": ""
+                    },
+                    "order": {
+                        "juri_list": 3
+                    },
+                    "type": "linebreak"
+                },
+                "tx_mask_4c41c6e46137c": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_4c41c6e46137c",
+                    "key": "4c41c6e46137c",
+                    "type": "palette"
+                },
+                "tx_mask_ab5c83b997a82": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_ab5c83b997a82",
+                    "key": "ab5c83b997a82",
+                    "type": "palette"
+                },
+                "tx_mask_backgroundchange": {
+                    "config": {
+                        "items": [],
+                        "type": "check"
+                    },
+                    "description": {
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_backgroundchange",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "backgroundchange",
+                    "label": {
+                        "juri_list": "Change background"
+                    },
+                    "order": {
+                        "juri_list": 4
+                    },
+                    "type": "check"
+                },
+                "tx_mask_backgroundcolor": {
+                    "config": {
+                        "renderType": "colorpicker",
+                        "size": 10,
+                        "type": "input"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_backgroundcolor",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_30b344f8edb67",
+                        "image_link_zoom_in_effect": "tx_mask_5929b105e8afa",
+                        "image_slider_text": "tx_mask_6bf61bca8b5ca",
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "backgroundcolor",
+                    "label": {
+                        "3_box_text_static_module": "Background Color",
+                        "image_link_zoom_in_effect": "Background Color",
+                        "image_slider_text": "Background Color",
+                        "juri_list": "Background Color"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1
+                    },
+                    "type": "colorpicker"
+                },
+                "tx_mask_e571ad581c685": {
+                    "config": {
+                        "type": "palette"
+                    },
+                    "fullKey": "tx_mask_e571ad581c685",
+                    "key": "e571ad581c685",
+                    "type": "palette"
+                },
+                "tx_mask_headline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headline",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "intro": "tx_mask_3170d5a513417",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headline",
+                    "label": {
+                        "3_box_text_static_module": "Headline",
+                        "criteria_items": "Headline",
+                        "image_link_slider_with_tabs": "Headline",
+                        "image_link_zoom_in_effect": "Headline",
+                        "image_slider_text": "Headline",
+                        "intro": "Headline",
+                        "juri_list": "Headline"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_slider_with_tabs": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "intro": 1,
+                        "juri_list": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_headlinemobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_headlinemobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_5502a1390dd8f",
+                        "criteria_items": "tx_mask_a6d2670731e4d",
+                        "image_link_slider_with_tabs": "tx_mask_0e33ab916b889",
+                        "image_link_zoom_in_effect": "tx_mask_816288cb29f1",
+                        "image_slider_text": "tx_mask_c7a28e3f60647",
+                        "juri_list": "tx_mask_e571ad581c685"
+                    },
+                    "key": "headlinemobile",
+                    "label": {
+                        "3_box_text_static_module": "Headline Mobile",
+                        "criteria_items": "Headline Mobile",
+                        "image_link_slider_with_tabs": "Headline Mobile",
+                        "image_link_zoom_in_effect": "Headline Mobile",
+                        "image_slider_text": "Headline Mobile",
+                        "juri_list": "Headline Mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_slider_with_tabs": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_is_main_text_highlighted": {
+                    "config": {
+                        "items": [
+                            {
+                                "0": "Is Highlighted",
+                                "iconIdentifierChecked": "true",
+                                "iconIdentifierUnchecked": "false",
+                                "invertStateDisplay": "0"
+                            }
+                        ],
+                        "type": "check"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": ""
+                    },
+                    "fullKey": "tx_mask_is_main_text_highlighted",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_30b344f8edb67",
+                        "image_link_zoom_in_effect": "tx_mask_5929b105e8afa",
+                        "image_slider_text": "tx_mask_6bf61bca8b5ca",
+                        "juri_list": "tx_mask_4c41c6e46137c"
+                    },
+                    "key": "is_main_text_highlighted",
+                    "label": {
+                        "3_box_text_static_module": "Is Main Text Highlighted",
+                        "image_link_zoom_in_effect": "Is Main Text Highlighted",
+                        "image_slider_text": "Is Main Text Highlighted",
+                        "juri_list": "Is Main Text Highlighted"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2
+                    },
+                    "type": "check"
+                },
+                "tx_mask_jurilist": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_jurilist",
+                    "key": "jurilist",
+                    "type": "inline"
+                },
+                "tx_mask_link1": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "description": {
+                        "criteria_items": "",
+                        "image_link_slider_with_tabs": "",
+                        "image_slider_text": "",
+                        "intro": "",
+                        "labs": "",
+                        "landing_page_banner": "",
+                        "simple_text": ""
+                    },
+                    "fullKey": "tx_mask_link1",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "criteria_items": "tx_mask_8baba6ba042a7",
+                        "image_slider_text": "tx_mask_1fdaa9a98af35",
+                        "intro": "tx_mask_77da5e8d64e3b",
+                        "labs": "tx_mask_056b260910ab8",
+                        "landing_page_banner": "tx_mask_0621319df136",
+                        "simple_text": "tx_mask_cd846f6fc623e"
+                    },
+                    "key": "link1",
+                    "label": {
+                        "criteria_items": "Link",
+                        "image_slider_text": "Link",
+                        "intro": "Link",
+                        "labs": "Link",
+                        "landing_page_banner": "Link",
+                        "simple_text": "Link"
+                    },
+                    "order": {
+                        "criteria_items": 1,
+                        "image_slider_text": 2,
+                        "intro": 2,
+                        "labs": 2,
+                        "landing_page_banner": 2,
+                        "simple_text": 2
+                    },
+                    "type": "link"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "text",
+                    "label": {
+                        "3_box_text_static_module": "Text",
+                        "criteria_items": "Text",
+                        "image_link_zoom_in_effect": "Text",
+                        "image_slider_text": "Text",
+                        "juri_list": "Text",
+                        "landing_page_banner": "Text"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 1,
+                        "criteria_items": 1,
+                        "image_link_zoom_in_effect": 1,
+                        "image_slider_text": 1,
+                        "juri_list": 1,
+                        "landing_page_banner": 1
+                    },
+                    "type": "richtext"
+                },
+                "tx_mask_textmobile": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "description": {
+                        "3_box_text_static_module": "",
+                        "criteria_items": "",
+                        "image_link_zoom_in_effect": "",
+                        "image_slider_text": "",
+                        "juri_list": "",
+                        "landing_page_banner": ""
+                    },
+                    "fullKey": "tx_mask_textmobile",
+                    "inPalette": 1,
+                    "inlineParent": {
+                        "3_box_text_static_module": "tx_mask_a019ac1e55959",
+                        "criteria_items": "tx_mask_003b69584b9d",
+                        "image_link_zoom_in_effect": "tx_mask_285469cab38d1",
+                        "image_slider_text": "tx_mask_528a67a5d4d35",
+                        "juri_list": "tx_mask_ab5c83b997a82",
+                        "landing_page_banner": "tx_mask_49f1c44e65f1b"
+                    },
+                    "key": "textmobile",
+                    "label": {
+                        "3_box_text_static_module": "Text mobile",
+                        "criteria_items": "Text mobile",
+                        "image_link_zoom_in_effect": "Text mobile",
+                        "image_slider_text": "Text mobile",
+                        "juri_list": "Text mobile",
+                        "landing_page_banner": "Text mobile"
+                    },
+                    "order": {
+                        "3_box_text_static_module": 2,
+                        "criteria_items": 2,
+                        "image_link_zoom_in_effect": 2,
+                        "image_slider_text": 2,
+                        "juri_list": 2,
+                        "landing_page_banner": 2
+                    },
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_jurilist": {
+            "sql": {
+                "tx_mask_juri_subheadline": {
+                    "tx_mask_jurilist": {
+                        "tx_mask_juri_subheadline": "mediumtext"
+                    }
+                },
+                "tx_mask_juriheadline": {
+                    "tx_mask_jurilist": {
+                        "tx_mask_juriheadline": "mediumtext"
+                    }
+                },
+                "tx_mask_juriimage": {
+                    "tx_mask_jurilist": {
+                        "tx_mask_juriimage": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_juriintro": {
+                    "tx_mask_jurilist": {
+                        "tx_mask_juriintro": "mediumtext"
+                    }
+                },
+                "tx_mask_jurilink": {
+                    "tx_mask_jurilist": {
+                        "tx_mask_jurilink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_juri_subheadline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_juri_subheadline",
+                    "inlineParent": "tx_mask_jurilist",
+                    "key": "juri_subheadline",
+                    "label": "Juri Subheadline",
+                    "order": 3,
+                    "type": "richtext"
+                },
+                "tx_mask_juriheadline": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_juriheadline",
+                    "inlineParent": "tx_mask_jurilist",
+                    "key": "juriheadline",
+                    "label": "Juri Headline",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_juriimage": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_juriimage",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_jurilist",
+                    "key": "juriimage",
+                    "label": "Juri image",
+                    "order": 1,
+                    "type": "file"
+                },
+                "tx_mask_juriintro": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_juriintro",
+                    "inlineParent": "tx_mask_jurilist",
+                    "key": "juriintro",
+                    "label": "Juri Intro",
+                    "order": 4,
+                    "type": "richtext"
+                },
+                "tx_mask_jurilink": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_jurilink",
+                    "inlineParent": "tx_mask_jurilist",
+                    "key": "jurilink",
+                    "label": "Juri Link",
+                    "order": 5,
+                    "type": "link"
+                }
+            }
+        }
+    }
+}

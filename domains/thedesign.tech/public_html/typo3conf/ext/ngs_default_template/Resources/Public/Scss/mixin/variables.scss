@@ -1,0 +1,373 @@
+// Variables
+
+//defines the breakpoints for mixins desktopLarge, desktop, tablet, mobile and mobileSmall -> mixins.scss
+
+@function global-image-url($url) {
+        @if function-exists(font-url) {
+                @return image-url($url);
+        } @else {
+                @return url($image-path + $url);
+        }
+}
+
+// Fluid functions
+
+@function globFluidSizeValue($max, $min, $maxVP, $minVP) {
+        @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$minVP}px) / (#{$maxVP} - #{$minVP})));
+}
+
+@function globFluidSizeValueDeskMob($max, $min) {
+        @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$mediaMobileSmallSizeX}px) / (#{$mediaDesktopSize} - #{$mediaMobileSmallSizeX})));
+}
+
+@function globFluidSizeValueDeskDescMin($max, $min) {
+        @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$mediaDesktopSize}px) / (#{$mediaDesktopLargeSize} - #{$mediaDesktopSize})));
+}
+
+@function globFluidSizeValueDeskTab($max, $min) {
+        @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$mediaMobileSize}px) / (#{$mediaDesktopSize} - #{$mediaMobileSize})));
+}
+
+@function globFluidSizeValueTabMob($max, $min) {
+        @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - #{$mediaMobileSmallSizeX}px) / (#{$mediaMobileSize} - #{$mediaMobileSmallSizeX})));
+}
+
+
+// Fonts and sizes
+
+$default: (
+        "font-family": ("Poppins"),
+        "font-weight": 400,
+        "font-size": 16px,
+        "line-height": 24px,
+        "margin": 0px,
+        "padding": 0px
+);
+
+$large: (
+        "font-family": map-get($default, "font-family"),
+        "font-style": map-get($default, "font-style"),
+        "font-weight": 400,
+        "font-size": 20px,
+        "line-height": 30px,
+);
+
+$medium: (
+        "font-family": map-get($default, "font-family"),
+        "font-style": map-get($default, "font-style"),
+        "font-weight": 400,
+        "font-size": 18px,
+        "line-height": 28px
+);
+
+$small: (
+        "font-family": map-get($default, "font-family"),
+        "font-style": map-get($default, "font-style"),
+        "font-weight": 400,
+        "font-size": 14px,
+        "line-height": 20px
+);
+
+$extrasmall: (
+        "font-family": map-get($default, "font-family"),
+        "font-style": map-get($default, "font-style"),
+        "font-weight": 100,
+        "font-size": 14px,
+        "line-height": 22px
+);
+
+$fontSizesDesctop: (
+        "default": (
+        ),
+        "medium1": (
+                "font-size": globFluidSizeValueDeskMob(18, 16),
+                "line-height": globFluidSizeValueDeskMob(28, 24)
+        ),
+        "large1": (
+        ),
+        "small": (
+        ),
+);
+
+$fontSizesDesctopMin: (
+);
+
+$fontSizesTablet: (
+        "default": (
+        ),
+        "medium1": (
+                "font-size": 16px,
+                "line-height": 24px,
+        ),
+        "large1": (
+        ),
+        "small": (
+        ),
+        "extrasmall": (
+        )
+);
+
+$fontSizesMobile: (
+);
+
+
+//Headings
+
+$headings: (
+        "t1large": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 200,
+                "font-size": 92px,
+                "line-height": 87.4px
+        ),
+        "t1": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 600,
+                "font-size": 120px,
+                "line-height": 114px,
+        ),
+        "t2": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 600,
+                "font-size": 92px,
+                "line-height": 85px
+        ),
+        "t3": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 600,
+                "font-size": 80px,
+                "line-height": 76px
+        ),
+        "t4": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 400,
+                "font-size": 64px,
+                "line-height": 61px
+        ),
+        "t4-inverse": (
+                "font-family": ("Poppins"),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 300,
+                "font-size": 32px,
+                "line-height": 40px
+        ),
+        "t5": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 400,
+                "font-size": 56px,
+                "line-height": 53px
+        ),
+        "t5-inverse": (
+                "font-family": ("Poppins"),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 300,
+                "font-size": 24px,
+                "line-height": 32px
+        ),
+        "t6": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 400,
+                "font-size": 32px,
+                "line-height": 30px
+        ),
+        "t6-inverse": (
+                "font-family": ("Poppins"),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 300,
+                "font-size": 22px,
+                "line-height": 32px
+        )
+);
+
+$headingsDesktopLarge: (
+);
+
+$headingsDesktopMin: (
+        "t1large": (
+                "font-size": globFluidSizeValueDeskMob(92, 40),
+                "line-height": globFluidSizeValueDeskMob(87.4, 56)
+        ),
+        "t1": (
+        ),
+        "t2": (
+        ),
+        "t3": (
+                "font-size": globFluidSizeValueDeskMob(80, 32),
+                "line-height": globFluidSizeValueDeskMob(76, 39)
+        ),
+        "t4": (
+                "font-size": globFluidSizeValueDeskMob(64, 32),
+                "line-height": globFluidSizeValueDeskMob(61, 45)
+        ),
+        "t4-inverse": (
+                "font-size": globFluidSizeValueDeskMob(32, 22),
+                "line-height": globFluidSizeValueDeskMob(40, 32)
+        ),
+        "t5": (
+                "font-size": globFluidSizeValueDeskMob(56, 32),
+                "line-height": globFluidSizeValueDeskMob(53, 40)
+        ),
+        "t5-inverse": (
+                "font-size": globFluidSizeValueDeskMob(24, 14),
+                "line-height": globFluidSizeValueDeskMob(32, 22)
+        ),
+        "t6": (
+                "font-size": globFluidSizeValueDeskMob(32, 24),
+                "line-height": globFluidSizeValueDeskMob(30, 22.8)
+        ),
+        "t6-inverse": (
+                "font-size": globFluidSizeValueDeskMob(22, 16),
+                "line-height": globFluidSizeValueDeskMob(32, 24)
+        )
+);
+
+$headingsTablet: (
+);
+
+$headingsMobile: (
+        "t1large": (
+                "font-size": 40px,
+                "line-height": 56px
+        ),
+        "t1": (
+        ),
+        "t2": (
+        ),
+        "t3": (
+                "font-size": 32px,
+                "line-height": 39px
+        ),
+        "t4": (
+                "font-size": 32px,
+                "line-height": 45px
+        ),
+        "t4-inverse": (
+                "font-size": 22px,
+                "line-height": 32px
+        ),
+        "t5": (
+                "font-size": 32px,
+                "line-height": 40px
+        ),
+        "t5-inverse": (
+                "font-size": 14px,
+                "line-height": 22px
+        ),
+        "t6": (
+                "font-size": 24px,
+                "line-height": 22.8px
+        ),
+        "t6-inverse": (
+                "font-size": 16px,
+                "line-height": 24px
+        )
+);
+
+$morelink: (
+);
+
+$morelinkDescLarge: (
+);
+
+$morelinkDescMin: (
+);
+
+$morelinkTablet: (
+);
+
+$morelinkMobile: (
+);
+
+//Inverce
+
+$bgwebInverse: (
+        "fontSizes": (
+        ),
+        "title": (
+        )
+);
+
+$bgwebInverseDesctop: (
+        "fontSizes": (
+        ),
+        "title": (
+        )
+);
+
+$bgwebInverseDesctopMin: (
+        "fontSizes": (
+        ),
+        "title": (
+        )
+);
+
+$bgwebInverseTablet: (
+        "fontSizes": (
+        ),
+        "title": (
+        )
+);
+
+$bgwebInverseMobile: (
+        "fontSizes": (
+        ),
+        "title": (
+        )
+);
+
+
+//Buttons
+
+$buttons: (
+        "btn": (
+                "font-family": ('Rische'),
+                "font-style": map-get($default, "font-style"),
+                "font-weight": 600,
+                "border-radius": 34px,
+                "display": inline-block,
+                "border": none,
+                "position": relative,
+                "background-color": transparent,
+                "text-decoration": none,
+                "cursor": pointer
+        ),
+        "button1": (
+                "border": solid 1px currentColor,
+                "padding": 18px 37px 17px 38px,
+                "font-size": 24px,
+                "line-height": 33px
+        ),
+        "button2": (
+                "padding": 12px 16px 10px 16px,
+                "font-size": 14px,
+                "line-height": 13px,
+        ),
+        "button3": (
+                "font-family": ('Poppins'),
+                "padding": 13px 13px 14px 14px,
+                "font-size": 23px,
+                "line-height": 26px,
+        )
+);
+
+$buttonsTablet: (
+        "button1": (
+        ),
+        "button3": (
+                "padding": 11px 16px,
+                "font-size": 14px,
+                "line-height": 13px,
+        )
+);
+
+$buttonsMobile: (
+        "button1": (
+        )
+);

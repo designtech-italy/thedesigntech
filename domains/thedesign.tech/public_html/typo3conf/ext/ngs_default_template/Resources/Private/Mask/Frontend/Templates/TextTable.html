@@ -1,0 +1,48 @@
+<div class="text-table-element f_slider-wrapper" id="c{data.uid}">
+    <f:if condition="{data.tx_mask_headline} || {data.tx_mask_subheadline} || {data.tx_mask_text}">
+        <div class="boxed-headline">
+            <f:if condition="{data.tx_mask_headline}">
+                <div class="t3 headline">{data.tx_mask_headline -> f:format.html()}</div>
+            </f:if>
+            <f:if condition="{data.tx_mask_subheadline}">
+                <div class="subheadline t6-inverse">{data.tx_mask_subheadline -> f:format.html()}</div>
+            </f:if>
+        </div>
+    </f:if>
+    <f:if condition="{data.tx_mask_event}">
+        <div class="table-list f_table-list">
+            <f:for each="{data.tx_mask_event}" as="data_item" iteration="loop">
+                <f:if condition="{loop.cycle} == 1 || {loop.cycle} == 3 || {loop.cycle} == 4">
+                    <div class="item">
+                </f:if>
+                <div class="table-item large1">
+                    <div class="table-row">
+                        <f:if condition="{data_item.tx_mask_date}">
+                            <div class="date-box t6-inverse">{data_item.tx_mask_date -> f:format.html()}</div>
+                        </f:if>
+                        <f:if condition="{data_item.tx_mask_evenetsinner}">
+                            <div class="row-list">
+                                <f:for each="{data_item.tx_mask_evenetsinner}" as="data_item_item">
+                                    <div class="row-inner">
+                                        <f:if condition="{data_item_item.tx_mask_time}">
+                                            <div class="time-box">{data_item_item.tx_mask_time}</div>
+                                        </f:if>
+                                        <f:if condition="{data_item_item.tx_mask_name}">
+                                            <div class="name-box">{data_item_item.tx_mask_name -> f:format.html()}</div>
+                                        </f:if>
+                                        <f:if condition="{data_item_item.tx_mask_type}">
+                                            <div class="type-box">{data_item_item.tx_mask_type -> f:format.html()}</div>
+                                        </f:if>
+                                    </div>
+                                </f:for>
+                            </div>
+                        </f:if>
+                    </div>
+                </div>
+                <f:if condition="{loop.cycle} == 2 || {loop.cycle} == 3 || {loop.isLast} == 6">
+                    </div>
+                </f:if>
+            </f:for>
+        </div>
+    </f:if>
+</div>

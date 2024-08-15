@@ -1,0 +1,51 @@
+{
+  "name": "causal/cloudflare",
+  "type": "typo3-cms-extension",
+  "description": "The Cloudflare TYPO3 extension ensures your TYPO3 website is running optimally on the Cloudflare platform.",
+  "keywords": [
+    "TYPO3 CMS",
+    "cloudflare",
+    "cloud",
+    "content delivery network",
+    "cdn",
+    "proxy",
+    "reverse proxy",
+    "ssl",
+    "performance"
+  ],
+  "homepage": "https://github.com/xperseguers/t3ext-cloudflare",
+  "support": {
+    "issues": "https://github.com/xperseguers/t3ext-cloudflare/issues"
+  },
+  "authors": [
+    {
+      "name": "Xavier Perseguers",
+      "email": "xavier@causal.ch",
+      "homepage": "https://www.causal.ch",
+      "role": "Developer"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "php": ">= 7.2.0, <= 7.4.99",
+    "ext-curl": "*",
+    "typo3/cms-core": "^9.5 || ^10.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Causal\\Cloudflare\\": "Classes/"
+    }
+  },
+  "replace": {
+    "typo3-ter/cloudflare": "self.version"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.4.x-dev",
+      "dev-typo3/v8": "2.3.x-dev"
+    },
+    "typo3/cms": {
+      "extension-key": "cloudflare"
+    }
+  }
+}
